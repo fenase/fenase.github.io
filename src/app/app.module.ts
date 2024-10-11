@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SharedModule } from './shared/shared.module';
 import { LandingComponent } from './landing/landing.component';
+import { TranslocoRootModule } from './transloco-root.module';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,11 @@ import { LandingComponent } from './landing/landing.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    TranslocoRootModule,
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(),
   ],
   bootstrap: [AppComponent]
 })
