@@ -5,6 +5,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LanguageSelectorModule } from "../language-selector/language-selector.module";
+import { TranslocoModule } from '@ngneat/transloco';
 
 
 
@@ -12,7 +13,7 @@ import { LanguageSelectorModule } from "../language-selector/language-selector.m
   declarations: [
     TopbarComponent,
   ],
-  exports:[
+  exports: [
     TopbarComponent,
   ],
   imports: [
@@ -20,7 +21,8 @@ import { LanguageSelectorModule } from "../language-selector/language-selector.m
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    LanguageSelectorModule
-]
+    LanguageSelectorModule,
+    TranslocoModule,
+  ]
 })
 export class SharedModule { }
