@@ -1,11 +1,15 @@
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TopbarComponent } from './topbar/topbar.component';
-import { MatIconModule } from '@angular/material/icon';
+import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { LanguageSelectorModule } from "../language-selector/language-selector.module";
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterModule } from '@angular/router';
 import { TranslocoModule } from '@ngneat/transloco';
+import { LanguageSelectorModule } from "../language-selector/language-selector.module";
+import { TopbarComponent } from './topbar/topbar.component';
 
 
 
@@ -18,9 +22,11 @@ import { TranslocoModule } from '@ngneat/transloco';
   ],
   imports: [
     CommonModule,
+    RouterModule,
+    MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule,
+    MatMenuModule,
     LanguageSelectorModule,
     TranslocoModule,
   ]

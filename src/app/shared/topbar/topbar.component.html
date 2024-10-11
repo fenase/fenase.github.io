@@ -1,15 +1,23 @@
-<mat-toolbar color="primary">
-  <div>
-    <span>fenase</span>
-  </div>
-  <span class="flexExpand"></span>
-  <div>
-    <a mat-button href="./about">
-      <mat-icon>info</mat-icon>
+<nav>
+  <mat-toolbar color="primary">
+    <a href="" mat-button mat-button-toggle color="primary">
+      <mat-icon fontIcon="home"></mat-icon>
+      home</a>
+
+    <button mat-button mat-button-toggle [matMenuTriggerFor]="belowMenu" color="primary"
+      [class.selected]="router.isActive('/projects',true)" value="projects">Projects</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item>Big Excel Creator</button>
+      <button mat-menu-item>SnowFlake Id Generator</button>
+    </mat-menu>
+
+    <a mat-button color="light" [routerLink]="['/about']" [class.selected]="router.isActive('/about',true)">
       {{ "aboutMe" | transloco }}
     </a>
-  </div>
-  <div>
-    <app-language-selector></app-language-selector>
-  </div>
-</mat-toolbar>
+
+    <span class="flexExpand"></span>
+    <div>
+      <app-language-selector></app-language-selector>
+    </div>
+  </mat-toolbar>
+</nav>

@@ -7,7 +7,14 @@ import { TranslocoService } from '@ngneat/transloco';
   styleUrl: './language-selector.component.css'
 })
 export class LanguageSelectorComponent {
-  constructor(private translocoService: TranslocoService) { }
+  private readonly storedLanguageKey: string = "lang";
+
+  constructor(private translocoService: TranslocoService) {
+    let languageCode: string | null = localStorage.getItem(this.storedLanguageKey);
+    if (languageCode !== null) {
+      this.changeLanguage(languageCode);
+    }
+  }
 
   public languagesList: Array<Record<'imgUrl' | 'code' | 'name' | 'shorthand' | 'message', string>> =
     [
@@ -27,12 +34,13 @@ export class LanguageSelectorComponent {
       },
     ];
 
-  public get availableLanguages():Array<Record<'imgUrl' | 'code' | 'name' | 'shorthand' | 'message', string>>{
+  public get availableLanguages(): Array<Record<'imgUrl' | 'code' | 'name' | 'shorthand' | 'message', string>> {
     return this.languagesList.filter(x => x.code != this.translocoService.getActiveLang());
   }
 
 
   public changeLanguage(languageCode: string): void {
     this.translocoService.setActiveLang(languageCode);
+    localStorage.setItem(this.storedLanguageKey, languageCode);
   }
 }

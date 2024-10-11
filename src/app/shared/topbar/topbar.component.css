@@ -2,6 +2,10 @@
   flex: 1 1 auto;
 }
 
-.mat-toolbar{
-  background-color: azure;
+.mat-toolbar {
+  background-color: #d7e3ff;
+}
+
+.selected {
+  background-color: #c1d5f8;
 }
