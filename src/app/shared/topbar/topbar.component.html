@@ -1,10 +1,11 @@
 <nav>
   <mat-toolbar color="primary">
-    <a [routerLink]="['/']" mat-button mat-button-toggle color="primary">
+    <a [routerLink]="['/']" mat-button color="primary">
       <mat-icon fontIcon="home"></mat-icon>
-      home</a>
+      home
+    </a>
 
-    <button mat-button mat-button-toggle [matMenuTriggerFor]="belowMenu" color="primary"
+    <button mat-button [matMenuTriggerFor]="belowMenu" color="primary"
       [class.selected]="router.isActive('/projects',true)" value="projects">Projects</button>
     <mat-menu #belowMenu="matMenu" yPosition="below">
       <button mat-menu-item [routerLink]="['/projects/BigExcelCreator']">Big Excel Creator</button>

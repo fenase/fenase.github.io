@@ -9,6 +9,8 @@ import { PageLayoutComponent } from './page-layout/page-layout.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BigExcelCreatorComponent } from './big-excel-creator.component';
 import { RouterModule } from '@angular/router';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -26,6 +28,8 @@ import { RouterModule } from '@angular/router';
     RouterModule,
     BigExcelCreatorRoutingModule,
     MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
   ]
 })
 export class BigExcelCreatorModule { }

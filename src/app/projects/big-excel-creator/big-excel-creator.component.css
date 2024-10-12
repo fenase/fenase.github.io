@@ -1,12 +1,19 @@
-mat-sidenav-container,
-mat-sidenav-content,
-mat-sidenav {
-  height: 100%;
+.container {
+  width: 100%;
+  height: calc(100vh - 75px);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 16px 8px;
+  overflow: auto;
+  box-sizing: border-box;
 }
 
-mat-sidenav {
+.sidenav-content {
   display: flex;
   flex-direction: column;
-  flex: 1 0 auto;
-  width: 200px;
+  min-height: 100%;
 }
+
+.sidenav {
+  padding: 20px;
+}
+
