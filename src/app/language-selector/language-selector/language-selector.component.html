@@ -1,7 +1,7 @@
 <div class="flex justify-center items-center">
   <button mat-raised-button
     *ngFor="let language of availableLanguages;"
-    class="flex flex-col items-center mx-5 flagImage"
+    class="flagImage"
     [style.backgroundImage]="'url(' + language.imgUrl + ')'"
     (click)="changeLanguage(language.code)"
     [matTooltip]="language.message"

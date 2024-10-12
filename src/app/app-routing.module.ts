@@ -8,6 +8,10 @@ const routes: Routes = [
     component: LandingComponent,
   },
   {
+    path: 'projects',
+    loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule),
+  },
+  {
     path: 'about',
     loadChildren: () => import('./about/about.module').then(m => m.AboutModule),
   },
