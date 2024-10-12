@@ -1,3 +1,4 @@
-<p-button *ngFor="let language of availableLanguages;" icon="pi pi-language" [rounded]="true" [text]="true" [ariaLabel]="language.message"
-  [raised]="true" (onClick)="changeLanguage(language.code)" [pTooltip]="language.message">
+<p-button *ngFor="let language of availableLanguages;" icon="pi pi-language" [rounded]="true" [text]="true"
+  [ariaLabel]="language.message" [raised]="true" (onClick)="changeLanguage(language.code)"
+  [pTooltip]="language.message">
 </p-button>

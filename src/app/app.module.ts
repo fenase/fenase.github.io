@@ -1,13 +1,20 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { provideHttpClient } from '@angular/common/http';
+import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { PrimeNGConfig } from 'primeng/api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { SharedModule } from './shared/shared.module';
 import { LandingComponent } from './landing/landing.component';
+import { SharedModule } from './shared/shared.module';
 import { TranslocoRootModule } from './transloco-root.module';
-import { provideHttpClient } from '@angular/common/http';
+
+const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
+  // ......
+  primeConfig.ripple = true;
+};
 
 @NgModule({
   declarations: [
@@ -16,6 +23,7 @@ import { provideHttpClient } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
     TranslocoRootModule,
@@ -23,6 +31,13 @@ import { provideHttpClient } from '@angular/common/http';
   providers: [
     provideAnimationsAsync(),
     provideHttpClient(),
+    provideAnimations(),
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeAppFactory,
+      deps: [PrimeNGConfig],
+      multi: true,
+   }
   ],
   bootstrap: [AppComponent]
 })
