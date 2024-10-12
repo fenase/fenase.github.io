@@ -1,5 +1,10 @@
 {
-  "landing": "landing works!!!!",
+  "Big Excel Creator":"Big Excel Creator",
+  "Snowflake Id Generator":"Snowflake Id Generator",
   "aboutMe": "About me",
-  "aboutMeText":""
+  "Home": "Home",
+  "Projects": "Projects",
+
+  "landing": "landing works!!!!",
+  "aboutMeText": ""
 }

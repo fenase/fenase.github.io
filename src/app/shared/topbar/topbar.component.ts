@@ -36,7 +36,7 @@ export class TopbarComponent {
         ]
       },
       {
-        label: 'About',
+        label: 'aboutMe',
         icon: 'pi pi-envelope',
         routerLink: '/about',
       }

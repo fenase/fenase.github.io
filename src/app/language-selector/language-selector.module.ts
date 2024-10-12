@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 import { LanguageSelectorComponent } from './language-selector/language-selector.component';
+import { TranslocoRootModule } from '../transloco-root.module';
 
 
 
@@ -17,6 +18,7 @@ import { LanguageSelectorComponent } from './language-selector/language-selector
     CommonModule,
     TooltipModule,
     ButtonModule,
+    TranslocoRootModule,
   ]
 })
 export class LanguageSelectorModule { }
