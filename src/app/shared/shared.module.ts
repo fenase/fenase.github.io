@@ -1,15 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { TranslocoModule } from '@ngneat/transloco';
 import { LanguageSelectorModule } from "../language-selector/language-selector.module";
 import { TopbarComponent } from './topbar/topbar.component';
+import { ButtonGroupModule } from 'primeng/buttongroup';
+import { ToolbarModule } from 'primeng/toolbar';
+import { InputIconModule } from 'primeng/inputicon';
+import { MenubarModule } from 'primeng/menubar';
 
 
 
@@ -23,10 +21,10 @@ import { TopbarComponent } from './topbar/topbar.component';
   imports: [
     CommonModule,
     RouterModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatMenuModule,
+    ButtonGroupModule,
+    ToolbarModule,
+    InputIconModule,
+    MenubarModule,
     LanguageSelectorModule,
     TranslocoModule,
   ]

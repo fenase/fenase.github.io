@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectsRoutingModule } from './projects-routing.module';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
+import { PanelMenuModule } from 'primeng/panelmenu';
 
 
 
@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule,
     ProjectsRoutingModule,
-    MatSidenavModule,
+    PanelMenuModule,
   ]
 })
 export class ProjectsModule { }

@@ -6,11 +6,11 @@ import { UsageComponent } from './usage/usage.component';
 import { DataValidationComponent } from './data-validation/data-validation.component';
 import { StylingComponent } from './styling/styling.component';
 import { PageLayoutComponent } from './page-layout/page-layout.component';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { BigExcelCreatorComponent } from './big-excel-creator.component';
 import { RouterModule } from '@angular/router';
-import { MatListModule } from '@angular/material/list';
-import { MatButtonModule } from '@angular/material/button';
+import { PanelMenuModule } from 'primeng/panelmenu';
+import { ButtonModule } from 'primeng/button';
+import { ListboxModule } from 'primeng/listbox';
 
 
 
@@ -27,9 +27,9 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     RouterModule,
     BigExcelCreatorRoutingModule,
-    MatSidenavModule,
-    MatListModule,
-    MatButtonModule,
+    PanelMenuModule,
+    ButtonModule,
+    ListboxModule,
   ]
 })
 export class BigExcelCreatorModule { }

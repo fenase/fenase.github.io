@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, UrlSegment } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-topbar',
@@ -9,4 +10,35 @@ import { Observable, Subscription } from 'rxjs';
 })
 export class TopbarComponent {
   constructor(public router: Router, private activatedRoute: ActivatedRoute) { }
+
+  public menuItems: MenuItem[] =
+    [
+      {
+        label: 'Home',
+        icon: 'pi pi-home',
+        routerLink: '.',
+      },
+      {
+        label: 'Projects',
+        icon: 'pi pi-search',
+        routerLink: '/projects',
+        items: [
+          {
+            label: 'Big Excel Creator',
+            icon: 'pi pi-bolt',
+            routerLink: '/projects/BigExcelCreator',
+          },
+          {
+            label: 'Snowflake Id Generator',
+            icon: 'pi pi-server',
+            routerLink: '/projects/404',
+          },
+        ]
+      },
+      {
+        label: 'About',
+        icon: 'pi pi-envelope',
+        routerLink: '/about',
+      }
+    ];
 }

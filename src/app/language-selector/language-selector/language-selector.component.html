@@ -1,11 +1,3 @@
-<div class="flex justify-center items-center">
-  <button mat-raised-button
-    *ngFor="let language of availableLanguages;"
-    class="flagImage"
-    [style.backgroundImage]="'url(' + language.imgUrl + ')'"
-    (click)="changeLanguage(language.code)"
-    [matTooltip]="language.message"
-    [attr.aria-label]="language.message"
-  >
-  </button>
-</div>
+<p-button *ngFor="let language of availableLanguages;" icon="pi pi-language" [rounded]="true" [text]="true" [ariaLabel]="language.message"
+  [raised]="true" (onClick)="changeLanguage(language.code)" [pTooltip]="language.message">
+</p-button>

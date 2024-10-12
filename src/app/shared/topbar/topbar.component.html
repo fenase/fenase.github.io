@@ -1,24 +1,9 @@
 <nav>
-  <mat-toolbar color="primary">
-    <a [routerLink]="['/']" mat-button color="primary">
-      <mat-icon fontIcon="home"></mat-icon>
-      home
-    </a>
-
-    <button mat-button [matMenuTriggerFor]="belowMenu" color="primary"
-      [class.selected]="router.isActive('/projects',true)" value="projects">Projects</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
-      <button mat-menu-item [routerLink]="['/projects/BigExcelCreator']">Big Excel Creator</button>
-      <button mat-menu-item>SnowFlake Id Generator</button>
-    </mat-menu>
-
-    <a mat-button color="light" [routerLink]="['/about']" [class.selected]="router.isActive('/about',true)">
-      {{ "aboutMe" | transloco }}
-    </a>
-
-    <span class="flexExpand"></span>
-    <div>
-      <app-language-selector></app-language-selector>
-    </div>
-  </mat-toolbar>
+  <p-menubar [model]="menuItems">
+    <ng-template pTemplate="end">
+      <div class="flex align-items-center gap-2">
+        <app-language-selector></app-language-selector>
+      </div>
+    </ng-template>
+  </p-menubar>
 </nav>

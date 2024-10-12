@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { ButtonModule } from 'primeng/button';
+import { TooltipModule } from 'primeng/tooltip';
 import { LanguageSelectorComponent } from './language-selector/language-selector.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
@@ -10,13 +10,13 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   declarations: [
     LanguageSelectorComponent
   ],
-  exports:[
+  exports: [
     LanguageSelectorComponent
   ],
   imports: [
     CommonModule,
-    MatButtonModule,
-    MatTooltipModule,
+    TooltipModule,
+    ButtonModule,
   ]
 })
 export class LanguageSelectorModule { }
