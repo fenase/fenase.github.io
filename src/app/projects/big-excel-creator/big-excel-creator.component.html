@@ -1,7 +1,10 @@
-<nav>
-  <p-panelMenu [model]="menuItems"></p-panelMenu>
-</nav>
+<div class="grid">
 
-<div class="sidenav-content">
-  <router-outlet></router-outlet>
+  <nav class="md:col-2">
+    <p-panelMenu [model]="menuItems"></p-panelMenu>
+  </nav>
+
+  <div class="md:col-10">
+    <router-outlet></router-outlet>
+  </div>
 </div>

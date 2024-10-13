@@ -1,7 +1,8 @@
 <nav>
   <p-menubar [model]="menuItems">
     <ng-template pTemplate="item" let-item let-root="root">
-      <a pRipple class="flex align-items-center p-menuitem-link">
+      <a [routerLink]="item.routerLink" routerLinkActive="router-link-active"
+       pRipple class="flex align-items-center p-menuitem-link">
           <span [class]="item.icon"></span>
           <span class="ml-2">{{ item.label | transloco}}</span>
           <span *ngIf="item.shortcut" class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">{{ item.shortcut }}</span>

@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { ButtonModule } from 'primeng/button';
 import { ListboxModule } from 'primeng/listbox';
+import { TranslocoRootModule } from '../../transloco-root.module';
 
 
 
@@ -26,6 +27,7 @@ import { ListboxModule } from 'primeng/listbox';
   imports: [
     CommonModule,
     RouterModule,
+    TranslocoRootModule,
     BigExcelCreatorRoutingModule,
     PanelMenuModule,
     ButtonModule,

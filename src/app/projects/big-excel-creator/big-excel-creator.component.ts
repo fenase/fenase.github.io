@@ -19,7 +19,19 @@ export class BigExcelCreatorComponent {
         label: 'Usage',
         icon: 'pi pi-file',
         routerLink:'usage',
-      },
+      },{
+        label: 'Documents',
+        items: [
+            {
+                label: 'New',
+                icon: 'pi pi-plus'
+            },
+            {
+                label: 'Search',
+                icon: 'pi pi-search'
+            }
+        ]
+    },
     ]
   constructor(public Router: Router, public ActivatedRoute: ActivatedRoute) {
   }
