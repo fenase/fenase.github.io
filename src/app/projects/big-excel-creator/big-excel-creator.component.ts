@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { Router, ActivatedRoute } from '@angular/router';
-import { take } from "rxjs";
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -13,25 +12,25 @@ export class BigExcelCreatorComponent {
       {
         label: 'Start',
         icon: 'pi pi-file',
-        routerLink:'.',
+        routerLink: '.',
       },
       {
         label: 'Usage',
         icon: 'pi pi-file',
-        routerLink:'usage',
-      },{
+        routerLink: 'usage',
+      }, {
         label: 'Documents',
         items: [
-            {
-                label: 'New',
-                icon: 'pi pi-plus'
-            },
-            {
-                label: 'Search',
-                icon: 'pi pi-search'
-            }
+          {
+            label: 'New',
+            icon: 'pi pi-plus'
+          },
+          {
+            label: 'Search',
+            icon: 'pi pi-search'
+          }
         ]
-    },
+      },
     ]
   constructor(public Router: Router, public ActivatedRoute: ActivatedRoute) {
   }

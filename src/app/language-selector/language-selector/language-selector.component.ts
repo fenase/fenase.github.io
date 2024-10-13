@@ -9,7 +9,7 @@ import { TranslocoService } from '@ngneat/transloco';
 export class LanguageSelectorComponent {
   private readonly storedLanguageKey: string = "lang";
 
-  constructor(private translocoService: TranslocoService) {
+  constructor(private readonly translocoService: TranslocoService) {
     let languageCode: string | null = localStorage.getItem(this.storedLanguageKey);
     if (languageCode !== null) {
       this.changeLanguage(languageCode);

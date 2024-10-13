@@ -1,6 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, UrlSegment } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
+import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -9,7 +8,7 @@ import { MenuItem } from 'primeng/api';
   styleUrl: './topbar.component.css'
 })
 export class TopbarComponent {
-  constructor(public router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(public router: Router, private readonly activatedRoute: ActivatedRoute) { }
 
   public menuItems: MenuItem[] =
     [
