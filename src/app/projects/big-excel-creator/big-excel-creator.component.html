@@ -1,7 +1,21 @@
 <div class="grid">
 
   <nav class="md:col-2">
-    <p-panelMenu [model]="menuItems"></p-panelMenu>
+    <p-menu [model]="menuItems">
+      <ng-template pTemplate="submenuheader" let-item>
+        <a *ngIf="item.routerLink" [routerLink]="item.routerLink" class="text-primary font-bold">{{item.label}}</a>
+        <span *ngIf="!item.routerLink" class="text-primary font-bold">{{ item.label }}</span>
+      </ng-template>
+      <ng-template pTemplate="item" let-item>
+        <a pRipple class="flex align-items-center p-menuitem-link">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">{{ item.label }}</span>
+          <span *ngIf="item.shortcut" class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">
+            {{ item.shortcut }}
+          </span>
+        </a>
+      </ng-template>
+    </p-menu>
   </nav>
 
   <div class="md:col-10">

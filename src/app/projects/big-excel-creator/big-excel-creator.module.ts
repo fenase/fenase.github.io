@@ -15,6 +15,7 @@ import { StylingComponent } from './styling/styling.component';
 import { UsageComponent } from './usage/usage.component';
 import { Fieldset, FieldsetModule } from 'primeng/fieldset';
 import { PanelModule } from 'primeng/panel';
+import { MenuModule } from 'primeng/menu';
 
 
 
@@ -32,7 +33,7 @@ import { PanelModule } from 'primeng/panel';
     RouterModule,
     TranslocoRootModule,
     BigExcelCreatorRoutingModule,
-    PanelMenuModule,
+    MenuModule,
     ButtonModule,
     ListboxModule,
     PanelModule

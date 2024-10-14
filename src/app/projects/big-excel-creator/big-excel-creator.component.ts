@@ -18,7 +18,8 @@ export class BigExcelCreatorComponent {
         label: 'Usage',
         icon: 'pi pi-file',
         routerLink: 'usage',
-      }, {
+      },
+      {
         label: 'Documents',
         items: [
           {
