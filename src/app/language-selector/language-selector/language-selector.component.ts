@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslocoService } from '@ngneat/transloco';
+import { TranslocoService, getBrowserLang } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-language-selector',
@@ -10,8 +10,13 @@ export class LanguageSelectorComponent {
   private readonly storedLanguageKey: string = "lang";
 
   constructor(private readonly translocoService: TranslocoService) {
-    let languageCode: string | null = localStorage.getItem(this.storedLanguageKey);
-    if (languageCode !== null) {
+    let languageCode: string | null | undefined = localStorage.getItem(this.storedLanguageKey);
+
+    if (!languageCode) {
+      languageCode = getBrowserLang();
+    }
+
+    if (languageCode && this.languagesList.map(x => x.code).includes(languageCode)) {
       this.changeLanguage(languageCode);
     }
   }
