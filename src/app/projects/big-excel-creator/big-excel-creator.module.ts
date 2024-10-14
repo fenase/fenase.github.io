@@ -33,7 +33,7 @@ import { MenuModule } from 'primeng/menu';
     RouterModule,
     TranslocoRootModule,
     BigExcelCreatorRoutingModule,
-    MenuModule,
+    PanelMenuModule,
     ButtonModule,
     ListboxModule,
     PanelModule
