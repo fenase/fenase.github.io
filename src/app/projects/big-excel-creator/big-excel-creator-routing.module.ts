@@ -10,8 +10,8 @@ const routes: Routes = [
     component: BigExcelCreatorComponent,
     children: [
       {
-        path:'',
-        component:StartComponent,
+        path: '',
+        component: StartComponent,
       },
       {
         path: 'usage',

@@ -1,0 +1,4 @@
+{
+  "p1": "Cree archivos de Excel usando OpenXML SAX con estilos. Este paquete es especialmente útil cuando se intenta generar archivos con varios miles de filas.",
+  "p2": "La idea detrás de este paquete facilitar el uso de un subconjunto de la funcionalidad de <a href='https://www.nuget.org/packages/DocumentFormat.OpenXml'>DocumentFormat.OpenXml</a> apuntando a generar archivos Excel de gran tamaño lo más rápido possible mediante la utilización del método SAX."
+}
