@@ -2,7 +2,7 @@ import {
   provideTransloco,
   TranslocoModule,
   TranslocoService
-} from '@ngneat/transloco';
+} from '@jsverse/transloco';
 import { APP_INITIALIZER, isDevMode, NgModule } from '@angular/core';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { firstValueFrom } from 'rxjs';

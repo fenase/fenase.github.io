@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslocoService, getBrowserLang } from '@ngneat/transloco';
+import { TranslocoService, getBrowserLang } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-language-selector',

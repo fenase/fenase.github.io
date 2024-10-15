@@ -7,12 +7,12 @@ import { ButtonGroupModule } from 'primeng/buttongroup';
 import { ToolbarModule } from 'primeng/toolbar';
 import { InputIconModule } from 'primeng/inputicon';
 import { MenubarModule } from 'primeng/menubar';
-import { TranslocoRootModule } from '../transloco-root.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MenuModule } from 'primeng/menu';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TranslocoModule } from '@jsverse/transloco';
 
 
 
@@ -35,10 +35,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ToolbarModule,
     InputIconModule,
     MenubarModule,
-    MenuModule ,
+    MenuModule,
     PanelMenuModule,
     LanguageSelectorModule,
-    TranslocoRootModule,
+    TranslocoModule,
   ]
 })
 export class SharedModule { }

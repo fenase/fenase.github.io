@@ -5,7 +5,6 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { ListboxModule } from 'primeng/listbox';
 import { PanelMenuModule } from 'primeng/panelmenu';
-import { TranslocoRootModule } from '../../transloco-root.module';
 import { BigExcelCreatorRoutingModule } from './big-excel-creator-routing.module';
 import { BigExcelCreatorComponent } from './big-excel-creator.component';
 import { DataValidationComponent } from './data-validation/data-validation.component';
@@ -19,6 +18,7 @@ import { MenuModule } from 'primeng/menu';
 import { SharedModule } from "../../shared/shared.module";
 import { SidebarComponent } from '../../shared/sidebar/sidebar.component';
 import { InstallationComponent } from './installation/installation.component';
+import { TranslocoModule } from '@jsverse/transloco';
 
 
 
@@ -35,7 +35,7 @@ import { InstallationComponent } from './installation/installation.component';
   imports: [
     CommonModule,
     RouterModule,
-    TranslocoRootModule,
+    TranslocoModule,
     BigExcelCreatorRoutingModule,
     PanelMenuModule,
     ButtonModule,

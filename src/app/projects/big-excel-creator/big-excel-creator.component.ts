@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { ActivatedRoute, Router } from '@angular/router';
-import { provideTranslocoScope } from '@ngneat/transloco';
+import { provideTranslocoScope } from '@jsverse/transloco';
 import { MenuItem } from 'primeng/api';
 
 @Component({

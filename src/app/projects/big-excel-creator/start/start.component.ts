@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { provideTranslocoScope } from '@ngneat/transloco';
+import { provideTranslocoScope } from '@jsverse/transloco';
 import { Constants } from '../../../../globals';
 
 @Component({
