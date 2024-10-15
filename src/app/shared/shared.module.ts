@@ -12,6 +12,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MenuModule } from 'primeng/menu';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { PanelMenuModule } from 'primeng/panelmenu';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -20,6 +21,7 @@ import { PanelMenuModule } from 'primeng/panelmenu';
     TopbarComponent,
     SidebarComponent,
     SafeHtmlPipe,
+    PageNotFoundComponent,
   ],
   exports: [
     TopbarComponent,
