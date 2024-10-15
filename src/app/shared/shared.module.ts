@@ -8,15 +8,23 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { InputIconModule } from 'primeng/inputicon';
 import { MenubarModule } from 'primeng/menubar';
 import { TranslocoRootModule } from '../transloco-root.module';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MenuModule } from 'primeng/menu';
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
+import { PanelMenuModule } from 'primeng/panelmenu';
 
 
 
 @NgModule({
   declarations: [
     TopbarComponent,
+    SidebarComponent,
+    SafeHtmlPipe,
   ],
   exports: [
     TopbarComponent,
+    SidebarComponent,
+    SafeHtmlPipe,
   ],
   imports: [
     CommonModule,
@@ -25,6 +33,8 @@ import { TranslocoRootModule } from '../transloco-root.module';
     ToolbarModule,
     InputIconModule,
     MenubarModule,
+    MenuModule ,
+    PanelMenuModule,
     LanguageSelectorModule,
     TranslocoRootModule,
   ]

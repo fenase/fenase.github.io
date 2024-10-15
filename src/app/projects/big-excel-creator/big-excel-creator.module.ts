@@ -16,6 +16,9 @@ import { UsageComponent } from './usage/usage.component';
 import { Fieldset, FieldsetModule } from 'primeng/fieldset';
 import { PanelModule } from 'primeng/panel';
 import { MenuModule } from 'primeng/menu';
+import { SharedModule } from "../../shared/shared.module";
+import { SidebarComponent } from '../../shared/sidebar/sidebar.component';
+import { InstallationComponent } from './installation/installation.component';
 
 
 
@@ -27,6 +30,7 @@ import { MenuModule } from 'primeng/menu';
     DataValidationComponent,
     StylingComponent,
     PageLayoutComponent,
+    InstallationComponent,
   ],
   imports: [
     CommonModule,
@@ -36,7 +40,8 @@ import { MenuModule } from 'primeng/menu';
     PanelMenuModule,
     ButtonModule,
     ListboxModule,
-    PanelModule
-  ]
+    PanelModule,
+    SharedModule
+]
 })
 export class BigExcelCreatorModule { }

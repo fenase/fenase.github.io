@@ -1,9 +1,9 @@
 <div class="grid">
 
   <nav class="xl:col-2 lg:col-4">
-    <p-panelMenu [model]="menuItems" >
-    </p-panelMenu>
+    <app-sidebar [menuItems]="menuItems"></app-sidebar>
   </nav>
+
 
   <div class="xl:col-10 lg:col-8">
     <router-outlet></router-outlet>
