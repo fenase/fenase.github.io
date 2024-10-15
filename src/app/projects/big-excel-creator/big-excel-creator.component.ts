@@ -1,92 +1,97 @@
 import { Component } from "@angular/core";
 import { Router, ActivatedRoute } from '@angular/router';
 import { MenuItem } from 'primeng/api';
-import { TranslocoService } from '@ngneat/transloco';
+import { provideTranslocoScope, TranslocoService } from '@ngneat/transloco';
 
 @Component({
   templateUrl: './big-excel-creator.component.html',
   styleUrl: './big-excel-creator.component.css',
+  providers: [provideTranslocoScope({ scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' })]
 })
 export class BigExcelCreatorComponent {
 
   public menuItems: MenuItem[] =
     [
       {
-        label: 'The Package',
+        label: 'projects.BigExcelCreator.The Package',
         icon: 'pi pi-crown',
         command: () => {
           this.router.navigate(['.'], { relativeTo: this.activatedRoute });
         }
       },
       {
-        label: 'Getting started',
+        label: 'projects.BigExcelCreator.Getting started',
         items: [
           {
-            label: 'Installation',
+            label: 'projects.BigExcelCreator.Installation',
             icon: 'pi pi-plus',
-            routerLink: '.',
+            command: () => {
+              this.router.navigate(['installation'], { relativeTo: this.activatedRoute });
+            }
           },
           {
-            label: 'Basic usage',
+            label: 'projects.BigExcelCreator.Basic usage',
             icon: 'pi pi-search',
-            routerLink: 'installation',
+            command: () => {
+              this.router.navigate(['usage'], { relativeTo: this.activatedRoute });
+            }
           }
         ]
       },
       {
-        label: 'Data Validation',
+        label: 'projects.BigExcelCreator.Data Validation',
         icon: 'pi pi-crown',
         command: () => {
           this.router.navigate(['dataValidation'], { relativeTo: this.activatedRoute });
         }
       },
       {
-        label: 'Styling and formatting',
+        label: 'projects.BigExcelCreator.Styling and formatting',
         items: [
           {
-            label: 'Column formatting',
+            label: 'projects.BigExcelCreator.Column formatting',
             icon: 'pi pi-plus',
             command: () => {
               this.router.navigate(['styling'], { fragment: 'columnFormatting', relativeTo: this.activatedRoute });
             }
           },
           {
-            label: 'Hide Sheet',
+            label: 'projects.BigExcelCreator.Hide Sheet',
             icon: 'pi pi-search',
             command: () => {
               this.router.navigate(['styling'], { fragment: 'hideSheet', relativeTo: this.activatedRoute });
             }
           },
           {
-            label: 'Merge Cells',
+            label: 'projects.BigExcelCreator.Merge Cells',
             icon: 'pi pi-search',
             command: () => {
               this.router.navigate(['styling'], { fragment: 'mergeCells', relativeTo: this.activatedRoute });
             }
           },
           {
-            label: 'Styling',
+            label: 'projects.BigExcelCreator.Styling',
             icon: 'pi pi-search',
             command: () => {
               this.router.navigate(['styling'], { fragment: 'styling', relativeTo: this.activatedRoute });
             }
           },
           {
-            label: 'Comments',
+            label: 'projects.BigExcelCreator.Comments',
             icon: 'pi pi-search',
             command: () => {
               this.router.navigate(['styling'], { fragment: 'comments', relativeTo: this.activatedRoute });
             }
           },
           {
-            label: 'Autofilter',
+            label: 'projects.BigExcelCreator.Autofilter',
             icon: 'pi pi-search',
             command: () => {
               this.router.navigate(['styling'], { fragment: 'autofilter', relativeTo: this.activatedRoute });
             }
           },
           {
-            label: 'Conditional Formatting',
+            label: 'projects.BigExcelCreator.Conditional Formatting',
             icon: 'pi pi-search',
             command: () => {
               this.router.navigate(['styling'], { fragment: 'conditionalFormatting', relativeTo: this.activatedRoute });
@@ -95,7 +100,7 @@ export class BigExcelCreatorComponent {
         ]
       },
       {
-        label: 'Page layout',
+        label: 'projects.BigExcelCreator.Page layout',
         icon: 'pi pi-crown',
         command: () => {
           this.router.navigate(['pageLayout'], { relativeTo: this.activatedRoute });
@@ -107,5 +112,5 @@ export class BigExcelCreatorComponent {
   }
 
 
-  title = 'fenase.github.io';
+  title = 'BigExcelCreator';
 }

@@ -1,5 +1,10 @@
 {
   "p1": "Cree archivos de Excel usando OpenXML SAX con estilos. Este paquete es especialmente útil cuando se intenta generar archivos con varios miles de filas.",
-  "p2": "La idea detrás de este paquete facilitar el uso de un subconjunto de la funcionalidad de <a href='https://www.nuget.org/packages/DocumentFormat.OpenXml'>DocumentFormat.OpenXml</a> apuntando a generar archivos Excel de gran tamaño lo más rápido possible mediante la utilización del método SAX."
-  ,"p3": "Al mismo tiempo, esta librería debería impedir la creación de un archivo inválido (un archivo que no emite errores al momento de su creación, pero que no se puede abrir). Debido a que una de las razones más frecuentes de la creación de archivos corruptos cuando se usa el método SAX es la ejecución de instrucciones en el orden incorrecto (por ejemplo, intentar crear una celda fuera de una hoja), esta librería debería impedirlo y lanzar una excepción."
+  "p2": "La idea detrás de este paquete facilitar el uso de un subconjunto de la funcionalidad de <a href='https://www.nuget.org/packages/DocumentFormat.OpenXml'>DocumentFormat.OpenXml</a> apuntando a generar archivos Excel de gran tamaño lo más rápido possible mediante la utilización del método SAX.",
+  "p3": "Al mismo tiempo, esta librería debería impedir la creación de un archivo inválido (un archivo que no emite errores al momento de su creación, pero que no se puede abrir). Debido a que una de las razones más frecuentes de la creación de archivos corruptos cuando se usa el método SAX es la ejecución de instrucciones en el orden incorrecto (por ejemplo, intentar crear una celda fuera de una hoja), esta librería debería impedirlo y lanzar una excepción.",
+  "note": {
+    "p1": "La Version 2.x de este paquete depende de la versión <a href='https://www.nuget.org/packages/DocumentFormat.OpenXml/2.20.0' rel='noopener noreferrer nofollow'>2.20 de DocumentFormat.OpenXml</a>. A partir de la versión 3, BigExcelCreator depende de la versión <a href='https://www.nuget.org/packages/DocumentFormat.OpenXml' rel='noopener noreferrer nofollow'>3 de DocumentFormat.OpenXml</a>.",
+    "p2": "Si ya está utilizando DocumentFormat.OpenXml v2, ya sea directamente o como referencia transitiva, y por algún motivo no puede actualizar (ej.: por ser dependencia de otro paquete), use <a href='{{lastVersion2}}' rel='noopener noreferrer nofollow'>BigExcelCreator v2</a>",
+    "p3": "Caso contrario, se recomienda que utilice la última versión disponible."
+  }
 }
