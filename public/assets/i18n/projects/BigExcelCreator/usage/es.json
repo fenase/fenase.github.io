@@ -1,16 +1,16 @@
 {
-  "seeWorkingExample":"Para ver un ejemplo de funcionamiento, vea el <a href='https://github.com/fenase/BigExcelCreator/blob/main/Example/Program.cs' rel='noopener noreferrer nofollow'>código de ejemplo</a> en gitHub. Éste forma parte de la solución de VisualStudio.",
-  "step 1":"Instancie la clase <code>BigExcelWriter</code> utilizando una ruta a un archivo o un stream (se recomienda usar <code>MemoryStream</code>).",
-  "step 2":"Abra una nueva hoja usando el método <code>CreateAndOpenSheet</code>",
-  "step 3":"Para cada fila, use <code>BeginRow</code> y <code>EndRow</code>",
-  "step 3 note":"si desea ocultar una fila, agregue <code>true</code> cuando realiza el llamado a <code>BeginRow</code>",
-  "step 4":"Entre las llamadas a <code>BeginRow</code> y <code>EndRow</code>, use <code>WriteTextCell</code> para escribir cada una de las celdas.",
-  "step 4 note1":"Si lo desea, puede usar <code>WriteTextRow</code> para escribir una fila a completa de una sola vez, utilizando el mismo formato.",
-  "step 4 note2":"A partir de la versión version 1.1, las celdas de texto pueden escribirse usando la tabla <em>shared strings</em> (palabras comunes), lo que debería reducir el tamaño del archivo generado. Vea {{projects.BigExcelCreator.usage.shared strings}} debajo",
-  "step 5":"Utilice <code>WriteFormulaCell</code> o <code>WriteFormulaRow</code> para insertar fórmulas.",
-  "step 6":"Utilice <code>WriteNumberCell</code> o <code>WriteNumberRow</code> para insertar números. Esto es útil si luego va a realizar cálculos.",
-  "step 7":"Utilice <code>CloseSheet</code> para finalizar, cerrando la hoja actual.",
-  "step 8":"Si fuera necesario, repita los pasos 2 → 5 para escribir otra hoja",
-  "shared strings":"Shared Strings",
-  "shared strings text":"Si el mismo texto aparece en varias hojas, utilizar la tabla de parabras comunes puede ayudar a reducir el tamaño del archivo generado. Para activarla, simplemente marque como <code>true</code> el parámetro <code>useSharedStrings</code> cuando ejecute <code>WriteTextCell</code> o <code>WriteTextRow</code>."
-  }
+  "seeWorkingExample": "Para ver un ejemplo de funcionamiento, vea el <a href='https://github.com/fenase/BigExcelCreator/blob/main/Example/Program.cs' rel='noopener noreferrer nofollow'>código de ejemplo</a> en gitHub. Éste forma parte de la solución de VisualStudio.",
+  "step 1": "Instancie la clase <code>BigExcelWriter</code> utilizando una ruta a un archivo o un stream (se recomienda usar <code>MemoryStream</code>).",
+  "step 2": "Abra una nueva hoja usando el método <code>CreateAndOpenSheet</code>",
+  "step 3": "Para cada fila, use <code>BeginRow</code> y <code>EndRow</code>",
+  "step 3 note": "si desea ocultar una fila, agregue <code>true</code> cuando realiza el llamado a <code>BeginRow</code>",
+  "step 4": "Entre las llamadas a <code>BeginRow</code> y <code>EndRow</code>, use <code>WriteTextCell</code> para escribir cada una de las celdas.",
+  "step 4 note1": "Si lo desea, puede usar <code>WriteTextRow</code> para escribir una fila a completa de una sola vez, utilizando el mismo formato.",
+  "step 4 note2": "A partir de la versión version 1.1, las celdas de texto pueden escribirse usando la tabla <em>shared strings</em> (palabras comunes), lo que debería reducir el tamaño del archivo generado. Vea {{projects.BigExcelCreator.usage.shared strings}} debajo",
+  "step 5": "Utilice <code>WriteFormulaCell</code> o <code>WriteFormulaRow</code> para insertar fórmulas.",
+  "step 6": "Utilice <code>WriteNumberCell</code> o <code>WriteNumberRow</code> para insertar números. Esto es útil si luego va a realizar cálculos.",
+  "step 7": "Utilice <code>CloseSheet</code> para finalizar, cerrando la hoja actual.",
+  "step 8": "Si fuera necesario, repita los pasos 2 → 5 para escribir otra hoja",
+  "shared strings": "Shared Strings",
+  "shared strings text": "Si el mismo texto aparece en varias hojas, utilizar la tabla de parabras comunes puede ayudar a reducir el tamaño del archivo generado. Para activarla, simplemente marque como <code>true</code> el parámetro <code>useSharedStrings</code> cuando ejecute <code>WriteTextCell</code> o <code>WriteTextRow</code>."
+}

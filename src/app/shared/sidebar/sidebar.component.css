@@ -2,7 +2,6 @@ nav {
   position: sticky;
   left: 0;
   top: 6rem;
-  height: calc(100vh - 5rem);
   width: 100%;
   -webkit-user-select: none;
   user-select: none;
@@ -19,4 +18,10 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    height: calc(100vh - 5rem);
+  }
 }
