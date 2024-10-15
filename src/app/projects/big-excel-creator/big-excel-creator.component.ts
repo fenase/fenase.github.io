@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { provideTranslocoScope } from '@ngneat/transloco';
 import { MenuItem } from 'primeng/api';
-import { provideTranslocoScope, TranslocoService } from '@ngneat/transloco';
 
 @Component({
   templateUrl: './big-excel-creator.component.html',
