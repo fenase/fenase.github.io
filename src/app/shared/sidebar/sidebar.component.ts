@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-sidebar',

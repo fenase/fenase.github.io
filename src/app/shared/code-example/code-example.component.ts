@@ -1,7 +1,7 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { delay, shareReplay, Subject, Subscription, takeUntil } from 'rxjs';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { TranslocoService } from '@jsverse/transloco';
+import { Subject, Subscription, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-code-example',
@@ -10,7 +10,10 @@ import { TranslocoService } from '@jsverse/transloco';
 })
 export class CodeExampleComponent implements OnInit, OnDestroy {
 
-  constructor(private translocoService: TranslocoService, private httpClient: HttpClient) { }
+  constructor(
+    private readonly translocoService: TranslocoService,
+    private readonly httpClient: HttpClient
+  ) { }
 
   @Input({ required: true })
   public examplePath: string = "";
@@ -24,9 +27,11 @@ export class CodeExampleComponent implements OnInit, OnDestroy {
   private langChangeSubscription?: Subscription;
 
   ngOnInit(): void {
+    this.destroy$ = new Subject();
+
     this.langChangeSubscription = this.translocoService.langChanges$
       .pipe(
-        takeUntil(this.destroy$)
+        takeUntil(this.destroy$!)
       )
       .subscribe(lang => {
         this.example = "";
@@ -34,7 +39,7 @@ export class CodeExampleComponent implements OnInit, OnDestroy {
         console.log(path);
         this.httpClient.get(path, { responseType: "text" })
           .pipe(
-            takeUntil(this.destroy$)
+            takeUntil(this.destroy$!)
           )
           .subscribe(data => {
             this.example = data;
@@ -43,11 +48,11 @@ export class CodeExampleComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.destroy$.next();
-    this.destroy$.complete();
+    this.destroy$?.next();
+    this.destroy$?.complete();
     if (this.langChangeSubscription) { this.langChangeSubscription.unsubscribe(); }
   }
 
-  private destroy$ = new Subject<void>();
+  private destroy$?: Subject<void>;
 }
 
