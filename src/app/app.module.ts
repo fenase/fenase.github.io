@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { SharedModule } from './shared/shared.module';
 import { TranslocoRootModule } from './transloco-root.module';
+import { MessagesModule } from 'primeng/messages';
 
 const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
   // ......
@@ -28,6 +29,7 @@ const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
     AppRoutingModule,
     SharedModule,
     TranslocoRootModule,
+    MessagesModule,
   ],
   providers: [
     provideAnimationsAsync(),

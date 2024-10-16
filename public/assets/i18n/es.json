@@ -1,4 +1,5 @@
 {
+  "site under construction": "SITIO EN CONSTRUCCIÓN.",
   "Big Excel Creator": "Big Excel Creator",
   "Snowflake Id Generator": "Snowflake Id Generator",
   "aboutMe": "Acerca de",
@@ -7,6 +8,6 @@
   "landing": "la pantalla principal está funcionando",
   "aboutMeText": "",
   "Note": "Nota",
-  "Example":"Ejemplo",
+  "Example": "Ejemplo",
   "404pageText": "404 - página no encontrada"
 }
