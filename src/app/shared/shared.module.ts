@@ -13,7 +13,6 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { LanguageSelectorModule } from "../language-selector/language-selector.module";
 import { CodeExampleComponent } from './code-example/code-example.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
 
@@ -23,7 +22,6 @@ import { TopbarComponent } from './topbar/topbar.component';
   declarations: [
     TopbarComponent,
     SidebarComponent,
-    SafeHtmlPipe,
     PageNotFoundComponent,
     CodeExampleComponent,
   ],
@@ -31,7 +29,6 @@ import { TopbarComponent } from './topbar/topbar.component';
     TopbarComponent,
     SidebarComponent,
     CodeExampleComponent,
-    SafeHtmlPipe,
   ],
   imports: [
     CommonModule,
