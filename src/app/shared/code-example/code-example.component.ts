@@ -36,7 +36,6 @@ export class CodeExampleComponent implements OnInit, OnDestroy {
       .subscribe(lang => {
         this.example = "";
         let path: string = `assets/examples/${lang}/${this.examplePath}.${this.language}`;
-        console.log(path);
         this.httpClient.get(path, { responseType: "text" })
           .pipe(
             takeUntil(this.destroy$!)
