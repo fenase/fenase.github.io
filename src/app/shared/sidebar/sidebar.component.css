@@ -1,0 +1,23 @@
+nav {
+  position: sticky;
+  left: 0;
+  top: 6rem;
+  width: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: transform .4s cubic-bezier(.05, .74, .2, .99), opacity .3s;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 250px;
+  margin-right: 4rem;
+  overflow: auto;
+  padding: 0 1rem 0 0;
+  flex-grow: 1;
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    height: calc(100vh - 5rem);
+  }
+}

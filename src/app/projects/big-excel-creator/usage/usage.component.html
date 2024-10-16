@@ -1,0 +1,40 @@
+<h1 class="text-primary">{{'projects.BigExcelCreator.Basic usage'|transloco}}</h1>
+
+<ng-container *transloco="let t">
+  <p-panel [header]="t('Note')">
+    <p [innerHTML]="t('projects.BigExcelCreator.usage.seeWorkingExample')"></p>
+  </p-panel>
+</ng-container>
+
+
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.usage'">
+
+  <ol>
+    <li [innerHTML]="t('step 1')"></li>
+    <li [innerHTML]="t('step 2')"></li>
+    <li [innerHTML]="t('step 3')">
+      <ul>
+        <li [innerHTML]="t('step 3 note')"></li>
+      </ul>
+    </li>
+    <li [innerHTML]="t('step 4')"></li>
+    <ul>
+      <li [innerHTML]="t('step 4 note1')"></li>
+      <li [innerHTML]="t('step 4 note2')"></li>
+    </ul>
+    <li [innerHTML]="t('step 5')"></li>
+    <li [innerHTML]="t('step 6')"></li>
+    <li [innerHTML]="t('step 7')"></li>
+    <li [innerHTML]="t('step 8')"></li>
+  </ol>
+
+  <h2 class="text-primary"> {{ t('shared strings') }}</h2>
+
+  <p [innerHTML]="t('shared strings text')"></p>
+
+
+  <h2> {{ 'Example' | transloco }}</h2>
+
+  <app-code-example examplePath="projects/BigExcelCreator/usage" language="cs"></app-code-example>
+
+</ng-container>
