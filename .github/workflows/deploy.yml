@@ -39,6 +39,6 @@ jobs:
     
     - name: publish
       env:
-        ghh: ${{ secrets.GITHUB_TOKghEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: npm run publish
