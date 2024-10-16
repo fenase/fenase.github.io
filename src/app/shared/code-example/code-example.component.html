@@ -1,2 +1,5 @@
-<pre [highlight]="example" [language]="language"></pre>
+<pre *ngIf="example; else skeleton" [highlight]="example" [language]="language"></pre>
 
+<ng-template #skeleton>
+  <p-skeleton height="20em" />
+</ng-template>
