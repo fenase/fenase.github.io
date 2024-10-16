@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideHighlightOptions } from 'ngx-highlightjs';
 import { PrimeNGConfig } from 'primeng/api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,7 +38,11 @@ const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
       useFactory: initializeAppFactory,
       deps: [PrimeNGConfig],
       multi: true,
-   }
+    },
+    provideHighlightOptions({
+      fullLibraryLoader: () => import('highlight.js'),
+      lineNumbersLoader: () => import('ngx-highlightjs/line-numbers'),
+    }),
   ],
   bootstrap: [AppComponent]
 })

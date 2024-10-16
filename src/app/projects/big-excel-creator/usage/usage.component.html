@@ -33,7 +33,8 @@
   <p [innerHTML]="t('shared strings text')"></p>
 
 
-  <h2 > {{ 'Example' | transloco }}</h2>
-  <pre>{{ example }}</pre>
+  <h2> {{ 'Example' | transloco }}</h2>
+
+  <app-code-example [example]="example" language="csharp"></app-code-example>
 
 </ng-container>

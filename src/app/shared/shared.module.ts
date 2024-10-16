@@ -1,18 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { LanguageSelectorModule } from "../language-selector/language-selector.module";
-import { TopbarComponent } from './topbar/topbar.component';
-import { ButtonGroupModule } from 'primeng/buttongroup';
-import { ToolbarModule } from 'primeng/toolbar';
-import { InputIconModule } from 'primeng/inputicon';
-import { MenubarModule } from 'primeng/menubar';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { MenuModule } from 'primeng/menu';
-import { SafeHtmlPipe } from './pipes/safe-html.pipe';
-import { PanelMenuModule } from 'primeng/panelmenu';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TranslocoModule } from '@jsverse/transloco';
+import { HighlightAuto, HighlightModule } from 'ngx-highlightjs';
+import { ButtonGroupModule } from 'primeng/buttongroup';
+import { InputIconModule } from 'primeng/inputicon';
+import { MenuModule } from 'primeng/menu';
+import { MenubarModule } from 'primeng/menubar';
+import { PanelMenuModule } from 'primeng/panelmenu';
+import { ToolbarModule } from 'primeng/toolbar';
+import { LanguageSelectorModule } from "../language-selector/language-selector.module";
+import { CodeExampleComponent } from './code-example/code-example.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { TopbarComponent } from './topbar/topbar.component';
+import { HighlightPlusModule } from 'ngx-highlightjs/plus';
+import { HighlightLineNumbers } from 'ngx-highlightjs/line-numbers';
 
 
 
@@ -22,10 +26,12 @@ import { TranslocoModule } from '@jsverse/transloco';
     SidebarComponent,
     SafeHtmlPipe,
     PageNotFoundComponent,
+    CodeExampleComponent,
   ],
   exports: [
     TopbarComponent,
     SidebarComponent,
+    CodeExampleComponent,
     SafeHtmlPipe,
   ],
   imports: [
@@ -39,6 +45,9 @@ import { TranslocoModule } from '@jsverse/transloco';
     PanelMenuModule,
     LanguageSelectorModule,
     TranslocoModule,
-  ]
+    HighlightModule,
+    HighlightAuto,
+    HighlightLineNumbers,
+  ],
 })
 export class SharedModule { }

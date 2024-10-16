@@ -736,19 +736,10 @@ samp {
 }
 
 pre {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow: auto;
   font-size: 0.875em;
-  padding: 10.5px;
   line-height: 1.42857143;
-  color: var(--neutralForeground2Rest);
   word-break: break-all;
   word-wrap: break-word;
-  background-color: var(--neutralBackground1Rest);
-  border: 2px solid var(--neutralStroke1Rest);
-  border-radius: 4px;
 }
 
 pre code {

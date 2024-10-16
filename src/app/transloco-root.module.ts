@@ -1,11 +1,11 @@
+import { APP_INITIALIZER, isDevMode, NgModule } from '@angular/core';
 import {
   provideTransloco,
   TranslocoModule,
   TranslocoService
 } from '@jsverse/transloco';
-import { APP_INITIALIZER, isDevMode, NgModule } from '@angular/core';
-import { TranslocoHttpLoader } from './transloco-loader';
 import { firstValueFrom } from 'rxjs';
+import { TranslocoHttpLoader } from './transloco-loader';
 
 const DEFAULT_LANGAGE = 'en';
 
