@@ -2,7 +2,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
-import { HighlightAuto, HighlightModule } from 'ngx-highlightjs';
+import { HighlightLineNumbers } from 'ngx-highlightjs/line-numbers';
+import { GistFilePipe, HighlightPlusModule } from 'ngx-highlightjs/plus';
 import { ButtonGroupModule } from 'primeng/buttongroup';
 import { InputIconModule } from 'primeng/inputicon';
 import { MenuModule } from 'primeng/menu';
@@ -15,8 +16,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
-import { HighlightPlusModule } from 'ngx-highlightjs/plus';
-import { HighlightLineNumbers } from 'ngx-highlightjs/line-numbers';
+import { HighlightModule } from 'ngx-highlightjs';
 
 
 
@@ -46,8 +46,9 @@ import { HighlightLineNumbers } from 'ngx-highlightjs/line-numbers';
     LanguageSelectorModule,
     TranslocoModule,
     HighlightModule,
-    HighlightAuto,
+    HighlightPlusModule,
     HighlightLineNumbers,
+    GistFilePipe,
   ],
 })
 export class SharedModule { }
