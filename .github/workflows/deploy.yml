@@ -37,7 +37,7 @@ jobs:
     - run: git config user.email "fenase@users.noreply.github.com"
     - run: git config user.name "fenase"
     
-    - name: publish
+    - name: Publish pages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
