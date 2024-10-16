@@ -42,8 +42,13 @@ const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
       multi: true,
     },
     provideHighlightOptions({
-      fullLibraryLoader: () => import('highlight.js'),
+      coreLibraryLoader: () => import('highlight.js/lib/core'),
       lineNumbersLoader: () => import('ngx-highlightjs/line-numbers'),
+      languages: {
+        cs: () => import('highlight.js/lib/languages/csharp'),
+        powershell: () => import('highlight.js/lib/languages/powershell'),
+        xml: () => import('highlight.js/lib/languages/xml'),
+      },
     }),
   ],
   bootstrap: [AppComponent]

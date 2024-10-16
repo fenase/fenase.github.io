@@ -1,9 +1,17 @@
 <h1 class="text-primary">{{'projects.BigExcelCreator.Installation'|transloco}}</h1>
 
-<p-tabView>
-  <p-tabPanel header="h1">
-    <p>
-      texto 1
-    </p>
+<p-tabView [(activeIndex)]="activeVersionIndex">
+
+  <p-tabPanel *ngFor="let version of  instructions" [header]="version.name">
+
+    <p-tabView [scrollable]="true" [(activeIndex)]="activeFlavorIndex">
+
+      <p-tabPanel *ngFor="let instruction of version.instructions" [header]="instruction.name">
+        <pre [highlight]="instruction.text" [language]="instruction.lang"> </pre>
+      </p-tabPanel>
+
+    </p-tabView>
+
   </p-tabPanel>
+
 </p-tabView>

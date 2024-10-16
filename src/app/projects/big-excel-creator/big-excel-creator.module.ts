@@ -16,6 +16,7 @@ import { PageLayoutComponent } from './page-layout/page-layout.component';
 import { StartComponent } from './start/start.component';
 import { StylingComponent } from './styling/styling.component';
 import { UsageComponent } from './usage/usage.component';
+import { HighlightModule } from 'ngx-highlightjs';
 
 
 
@@ -40,6 +41,7 @@ import { UsageComponent } from './usage/usage.component';
     PanelModule,
     TabViewModule,
     SharedModule,
+    HighlightModule,
 ]
 })
 export class BigExcelCreatorModule { }
