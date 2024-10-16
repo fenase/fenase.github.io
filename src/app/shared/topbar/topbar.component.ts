@@ -5,7 +5,7 @@ import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
-  styleUrl: './topbar.component.css'
+  styles: '',
 })
 export class TopbarComponent {
   constructor(public router: Router, private readonly activatedRoute: ActivatedRoute) { }

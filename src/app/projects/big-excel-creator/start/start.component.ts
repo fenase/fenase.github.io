@@ -5,7 +5,7 @@ import { Constants } from '../../../../globals';
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',
-  styleUrl: './start.component.css',
+  styles: '',
   providers: [provideTranslocoScope({ scope: 'projects/BigExcelCreator/start', alias: 'projects.BigExcelCreator.start' })]
 })
 export class StartComponent {

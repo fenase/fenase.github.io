@@ -5,7 +5,7 @@ import { MenuItem } from 'primeng/api';
 
 @Component({
   templateUrl: './big-excel-creator.component.html',
-  styleUrl: './big-excel-creator.component.css',
+  styles: '',
   providers: [provideTranslocoScope({ scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' })]
 })
 export class BigExcelCreatorComponent {

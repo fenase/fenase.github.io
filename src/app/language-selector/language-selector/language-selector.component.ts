@@ -4,7 +4,7 @@ import { TranslocoService, getBrowserLang } from '@jsverse/transloco';
 @Component({
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
-  styleUrl: './language-selector.component.css'
+  styles: '',
 })
 export class LanguageSelectorComponent {
   private readonly storedLanguageKey: string = "lang";
