@@ -7,7 +7,7 @@
     "build": "ng build  --base-href 'https://fenase.github.io'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "publish": "npx angular-cli-ghpages --no-silent --dir=dist/fenase.github.io --name='fenase' --email='fenase@users.noreply.github.com'"
+    "publish": "npx angular-cli-ghpages --no-silent --dir=dist/fenase.github.io"
   },
   "private": true,
   "dependencies": {
