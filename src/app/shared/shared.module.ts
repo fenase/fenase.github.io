@@ -9,9 +9,11 @@ import { MenuModule } from 'primeng/menu';
 import { MenubarModule } from 'primeng/menubar';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { SkeletonModule } from 'primeng/skeleton';
+import { TabViewModule } from 'primeng/tabview';
 import { ToolbarModule } from 'primeng/toolbar';
 import { LanguageSelectorModule } from "../language-selector/language-selector.module";
 import { CodeExampleComponent } from './code-example/code-example.component';
+import { InstallInstructionsComponent } from './install-instructions/install-instructions.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
@@ -24,11 +26,13 @@ import { TopbarComponent } from './topbar/topbar.component';
     SidebarComponent,
     PageNotFoundComponent,
     CodeExampleComponent,
+    InstallInstructionsComponent,
   ],
   exports: [
     TopbarComponent,
     SidebarComponent,
     CodeExampleComponent,
+    InstallInstructionsComponent,
   ],
   imports: [
     CommonModule,
@@ -43,6 +47,7 @@ import { TopbarComponent } from './topbar/topbar.component';
     TranslocoModule,
     HighlightModule,
     SkeletonModule,
+    TabViewModule,
   ],
 })
 export class SharedModule { }

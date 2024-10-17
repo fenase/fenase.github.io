@@ -1,17 +1,3 @@
 <h1 class="text-primary">{{'projects.BigExcelCreator.Installation'|transloco}}</h1>
 
-<p-tabView [(activeIndex)]="activeVersionIndex">
-
-  <p-tabPanel *ngFor="let version of  instructions" [header]="version.name">
-
-    <p-tabView [scrollable]="true" [(activeIndex)]="activeFlavorIndex">
-
-      <p-tabPanel *ngFor="let instruction of version.instructions" [header]="instruction.name">
-        <pre [highlight]="instruction.text" [language]="instruction.lang"> </pre>
-      </p-tabPanel>
-
-    </p-tabView>
-
-  </p-tabPanel>
-
-</p-tabView>
+<app-install-instructions [instructions]="instructions"></app-install-instructions>

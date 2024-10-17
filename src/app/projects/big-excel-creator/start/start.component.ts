@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { provideTranslocoScope } from '@jsverse/transloco';
-import { Constants } from '../../../../globals';
+import { Constants } from '../globals';
 
 @Component({
   selector: 'app-start',

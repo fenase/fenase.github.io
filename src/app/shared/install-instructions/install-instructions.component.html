@@ -1,0 +1,19 @@
+<div class="card">
+
+  <p-tabView [(activeIndex)]="versionIndex">
+
+    <p-tabPanel *ngFor="let version of  instructions" [header]="version.name">
+
+      <p-tabView [scrollable]="true" [(activeIndex)]="installerFlavor">
+
+        <p-tabPanel *ngFor="let instruction of version.instructions" [header]="instruction.name">
+          <pre [highlight]="instruction.text" [language]="instruction.lang" [classList]="instruction.class"> </pre>
+        </p-tabPanel>
+
+      </p-tabView>
+
+    </p-tabPanel>
+
+  </p-tabView>
+
+</div>
