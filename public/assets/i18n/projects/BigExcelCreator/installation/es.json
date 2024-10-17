@@ -1,0 +1,4 @@
+{
+  "useCommand": "Se puede agregar este paquete a su ptoyecto .NET usando los comandos mostrados abajo.",
+  "usePM": "También puede usar el gestor de paquetes de NuGet desde la solución de Visual Studio."
+}

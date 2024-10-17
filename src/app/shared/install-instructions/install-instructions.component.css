@@ -42,3 +42,7 @@ pre>span {
 .copyDiv {
   display: flex;
 }
+
+.card{
+  padding: 0.5rem 1rem;
+}
