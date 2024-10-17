@@ -1,0 +1,44 @@
+.netCli::before {
+  content: '> ';
+}
+
+.packageManager::before {
+  content: 'PM> ';
+}
+
+.PackageReference::before {
+  content: '';
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  font-size: 0.875em;
+  padding: 10.5px;
+  line-height: 1.42857143;
+  color: var(--neutralForeground2Rest);
+  word-break: break-word;
+  word-wrap: break-word;
+  background-color: var(--neutralBackground1Rest);
+  border: 2px solid var(--neutralStroke1Rest);
+  border-radius: 4px;
+  display: flex;
+  vertical-align: middle;
+  justify-content: space-between;
+}
+
+pre>span {
+  white-space: pre-wrap;
+}
+
+
+.copyButton {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.copyDiv {
+  display: flex;
+}

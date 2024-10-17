@@ -2,11 +2,11 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
+import { HighlightModule } from 'ngx-highlightjs';
 import { ButtonModule } from 'primeng/button';
 import { ListboxModule } from 'primeng/listbox';
 import { PanelModule } from 'primeng/panel';
 import { PanelMenuModule } from 'primeng/panelmenu';
-import { TabViewModule } from 'primeng/tabview';
 import { SharedModule } from "../../shared/shared.module";
 import { BigExcelCreatorRoutingModule } from './big-excel-creator-routing.module';
 import { BigExcelCreatorComponent } from './big-excel-creator.component';
@@ -38,8 +38,8 @@ import { UsageComponent } from './usage/usage.component';
     ButtonModule,
     ListboxModule,
     PanelModule,
-    TabViewModule,
     SharedModule,
+    HighlightModule,
 ]
 })
 export class BigExcelCreatorModule { }

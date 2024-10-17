@@ -1,13 +1,14 @@
 {
-  "site under construction": "SITE UNDER CONSTRUCTION.",
+  "404pageText": "404 - page not found",
   "Big Excel Creator": "Big Excel Creator",
+  "Copy": "Copy",
+  "Example": "Example",
+  "Home": "Home",
+  "Note": "Note",
+  "Projects": "Projects",
   "Snowflake Id Generator": "Snowflake Id Generator",
   "aboutMe": "About me",
-  "Home": "Home",
-  "Projects": "Projects",
-  "landing": "landing works!!!!",
   "aboutMeText": "",
-  "Note": "Note",
-  "Example": "Example",
-  "404pageText": "404 - page not found"
+  "landing": "landing works!!!!",
+  "site under construction": "SITE UNDER CONSTRUCTION."
 }
