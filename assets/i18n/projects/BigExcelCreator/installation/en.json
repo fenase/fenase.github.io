@@ -1,0 +1,4 @@
+{
+  "useCommand": "You can add this package to your .NET project using the commands below",
+  "usePM": "Also, you can use the nuget package manager inside your solution in Visual Studio"
+}
