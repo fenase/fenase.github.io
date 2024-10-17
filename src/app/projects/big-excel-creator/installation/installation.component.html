@@ -1,3 +1,11 @@
 <h1 class="text-primary">{{'projects.BigExcelCreator.Installation'|transloco}}</h1>
 
-<app-install-instructions [instructions]="instructions"></app-install-instructions>
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.installation'">
+
+  <p>{{ t('useCommand') }}</p>
+
+  <app-install-instructions [instructions]="instructions"></app-install-instructions>
+
+  <p>{{ t('usePM') }}</p>
+
+</ng-container>

@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
 import { InstallationInstruction, InstallationVersion } from '../../../shared/install-instructions/install-instructions.component';
 import { Versions } from '../globals';
+import { provideTranslocoScope } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-installation',
   templateUrl: './installation.component.html',
   styleUrls: ['/node_modules/highlight.js/styles/vs.css'],
+  providers: [
+    provideTranslocoScope(
+      { scope: 'projects/BigExcelCreator/installation', alias: 'projects.BigExcelCreator.installation' },
+      { scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' }
+    )
+  ],
 })
 export class InstallationComponent {
 

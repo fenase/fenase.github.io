@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build  --base-href 'https://fenase.github.io'",
+    "build": "ng build --verbose --base-href 'https://fenase.github.io'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "publish": "npx angular-cli-ghpages --dir=dist/fenase.github.io"
