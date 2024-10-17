@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
 import { HighlightModule } from 'ngx-highlightjs';
-import { ButtonGroupModule } from 'primeng/buttongroup';
+import { ButtonModule } from 'primeng/button';
 import { InputIconModule } from 'primeng/inputicon';
 import { MenuModule } from 'primeng/menu';
 import { MenubarModule } from 'primeng/menubar';
@@ -37,7 +37,7 @@ import { TopbarComponent } from './topbar/topbar.component';
   imports: [
     CommonModule,
     RouterModule,
-    ButtonGroupModule,
+    ButtonModule,
     ToolbarModule,
     InputIconModule,
     MenubarModule,

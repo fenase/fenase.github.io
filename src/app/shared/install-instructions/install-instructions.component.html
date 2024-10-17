@@ -1,19 +1,28 @@
-<div class="card">
+<ng-container *transloco="let t;">
 
-  <p-tabView [(activeIndex)]="versionIndex">
+  <div class="card">
 
-    <p-tabPanel *ngFor="let version of  instructions" [header]="version.name">
+    <p-tabView [(activeIndex)]="versionIndex" (activeIndexChange)="onTabsChange()">
 
-      <p-tabView [scrollable]="true" [(activeIndex)]="installerFlavor">
+      <p-tabPanel *ngFor="let version of  instructions" [header]="version.name">
 
-        <p-tabPanel *ngFor="let instruction of version.instructions" [header]="instruction.name">
-          <pre [highlight]="instruction.text" [language]="instruction.lang" [classList]="instruction.class"> </pre>
-        </p-tabPanel>
+        <p-tabView [scrollable]="true" [(activeIndex)]="installerFlavorIndex" (activeIndexChange)="onTabsChange()">
 
-      </p-tabView>
+          <p-tabPanel *ngFor="let instruction of version.instructions" [header]="instruction.name">
+            <pre>
+              <span [highlight]="instruction.text" [language]="instruction.lang" [classList]="instruction.class"></span>
+              <div class="copyDiv">
+                <p-button [label]="t('Copy')" size="small" icon="pi pi-copy" (onClick)="copy()" [loading]="copying" styleClass="copyDiv"></p-button>
+              </div>
+            </pre>
+          </p-tabPanel>
 
-    </p-tabPanel>
+        </p-tabView>
 
-  </p-tabView>
+      </p-tabPanel>
 
-</div>
+    </p-tabView>
+
+  </div>
+
+</ng-container>

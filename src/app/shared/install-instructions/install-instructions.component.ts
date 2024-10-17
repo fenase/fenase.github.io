@@ -1,17 +1,60 @@
-import { Component, Input } from '@angular/core';
+import { Clipboard } from '@angular/cdk/clipboard';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-install-instructions',
   templateUrl: './install-instructions.component.html',
   styleUrl: './install-instructions.component.css'
 })
-export class InstallInstructionsComponent {
+export class InstallInstructionsComponent implements OnInit {
+  constructor(private clipboard: Clipboard) { }
+
 
   @Input({ required: true })
   public instructions: InstallationVersion[] = [];
 
-  public versionIndex:number=0;
-  public installerFlavor:number=0;
+  public versionIndex: number = 1;
+  public installerFlavorIndex: number = 2;
+  public copying: boolean = false;
+
+  ngOnInit(): void {
+    let settingsString: string | null = localStorage.getItem(this.storageKey);
+    if (settingsString) {
+      let settings: InstallInstructionsSettings = JSON.parse(settingsString);
+      if (settings) {
+        this.versionIndex = settings.versionIndex;
+        this.installerFlavorIndex = settings.installerFlavorIndex;
+      }
+    }
+  }
+
+  public copy(): void {
+    this.copying = true;
+    const pending = this.clipboard.beginCopy(this.instructions[this.versionIndex].instructions[this.installerFlavorIndex].text);
+    let remainingAttempts: number = 3;
+    const attempt = () => {
+      const result = pending.copy();
+      if (!result && --remainingAttempts > 0) {
+        setTimeout(attempt, 100);
+      } else {
+        // Remember to destroy when you're done!
+        pending.destroy();
+        this.copying = false;
+      }
+    };
+    attempt();
+  }
+
+  public onTabsChange() {
+    let settings: InstallInstructionsSettings = {
+      versionIndex: this.versionIndex,
+      installerFlavorIndex: this.installerFlavorIndex,
+    };
+
+    localStorage.setItem(this.storageKey, JSON.stringify(settings));
+  }
+
+  private readonly storageKey: string = 'InstallInstructionsSettings';
 
 }
 
@@ -21,6 +64,8 @@ export interface InstallationVersion {
 }
 
 export class InstallationInstruction {
+  public readonly class: string;
+
   constructor(
     public readonly name: '.NET CLI' | 'Package Manager' | 'PackageReference',
     public readonly text: string,
@@ -37,7 +82,10 @@ export class InstallationInstruction {
         break;
     }
   }
-
-  public readonly class: string;
-
 }
+
+interface InstallInstructionsSettings {
+  versionIndex: number;
+  installerFlavorIndex: number;
+}
+
