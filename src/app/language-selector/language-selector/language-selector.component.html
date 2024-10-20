@@ -3,7 +3,7 @@
   <p-menu #menu [model]="menuItems" [popup]="true">
 
     <ng-template pTemplate="submenuheader" let-item>
-      <span>{{ item.label | transloco }}</span>
+      <span>{{ t(item.label) }}</span>
     </ng-template>
 
     <ng-template pTemplate="item" let-item>

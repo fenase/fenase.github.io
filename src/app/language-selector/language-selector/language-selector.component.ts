@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslocoService, getBrowserLang } from '@jsverse/transloco';
-import { MenuItem } from 'primeng/api';
+import { LanguageMenuItem } from '../LanguageMenuItem.Interface';
+import { first, firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-language-selector',
@@ -10,7 +11,7 @@ import { MenuItem } from 'primeng/api';
 export class LanguageSelectorComponent implements OnInit {
   private readonly storedLanguageKey: string = "lang";
 
-  public menuItems: languageMenuItem[] = [];
+  public menuItems: LanguageMenuItem[] = [];
   public activeLanguage?: string;
 
   public languagesList: Array<Record<'imgUrl' | 'code' | 'label' | 'shorthand' | 'message', string>> =
@@ -53,13 +54,14 @@ export class LanguageSelectorComponent implements OnInit {
   }
 
   public changeLanguage(languageCode: string): void {
-    this.translocoService.setActiveLang(languageCode);
-    localStorage.setItem(this.storedLanguageKey, languageCode);
-    this.activeLanguage = languageCode;
+    this.translocoService.load(languageCode)
+      .pipe(
+        first()
+      )
+      .subscribe(() => {
+        this.translocoService.setActiveLang(languageCode);
+        localStorage.setItem(this.storedLanguageKey, languageCode);
+        this.activeLanguage = languageCode;
+      });
   }
-}
-
-interface languageMenuItem extends MenuItem {
-  code?: string,
-  message?: string,
 }
