@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslocoService, getBrowserLang } from '@jsverse/transloco';
+import { first } from 'rxjs';
 import { LanguageMenuItem } from '../LanguageMenuItem.Interface';
-import { first, firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-language-selector',
