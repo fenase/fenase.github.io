@@ -18,6 +18,7 @@ nav {
 
 @media screen and (min-width: 768px) {
   nav {
-    height: calc(100vh - 5rem);
+    /* 100vh: screen height; 1rem: nav col-3 padding*/
+    height: calc(100vh - var(--topPaddingBecauseOfMenu) - 1rem);
   }
 }
