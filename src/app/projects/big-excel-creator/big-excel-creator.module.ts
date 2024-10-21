@@ -14,7 +14,14 @@ import { DataValidationComponent } from './data-validation/data-validation.compo
 import { InstallationComponent } from './installation/installation.component';
 import { PageLayoutComponent } from './page-layout/page-layout.component';
 import { StartComponent } from './start/start.component';
+import { AutofilterComponent } from './styling/autofilter/autofilter.component';
+import { ColumnFormattingComponent } from './styling/column-formatting/column-formatting.component';
+import { CommentsComponent } from './styling/comments/comments.component';
+import { ConditionalFormattingComponent } from './styling/conditional-formatting/conditional-formatting.component';
+import { HideSheetComponent } from './styling/hide-sheet/hide-sheet.component';
+import { MergeCellsComponent } from './styling/merge-cells/merge-cells.component';
 import { StylingComponent } from './styling/styling.component';
+import { StylingComponent as StylingDetailsComponent } from './styling/styling/styling.component';
 import { UsageComponent } from './usage/usage.component';
 
 
@@ -28,6 +35,13 @@ import { UsageComponent } from './usage/usage.component';
     StylingComponent,
     PageLayoutComponent,
     InstallationComponent,
+    ColumnFormattingComponent,
+    HideSheetComponent,
+    MergeCellsComponent,
+    CommentsComponent,
+    AutofilterComponent,
+    ConditionalFormattingComponent,
+    StylingDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -40,6 +54,6 @@ import { UsageComponent } from './usage/usage.component';
     PanelModule,
     SharedModule,
     HighlightModule,
-]
+  ]
 })
 export class BigExcelCreatorModule { }

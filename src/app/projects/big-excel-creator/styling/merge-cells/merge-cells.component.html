@@ -1,0 +1,10 @@
+<h2 class="text-primary" [attr.id]="'mergeCells'">{{ 'projects.BigExcelCreator.Merge Cells' | transloco }}</h2>
+
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.styling'">
+
+  <p [innerHTML]="t('MergeCells.basic')"></p>
+
+
+  <app-code-example examplePath="projects/BigExcelCreator/mergeCells" language="cs"></app-code-example>
+
+</ng-container>

@@ -1,0 +1,21 @@
+<h2 class="text-primary" [attr.id]="'styling'">{{ 'projects.BigExcelCreator.Styling' | transloco }}</h2>
+
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.styling'">
+
+  <p [innerHTML]="t('Styling.basic')"></p>
+  <app-code-example examplePath="projects/BigExcelCreator/stylingDefine" language="cs"></app-code-example>
+
+  <p [innerHTML]="t('Styling.insert')"></p>
+  <app-code-example examplePath="projects/BigExcelCreator/stylingInsert" language="cs"></app-code-example>
+
+  <p [innerHTML]="t('Styling.useName')"></p>
+  <app-code-example examplePath="projects/BigExcelCreator/stylingUseName" language="cs"></app-code-example>
+
+  <p-panel [showHeader]="false">
+    <p [innerHTML]="t('Styling.note.p1',{'aHrefLink':'#conditionalFormatting'})"></p>
+    <p [innerHTML]="t('Styling.note.p2')"></p>
+
+    <app-code-example examplePath="projects/BigExcelCreator/stylingDifferential" language="cs"></app-code-example>
+  </p-panel>
+
+</ng-container>
