@@ -6,7 +6,6 @@ import { HighlightModule } from 'ngx-highlightjs';
 import { ButtonModule } from 'primeng/button';
 import { ListboxModule } from 'primeng/listbox';
 import { PanelModule } from 'primeng/panel';
-import { PanelMenuModule } from 'primeng/panelmenu';
 import { SharedModule } from "../../shared/shared.module";
 import { BigExcelCreatorRoutingModule } from './big-excel-creator-routing.module';
 import { BigExcelCreatorComponent } from './big-excel-creator.component';
@@ -48,7 +47,6 @@ import { UsageComponent } from './usage/usage.component';
     RouterModule,
     TranslocoModule,
     BigExcelCreatorRoutingModule,
-    PanelMenuModule,
     ButtonModule,
     ListboxModule,
     PanelModule,

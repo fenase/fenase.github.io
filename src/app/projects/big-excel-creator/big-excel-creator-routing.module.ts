@@ -22,6 +22,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
+        redirectTo:'thePackage',
+        pathMatch: 'full',
+      },
+      {
+        path: 'thePackage',
         component: StartComponent,
       },
       {

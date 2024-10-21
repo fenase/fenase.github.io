@@ -22,3 +22,12 @@ nav {
     height: calc(100vh - var(--topPaddingBecauseOfMenu) - 1rem);
   }
 }
+
+.router-link {
+  border-left: 1px solid var(--surface-300);
+}
+
+.router-link-active {
+  color: var(--brandStrokeCompoundPressed);
+  border-left-color: var(--brandStrokeCompoundPressed);
+}
