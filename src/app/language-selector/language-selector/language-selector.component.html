@@ -1,4 +1,23 @@
-<p-button *ngFor="let language of availableLanguages;" icon="pi pi-language" [rounded]="true" [text]="true"
-  [ariaLabel]="language.message" [raised]="true" (onClick)="changeLanguage(language.code)"
-  [pTooltip]="language.message">
-</p-button>
+<ng-container *transloco="let t">
+
+  <p-menu #menu [model]="menuItems" [popup]="true">
+
+    <ng-template pTemplate="submenuheader" let-item>
+      <span>{{ t(item.label) }}</span>
+    </ng-template>
+
+    <ng-template pTemplate="item" let-item>
+      <a pRipple class="flex align-items-center p-menuitem-link" (click)="changeLanguage(item.code)"
+        [pTooltip]="item.message" tooltipPosition="left" [ariaLabel]="item.message">
+        <div class="flag" [style.backgroundImage]="'url(' + item.imgUrl + ')'"></div>
+        <span class="ml-2">{{ item.label }}</span>
+        <span *ngIf="item.code === activeLanguage" class="pi pi-check ml-auto"></span>
+      </a>
+    </ng-template>
+
+  </p-menu>
+
+  <p-button icon="pi pi-language" [rounded]="true" [text]="true" [raised]="true" (onClick)="menu.toggle($event)"
+    [pTooltip]="t('Languages')" tooltipPosition="left" [ariaLabel]="t('Languages')"></p-button>
+
+</ng-container>

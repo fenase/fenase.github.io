@@ -4,6 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 import { TranslocoModule } from '@jsverse/transloco';
+import { MenuModule } from 'primeng/menu';
 
 
 
@@ -19,6 +20,7 @@ import { TranslocoModule } from '@jsverse/transloco';
     TooltipModule,
     ButtonModule,
     TranslocoModule,
+    MenuModule,
   ]
 })
 export class LanguageSelectorModule { }

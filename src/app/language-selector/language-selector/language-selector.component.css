@@ -1,0 +1,8 @@
+.flag {
+  height: 1em;
+  aspect-ratio: 3/2;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}

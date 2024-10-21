@@ -1,1 +1,15 @@
-<p>page-layout works!</p>
+<h1 class="text-primary">{{ 'projects.BigExcelCreator.Page layout' | transloco }}</h1>
+
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.pageLayout'">
+
+  <h2 class="text-primary">{{ t('Sheet options') }}</h2>
+
+  <h3 class="text-color">{{ t('Gridlines') }}</h3>
+  <p [innerHTML]="t('Gridlines text ShowGridLinesInCurrentSheet')"></p>
+  <p [innerHTML]="t('Gridlines text PrintGridLinesInCurrentSheet')"></p>
+
+  <h3 class="text-color">{{ t('Headings') }}</h3>
+  <p [innerHTML]="t('Headings text ShowRowAndColumnHeadingsInCurrentSheet')"></p>
+  <p [innerHTML]="t('Headings text PrintRowAndColumnHeadingsInCurrentSheet')"></p>
+
+</ng-container>

@@ -1,0 +1,4 @@
+{
+  "use": "Use <code>AddListValidator</code> para restringir, usando una lista definida por la fórmula, los valores posibles a ser ingresados en una celda por el usuario.",
+  "alternative": "Alternativamente, use <code>AddIntegerValidator</code> o <code>AddDecimalValidator</code> para restringir / validar los valores de acuerdo a la definición ingresada en <code>validationType</code> (igualdad (equal), mayor a (greater than), entre (between), etc.)"
+}

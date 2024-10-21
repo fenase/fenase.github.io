@@ -1,1 +1,10 @@
-<p>data-validation works!</p>
+<h1 class="text-primary">{{ 'projects.BigExcelCreator.Data Validation' | transloco }}</h1>
+
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.DataValidation'">
+
+  <p [innerHTML]="t('use')"></p>
+  <p [innerHTML]="t('alternative')"></p>
+
+  <app-code-example examplePath="projects/BigExcelCreator/dataValidation" language="cs"></app-code-example>
+
+</ng-container>
