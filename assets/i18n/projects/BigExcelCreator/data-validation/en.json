@@ -1,0 +1,4 @@
+{
+  "use": "Use <code>AddListValidator</code> to restrict, to a list defined in a formula, possible values to be written to a cell by an user.",
+  "alternative": "Alternatively, use <code>AddIntegerValidator</code> or <code>AddDecimalValidator</code> to restrict / validate values as defined by <code>validationType</code> (equal, greater than, between, etc.)"
+}

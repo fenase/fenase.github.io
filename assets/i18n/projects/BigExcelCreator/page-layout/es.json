@@ -1,0 +1,9 @@
+{
+  "Sheet options": "Opciones de visualización de hoja",
+  "Gridlines": "Líneas de División (Gridlines)",
+  "Gridlines text ShowGridLinesInCurrentSheet": "Mientras está escribiendo una hoja, la propiedad <code>ShowGridLinesInCurrentSheet</code> controla la visibilidad de las líneas de división. Habilitado de forma predeterminada.",
+  "Gridlines text PrintGridLinesInCurrentSheet": "Mientras está escribiendo una hoja, la propiedad <code>PrintGridLinesInCurrentSheet</code> controla la impresión de las líneas de división. Deshabilitado de forma predeterminada.",
+  "Headings": "Fila de encabezado (Headings)",
+  "Headings text ShowRowAndColumnHeadingsInCurrentSheet": "Mientras está escribiendo una hoja, la propiedad <code>ShowRowAndColumnHeadingsInCurrentSheet</code> controla si los encabezados (letras de columnas y números de fila) se muestran. Habilitado de forma predeterminada.",
+  "Headings text PrintRowAndColumnHeadingsInCurrentSheet": "Mientras está escribiendo una hoja, la propiedad <code>PrintRowAndColumnHeadingsInCurrentSheet</code> controla si los encabezados (letras de columnas y números de fila) se imprimen. Deshabilitado de forma predeterminada."
+}
