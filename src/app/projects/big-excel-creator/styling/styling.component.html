@@ -2,7 +2,9 @@
 
 
 
-<h2 class="text-primary" [attr.id]="'columnFormatting'">{{ 'projects.BigExcelCreator.Column formatting' | transloco }}</h2>
+<h2 class="text-primary" [attr.id]="'columnFormatting'">
+  {{ 'projects.BigExcelCreator.Column formatting' | transloco }}
+</h2>
 
 <ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.styling'">
 
@@ -62,5 +64,80 @@
 
     <app-code-example examplePath="projects/BigExcelCreator/stylingDifferential" language="cs"></app-code-example>
   </p-panel>
+
+</ng-container>
+
+
+<h2 class="text-primary" [attr.id]="'comments'">{{ 'projects.BigExcelCreator.Comments' | transloco }}</h2>
+
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.styling'">
+
+  <p [innerHTML]="t('Comments.basic')"></p>
+
+  <app-code-example examplePath="projects/BigExcelCreator/comment" language="cs"></app-code-example>
+
+</ng-container>
+
+
+<h2 class="text-primary" [attr.id]="'autofilter'">{{ 'projects.BigExcelCreator.Autofilter' | transloco }}</h2>
+
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.styling'">
+
+  <p [innerHTML]="t('Autofilter.basic')"></p>
+
+  <app-code-example examplePath="projects/BigExcelCreator/autofilter" language="cs"></app-code-example>
+
+</ng-container>
+
+
+<h2 class="text-primary" [attr.id]="'conditionalFormatting'">
+  {{ 'projects.BigExcelCreator.Conditional Formatting' | transloco }}
+</h2>
+
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.styling'">
+
+  <p [innerHTML]="t('Conditional Formatting.basic',{'aHrefLink':'#styling'})"></p>
+
+  <p-panel [showHeader]="false">
+    <p [innerHTML]="t('Conditional Formatting.note.On every case below')"></p>
+    <ul>
+      <li [innerHTML]="t('Conditional Formatting.note.Reference')"></li>
+      <li [innerHTML]="t('Conditional Formatting.note.Format')"></li>
+    </ul>
+  </p-panel>
+
+
+  <h3 class="text-primary">{{ t('Conditional Formatting.Formula.title') }}</h3>
+
+  <p [innerHTML]="t('Conditional Formatting.Formula.basic',{'aHrefLink':'#styling'})"></p>
+  <ul>
+    <li [innerHTML]="t('Conditional Formatting.Formula.formula')"></li>
+  </ul>
+
+  <app-code-example examplePath="projects/BigExcelCreator/conditionalFormattingFormula"
+    language="cs"></app-code-example>
+
+
+  <h3 class="text-primary">{{ t('Conditional Formatting.Cell Is.title') }}</h3>
+
+  <p [innerHTML]="t('Conditional Formatting.Cell Is.basic')"></p>
+  <ul>
+    <li [innerHTML]="t('Conditional Formatting.Cell Is.Operator')"></li>
+    <li [innerHTML]="t('Conditional Formatting.Cell Is.value')"></li>
+    <li [innerHTML]="t('Conditional Formatting.Cell Is.value2')"></li>
+  </ul>
+
+  <app-code-example examplePath="projects/BigExcelCreator/conditionalFormattingCellIs" language="cs"></app-code-example>
+
+
+
+  <h3 class="text-primary">{{ t('Conditional Formatting.Duplicated Values.title') }}</h3>
+
+  <p [innerHTML]="t('Conditional Formatting.Duplicated Values.basic')"></p>
+
+  <app-code-example examplePath="projects/BigExcelCreator/conditionalFormattingDuplicatedValues"
+    language="cs"></app-code-example>
+
+
 
 </ng-container>
