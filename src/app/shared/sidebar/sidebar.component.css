@@ -9,7 +9,7 @@ nav {
   display: flex;
   flex-direction: column;
   flex: 0 0 250px;
-  margin-right: 4rem;
+  margin-right: 2rem;
   overflow: auto;
   padding: 0 1rem 0 0;
   flex-grow: 1;
