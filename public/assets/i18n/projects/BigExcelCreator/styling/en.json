@@ -1,15 +1,15 @@
 {
   "ColumnFormatting": {
     "basic": "When calling <code>CreateAndOpenSheet</code>, pass <code>IList&lt;Column&gt;</code> as second parameter. Each element represents a single column. Only the <code>CustomWidth</code>, <code>Width</code> and <code>Hidden</code> are used.",
-    "width":"<code>Width</code> represents the column width in characters (Same unit as when resizing in Excel).",
-    "CustomWidth":"<code>CustomWidth</code> allows the use of <code>Width</code>.",
-    "Hidden":"<code>Hidden</code> hides the column."
+    "width": "<code>Width</code> represents the column width in characters (Same unit as when resizing in Excel).",
+    "CustomWidth": "<code>CustomWidth</code> allows the use of <code>Width</code>.",
+    "Hidden": "<code>Hidden</code> hides the column."
   },
   "HideSheet": {
-    "basic": "<code>CreateAndOpenSheet</code> accepts as third parameter a SheetStateValues variable.",
-    "Visible":"<code>SheetStateValues.Visible</code> (default): Sheet is visible",
-    "Hidden":"<code>SheetStateValues.Hidden</code>: Sheet is hidden",
-    "VeryHidden":"<code>SheetStateValues.VeryHidden</code>: Sheet is hidden and cannot be unhidden from Excel's UI"
+    "basic": "<code>CreateAndOpenSheet</code> accepts as third parameter a <code>SheetStateValues</code> variable.",
+    "Visible": "<code>SheetStateValues.Visible</code> (default): Sheet is visible",
+    "Hidden": "<code>SheetStateValues.Hidden</code>: Sheet is hidden",
+    "VeryHidden": "<code>SheetStateValues.VeryHidden</code>: Sheet is hidden and cannot be unhidden from Excel's UI"
   },
   "MergeCells": {
     "basic": "In order to merge a range of cells while a sheet is open, use <code>MergeCells</code> with a range."
@@ -17,10 +17,10 @@
   "Styling": {
     "basic": "First, the elements that define a style (font, fill, border and, optionally, numbering format) must be created.",
     "insert": "After that, a new style list can be created and new styles inserted. Remember to name you styles.",
-    "useName": "When instantiating <code>BigExcelWriter</code>, use the result of calling <code>GetStylesheet</code> as the <code>stylesheet parameter</code>. Then, when writing a cell, you can use the name given earlier to format it.",
-    "note":{
-      "p1":"If you're planning to use <a href='{{aHrefLink}}'>{{projects.BigExcelCreator.Conditional Formatting}}</a>, you must also create differential styles here. To do so, follow the same instructions as above, replacing <code>NewStyle</code> with <code>NewDifferentialStyle</code>.",
-      "p2":"All parameters of <code>NewDifferentialStyle</code> are optional, except <code>name</code>. Of the optional parameters, at least one must be present."
+    "useName": "When instantiating <code>BigExcelWriter</code>, use the result of calling <code>GetStylesheet</code> as the <code>stylesheet</code> parameter. Then, when writing a cell, you can use the name given earlier to format it.",
+    "note": {
+      "p1": "If you're planning to use <a href='{{aHrefLink}}'>{{projects.BigExcelCreator.Conditional Formatting}}</a>, you must also create differential styles here. To do so, follow the same instructions as above, replacing <code>NewStyle</code> with <code>NewDifferentialStyle</code>.",
+      "p2": "All parameters of <code>NewDifferentialStyle</code> are optional, except <code>name</code>. Of the optional parameters, at least one must be present."
     }
   },
   "Comments": {
@@ -31,26 +31,26 @@
   },
   "Conditional Formatting": {
     "basic": "In order to use conditional formatting, you should define Differential styles (see <a href='{{aHrefLink}}'>Styling</a>)",
-    "note":{
-      "On every case below":"On every case below",
-      "Reference":"<code>reference</code> ⇒ A range of cells to apply the conditional formatting to",
-      "Format":"<code>format</code> ⇒ The id of the Differential style. Obtain it using <code>GetIndexDifferentialByName</code> after creating it with <code>NewDifferentialStyle</code>"
+    "note": {
+      "On every case below": "On every case below",
+      "Reference": "<code>reference</code> ⇒ A range of cells to apply the conditional formatting to",
+      "Format": "<code>format</code> ⇒ The id of the Differential style. Obtain it using <code>GetIndexDifferentialByName</code> after creating it with <code>NewDifferentialStyle</code>"
     },
-    "Formula":{
-      "title":"Formula",
-      "basic":"To define a conditional style by formula, use <code>AddConditionalFormattingFormula(string reference, string formula, int format)</code>.",
-      "formula":"<code>formula</code> defines the expression to use. Use a fixed range using <code>$</code> to anchor the reference to a cell. Avoid using <code>$</code> to make the reference 'walk' with the range. This is useful when referencing the current cell."
+    "Formula": {
+      "title": "Formula",
+      "basic": "To define a conditional style by formula, use <code>AddConditionalFormattingFormula(string reference, string formula, int format)</code>.",
+      "formula": "<code>formula</code> defines the expression to use. Use a fixed range using <code>$</code> to anchor the reference to a cell. Avoid using <code>$</code> to make the reference 'walk' with the range. This is useful when referencing the current cell."
     },
-    "Cell Is":{
-      "title":"Cell Is",
-      "basic":"Format cells based on their contents using <code>AddConditionalFormattingCellIs</code>",
-      "Operator":"<code>Operator</code> defines how to compare values.",
-      "value":"<code>value</code> defines the value to compare the cell to.",
-      "value2":"<code>value2</code> If the operator requires 2 numbers (eg: <code>Between</code> and <code>NotBetween</code>), the second value goes here."
+    "Cell Is": {
+      "title": "Cell Is",
+      "basic": "Format cells based on their contents using <code>AddConditionalFormattingCellIs</code>",
+      "Operator": "<code>Operator</code> defines how to compare values.",
+      "value": "<code>value</code> defines the value to compare the cell to.",
+      "value2": "<code>value2</code> If the operator requires 2 numbers (eg: <code>Between</code> and <code>NotBetween</code>), the second value goes here."
     },
-    "Duplicated Values":{
-      "title":"Duplicated Values",
-      "basic":"Format duplicated values using <code>AddConditionalFormattingDuplicatedValues</code>"
+    "Duplicated Values": {
+      "title": "Duplicated Values",
+      "basic": "Format duplicated values using <code>AddConditionalFormattingDuplicatedValues</code>"
     }
   }
 }

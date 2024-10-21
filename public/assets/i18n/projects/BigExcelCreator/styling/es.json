@@ -1,3 +1,56 @@
 {
-
+  "ColumnFormatting": {
+    "basic": "Cuando invoque <code>CreateAndOpenSheet</code>, utilice una <code>IList&lt;Column&gt;</code> como segundo parámetro. Cada elemento representa una única columna. Sólo se utilizan los valores de <code>CustomWidth</code>, <code>Width</code> y <code>Hidden</code>.",
+    "width": "<code>Width</code> representa el ancho de la columna en caracteres (La misma unidad que muestra Excel cuando se redimensiona una columna).",
+    "CustomWidth": "<code>CustomWidth</code> permite el uso de <code>Width</code>.",
+    "Hidden": "<code>Hidden</code> oculta la columna."
+  },
+  "HideSheet": {
+    "basic": "<code>CreateAndOpenSheet</code> acepta como tercer parámetro una variable de tipo <code>SheetStateValues</code>.",
+    "Visible": "<code>SheetStateValues.Visible</code> (predeterminado): La hoja se marca como \"visible\"",
+    "Hidden": "<code>SheetStateValues.Hidden</code>: Se oculta la hoja",
+    "VeryHidden": "<code>SheetStateValues.VeryHidden</code>: Se oculta la hoja y no puede mostrarse desde la interfaz de Excel"
+  },
+  "MergeCells": {
+    "basic": "Para unir un rango de celdas (mientras la hoja está abierta), use <code>MergeCells</code> con el rango deseado."
+  },
+  "Styling": {
+    "basic": "Primero se deben crear los elementos que definen un estilo (fuente (font), relleno (fill), borde (border) y, opcionalmente, formato numérico (numbering format)).",
+    "insert": "Luego, se puede crear una nueva lista de estilos para insertar los estilos creados. Recuerde darle nombre a los estilos.",
+    "useName": "Cuando cree una nueva instancia de <code>BigExcelWriter</code>, use el resultado de llamar a <code>GetStylesheet</code> como el parámetro <code>stylesheet</code>. Luego, cuando escriba una celda, puede usar el nombre indicado anteriormente para darle formato.",
+    "note": {
+      "p1": "Si está planeando usar <a href='{{aHrefLink}}'>{{projects.BigExcelCreator.Conditional Formatting}}</a>, también debe crear aquí los \"estilos diferenciales\" (differential styles). Para hacerlo, siga las mismas instrucciones indicadas más arriba, reemplazando <code>NewStyle</code> por <code>NewDifferentialStyle</code>.",
+      "p2": "Todos los parámetros de <code>NewDifferentialStyle</code> son opcionales, excepto <code>name</code>. De los parámetros opcionales, al menos uno debe estar presente."
+    }
+  },
+  "Comments": {
+    "basic": "Para agregar una nota (anteriormente conocidas como \"comentario\") en una celda, mientras la hoja se encuentra abierta, utilice el método <code>Comment</code>."
+  },
+  "Autofilter": {
+    "basic": "Para agregar un autofiltro, utilice <code>AddAutofilter</code> mientras se encuentra en una hoja."
+  },
+  "Conditional Formatting": {
+    "basic": "Para crear formato condicional, debe definir los estilos diferenciales (Differential styles) (ver <a href='{{aHrefLink}}'>Styling</a>)",
+    "note": {
+      "On every case below": "Para todas las opciones, lo siguiente aplica",
+      "Reference": "<code>reference</code> ⇒ El rango de celdas a las que se les aplicará el formato condicional",
+      "Format": "<code>format</code> ⇒ El Id del estilo diferencial. Obténgalo utilizando <code>GetIndexDifferentialByName</code> luego de crearlo con <code>NewDifferentialStyle</code>"
+    },
+    "Formula": {
+      "title": "Fórmula",
+      "basic": "Para definir el formato condicional mediante el uso de una fórmila, use <code>AddConditionalFormattingFormula(string reference, string formula, int format)</code>.",
+      "formula": "<code>formula</code> define la expresión a usar. Use un rango fijo con <code>$</code> para anclar la referencia a una celda. Evite usar <code>$</code> para hacer que la referencia \"camine\" con el rango. Esto es útil cuando se desea referenciar posiciones relativas a la celda a formatear."
+    },
+    "Cell Is": {
+      "title": "Valor de una celda (Cell Is)",
+      "basic": "De formato a una celda en base a su contenido usando <code>AddConditionalFormattingCellIs</code>",
+      "Operator": "<code>Operator</code> define cómo comparar valores.",
+      "value": "<code>value</code> define el valor con el que se comparará la celda.",
+      "value2": "<code>value2</code> si el operador requiere 2 números (ej: <code>Between</code> (entre) y <code>NotBetween</code> (no entre)), el segundo valor va acá."
+    },
+    "Duplicated Values": {
+      "title": "Valores Duplicados (Duplicated Values)",
+      "basic": "De formato a los valores duplicados usando <code>AddConditionalFormattingDuplicatedValues</code>"
+    }
+  }
 }
