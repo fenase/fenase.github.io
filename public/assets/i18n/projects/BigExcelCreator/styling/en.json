@@ -1,0 +1,26 @@
+{
+  "ColumnFormatting": {
+    "basic": "When calling <code>CreateAndOpenSheet</code>, pass <code>IList&lt;Column&gt;</code> as second parameter. Each element represents a single column. Only the <code>CustomWidth</code>, <code>Width</code> and <code>Hidden</code> are used.",
+    "width":"<code>Width</code> represents the column width in characters (Same unit as when resizing in Excel).",
+    "CustomWidth":"<code>CustomWidth</code> allows the use of <code>Width</code>.",
+    "Hidden":"<code>Hidden</code> hides the column."
+  },
+  "HideSheet": {
+    "basic": "<code>CreateAndOpenSheet</code> accepts as third parameter a SheetStateValues variable.",
+    "Visible":"<code>SheetStateValues.Visible</code> (default): Sheet is visible",
+    "Hidden":"<code>SheetStateValues.Hidden</code>: Sheet is hidden",
+    "VeryHidden":"<code>SheetStateValues.VeryHidden</code>: Sheet is hidden and cannot be unhidden from Excel's UI"
+  },
+  "MergeCells": {
+    "basic": "In order to merge a range of cells while a sheet is open, use <code>MergeCells</code> with a range."
+  },
+  "Styling": {
+    "basic": "First, the elements that define a style (font, fill, border and, optionally, numbering format) must be created.",
+    "insert": "After that, a new style list can be created and new styles inserted. Remember to name you styles.",
+    "useName": "When instantiating <code>BigExcelWriter</code>, use the result of calling <code>GetStylesheet</code> as the <code>stylesheet parameter</code>. Then, when writing a cell, you can use the name given earlier to format it.",
+    "note":{
+      "p1":"If you're planning to use <a href='{{aHrefLink}}'>{{projects.BigExcelCreator.Conditional Formatting}}</a>, you must also create differential styles here. To do so, follow the same instructions as above, replacing <code>NewStyle</code> with <code>NewDifferentialStyle</code>.",
+      "p2":"All parameters of <code>NewDifferentialStyle</code> are optional, except <code>name</code>. Of the optional parameters, at least one must be present."
+    }
+  }
+}
