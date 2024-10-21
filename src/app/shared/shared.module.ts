@@ -7,7 +7,6 @@ import { ButtonModule } from 'primeng/button';
 import { InputIconModule } from 'primeng/inputicon';
 import { MenuModule } from 'primeng/menu';
 import { MenubarModule } from 'primeng/menubar';
-import { PanelMenuModule } from 'primeng/panelmenu';
 import { SkeletonModule } from 'primeng/skeleton';
 import { TabViewModule } from 'primeng/tabview';
 import { ToolbarModule } from 'primeng/toolbar';
@@ -42,7 +41,7 @@ import { TopbarComponent } from './topbar/topbar.component';
     InputIconModule,
     MenubarModule,
     MenuModule,
-    PanelMenuModule,
+    MenuModule,
     LanguageSelectorModule,
     TranslocoModule,
     HighlightModule,

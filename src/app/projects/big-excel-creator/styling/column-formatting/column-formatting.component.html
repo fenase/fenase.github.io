@@ -1,0 +1,14 @@
+<h2 class="text-primary" [attr.id]="'columnFormatting'">
+  {{ 'projects.BigExcelCreator.Column formatting' | transloco }}
+</h2>
+
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.styling'">
+
+  <p [innerHTML]="t('ColumnFormatting.basic')"></p>
+  <p [innerHTML]="t('ColumnFormatting.width')"></p>
+  <p [innerHTML]="t('ColumnFormatting.CustomWidth')"></p>
+  <p [innerHTML]="t('ColumnFormatting.Hidden')"></p>
+
+  <app-code-example examplePath="projects/BigExcelCreator/columnFormatting" language="cs"></app-code-example>
+
+</ng-container>

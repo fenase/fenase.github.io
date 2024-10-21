@@ -1,0 +1,9 @@
+<h2 class="text-primary" [attr.id]="'comments'">{{ 'projects.BigExcelCreator.Comments' | transloco }}</h2>
+
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.styling'">
+
+  <p [innerHTML]="t('Comments.basic')"></p>
+
+  <app-code-example examplePath="projects/BigExcelCreator/comment" language="cs"></app-code-example>
+
+</ng-container>

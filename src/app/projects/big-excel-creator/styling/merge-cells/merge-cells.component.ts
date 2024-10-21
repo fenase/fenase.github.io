@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { provideTranslocoScope } from '@jsverse/transloco';
 
 @Component({
-  selector: 'app-styling',
-  templateUrl: './styling.component.html',
-  styles: '',
+  selector: 'app-merge-cells',
+  templateUrl: './merge-cells.component.html',
+  styles: ``,
   providers: [
     provideTranslocoScope(
       { scope: 'projects/BigExcelCreator/styling', alias: 'projects.BigExcelCreator.styling' },
@@ -12,6 +12,6 @@ import { provideTranslocoScope } from '@jsverse/transloco';
     )
   ],
 })
-export class StylingComponent {
+export class MergeCellsComponent {
 
 }

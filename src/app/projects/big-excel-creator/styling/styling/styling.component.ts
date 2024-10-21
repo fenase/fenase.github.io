@@ -4,7 +4,7 @@ import { provideTranslocoScope } from '@jsverse/transloco';
 @Component({
   selector: 'app-styling',
   templateUrl: './styling.component.html',
-  styles: '',
+  styles: ``,
   providers: [
     provideTranslocoScope(
       { scope: 'projects/BigExcelCreator/styling', alias: 'projects.BigExcelCreator.styling' },

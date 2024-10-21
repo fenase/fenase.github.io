@@ -9,42 +9,46 @@ import { MenuItem } from 'primeng/api';
   providers: [provideTranslocoScope({ scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' })]
 })
 export class BigExcelCreatorComponent {
+  private readonly baseRoute: string = "/projects/BigExcelCreator";
+
+
 
   public menuItems: MenuItem[] =
     [
-      {
-        label: 'projects.BigExcelCreator.The Package',
-        icon: 'pi pi-box',
-        command: () => {
-          this.router.navigate(['.'], { relativeTo: this.activatedRoute });
-        }
-      },
       {
         label: 'projects.BigExcelCreator.Getting started',
         icon: 'pi pi-play-circle',
         items: [
           {
+            label: 'projects.BigExcelCreator.The Package',
+            icon: 'pi pi-box',
+            routerLink: [this.baseRoute, 'thePackage'],
+            routerLinkActiveOptions: { exact: true }
+          },
+          {
             label: 'projects.BigExcelCreator.Installation',
             icon: 'pi pi-download',
-            command: () => {
-              this.router.navigate(['installation'], { relativeTo: this.activatedRoute });
-            }
+            routerLink: [this.baseRoute, 'installation'],
           },
           {
             label: 'projects.BigExcelCreator.Basic usage',
             icon: 'pi pi-code',
-            command: () => {
-              this.router.navigate(['usage'], { relativeTo: this.activatedRoute });
-            }
+            routerLink: [this.baseRoute, 'usage'],
+            routerLinkActiveOptions: { exact: true }
           }
-        ]
+        ],
       },
       {
         label: 'projects.BigExcelCreator.Data Validation',
         icon: 'pi pi-list-check',
-        command: () => {
-          this.router.navigate(['dataValidation'], { relativeTo: this.activatedRoute });
-        }
+        items: [
+          {
+            label: 'projects.BigExcelCreator.Data Validation',
+            icon: 'pi pi-list-check',
+            routerLink: [this.baseRoute, 'dataValidation'],
+            routerLinkActiveOptions: { exact: true }
+          }
+        ]
       },
       {
         label: 'projects.BigExcelCreator.Styling and formatting',
@@ -53,60 +57,58 @@ export class BigExcelCreatorComponent {
           {
             label: 'projects.BigExcelCreator.Column formatting',
             icon: 'pi pi-objects-column',
-            command: () => {
-              this.router.navigate(['styling'], { fragment: 'columnFormatting', relativeTo: this.activatedRoute });
-            }
+            routerLink: [this.baseRoute, 'styling', 'columnFormatting'],
+            routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Hide Sheet',
             icon: 'pi pi-eye-slash',
-            command: () => {
-              this.router.navigate(['styling'], { fragment: 'hideSheet', relativeTo: this.activatedRoute });
-            }
+            routerLink: [this.baseRoute, 'styling', 'hideSheet'],
+            routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Merge Cells',
             icon: 'pi pi-bars',
-            command: () => {
-              this.router.navigate(['styling'], { fragment: 'mergeCells', relativeTo: this.activatedRoute });
-            }
+            routerLink: [this.baseRoute, 'styling', 'mergeCells'],
+            routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Styling',
             icon: 'pi pi-palette',
-            command: () => {
-              this.router.navigate(['styling'], { fragment: 'styling', relativeTo: this.activatedRoute });
-            }
+            routerLink: [this.baseRoute, 'styling', 'styling'],
+            routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Comments',
             icon: 'pi pi-comment',
-            command: () => {
-              this.router.navigate(['styling'], { fragment: 'comments', relativeTo: this.activatedRoute });
-            }
+            routerLink: [this.baseRoute, 'styling', 'comments'],
+            routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Autofilter',
             icon: 'pi pi-filter',
-            command: () => {
-              this.router.navigate(['styling'], { fragment: 'autofilter', relativeTo: this.activatedRoute });
-            }
+            routerLink: [this.baseRoute, 'styling', 'autofilter'],
+            routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Conditional Formatting',
             icon: 'pi pi-sun',
-            command: () => {
-              this.router.navigate(['styling'], { fragment: 'conditionalFormatting', relativeTo: this.activatedRoute });
-            }
+            routerLink: [this.baseRoute, 'styling', 'conditionalFormatting'],
+            routerLinkActiveOptions: { exact: true }
           },
         ]
       },
       {
         label: 'projects.BigExcelCreator.Page layout',
         icon: 'pi pi-table',
-        command: () => {
-          this.router.navigate(['pageLayout'], { relativeTo: this.activatedRoute });
-        }
+        items: [
+          {
+            label: 'projects.BigExcelCreator.Page layout',
+            icon: 'pi pi-table',
+            routerLink: [this.baseRoute, 'pageLayout'],
+            routerLinkActiveOptions: { exact: true }
+          },
+        ]
       },
     ];
 

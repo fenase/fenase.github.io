@@ -1,0 +1,13 @@
+<h2 class="text-primary" [attr.id]="'hideSheet'">{{ 'projects.BigExcelCreator.Hide Sheet' | transloco }}</h2>
+
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.styling'">
+
+  <p [innerHTML]="t('HideSheet.basic')"></p>
+  <ul>
+    <li [innerHTML]="t('HideSheet.Visible')"></li>
+    <li [innerHTML]="t('HideSheet.Hidden')"></li>
+    <li [innerHTML]="t('HideSheet.VeryHidden')"></li>
+  </ul>
+
+
+</ng-container>
