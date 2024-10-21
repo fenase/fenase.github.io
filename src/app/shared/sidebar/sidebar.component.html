@@ -7,11 +7,13 @@
           <span class="text-primary font-bold">{{ item.label | transloco }}</span>
         </ng-template>
         <ng-template pTemplate="item" let-item>
-          <a [routerLink]="item.routerLink" routerLinkActive="router-link-active" pRipple
-            class="flex align-items-center p-menuitem-link router-link">
-            <span [class]="item.icon"></span>
-            <span class="ml-2">{{ item.label | transloco }}</span>
-          </a>
+
+            <a [routerLink]="item.routerLink" routerLinkActive="router-link-active" pRipple
+              class="flex align-items-center p-menuitem-link router-link">
+              <span [class]="item.icon"></span>
+              <span class="ml-2">{{ item.label | transloco }}</span>
+            </a>
+
         </ng-template>
       </p-menu>
     </nav>

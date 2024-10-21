@@ -854,6 +854,6 @@ a>code {
 .content {
   padding-top: var(--topPaddingBecauseOfMenu);
   z-index: 2;
-  position: relative;
+  position: absolute;
   flex: 0 0 auto;
 }
