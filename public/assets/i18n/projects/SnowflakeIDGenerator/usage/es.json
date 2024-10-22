@@ -1,0 +1,6 @@
+{
+  "There are 2 ways of using the generator": "Existen 2 formas de usar el generador:",
+  "Using the SnowflakeIDGenerator": "Usar la clase <code>SnowflakeIDGenerator</code> cómo clase estática. Útil si se desea generar un único código evitando lidiar con los constructores y el alcance del objeto generador.",
+  "Instantiating the SnowflakeIDGenerator": "Instanciar la clase <code>SnowflakeIDGenerator</code>. Esto se recomienda si se pretende generar más que unos pocos códigos a la vez.",
+  "If you prefer to use dependency injection": "A partir de la versión 1.4.2024 se puede utilizar la interfaz <code>ISnowflakeIDGenerator</code>. Si prefiere utilizar Injección de Dependencias, tal vez le sea útil el paquete <a href=\"https://www.nuget.org/packages/SnowflakeIDGenerator.DependencyInjection\" rel=\"noopener noreferrer\">SnowflakeIDGenerator.DependencyInjection</a>."
+}

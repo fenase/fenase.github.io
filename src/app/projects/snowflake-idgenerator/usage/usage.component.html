@@ -1,1 +1,21 @@
-<p>usage works!</p>
+<h1 class="text-primary">{{'projects.SnowflakeIDGenerator.Basic usage'|transloco}}</h1>
+
+
+
+<ng-container *transloco="let t; prefix: 'projects.SnowflakeIDGenerator.usage'">
+
+  <p [innerHTML]="t('There are 2 ways of using the generator')">:</p>
+  <ul>
+    <li [innerHTML]="t('Using the SnowflakeIDGenerator')"></li>
+    <li [innerHTML]="t('Instantiating the SnowflakeIDGenerator')"></li>
+  </ul>
+
+</ng-container>
+
+<ng-container *transloco="let t;">
+
+  <p-panel [header]="t('Note')">
+    <p [innerHTML]="t('projects.SnowflakeIDGenerator.usage.If you prefer to use dependency injection')"></p>
+  </p-panel>
+
+</ng-container>
