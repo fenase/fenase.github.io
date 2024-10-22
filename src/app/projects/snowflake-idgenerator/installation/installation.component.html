@@ -1,1 +1,11 @@
-<p>installation works!</p>
+<h1 class="text-primary">{{'projects.SnowflakeIDGenerator.Installation'|transloco}}</h1>
+
+<ng-container *transloco="let t; prefix: 'projects.SnowflakeIDGenerator.installation'">
+
+  <p>{{ t('useCommand') }}</p>
+
+  <app-install-instructions [instructions]="instructions"></app-install-instructions>
+
+  <p>{{ t('usePM') }}</p>
+
+</ng-container>

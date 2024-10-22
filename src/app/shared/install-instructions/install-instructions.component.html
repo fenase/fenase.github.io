@@ -1,6 +1,6 @@
 <ng-container *transloco="let t;">
 
-  <div class="card">
+  <div class="card" *ngIf="instructions.length > 1">
 
     <p-tabView [(activeIndex)]="versionIndex" (activeIndexChange)="onTabsChange()">
 
@@ -19,6 +19,26 @@
 
         </p-tabView>
 
+      </p-tabPanel>
+
+    </p-tabView>
+
+  </div>
+
+
+
+
+  <div class="card" *ngIf="instructions.length === 1">
+
+    <p-tabView [scrollable]="true" [(activeIndex)]="installerFlavorIndex" (activeIndexChange)="onTabsChange()">
+
+      <p-tabPanel *ngFor="let instruction of instructions[0].instructions" [header]="instruction.name">
+        <pre>
+          <span [highlight]="instruction.text" [language]="instruction.lang" [classList]="instruction.class"></span>
+            <div class="copyDiv">
+              <p-button [label]="t('Copy')" size="small" icon="pi pi-copy" (onClick)="copy()" [loading]="copying" styleClass="copyDiv"></p-button>
+            </div>
+          </pre>
       </p-tabPanel>
 
     </p-tabView>
