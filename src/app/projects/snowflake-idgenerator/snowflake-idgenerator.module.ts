@@ -6,7 +6,7 @@ import { HighlightModule } from 'ngx-highlightjs';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import { InstallationComponent } from './installation/installation.component';
-import { snowflakeIdGeneratorRoutingModule } from './snowflake-idgenerator-routing.module';
+import { SnowflakeIdGeneratorRoutingModule } from './snowflake-idgenerator-routing.module';
 import { SnowflakeIDGeneratorComponent } from './snowflake-idgenerator.component';
 import { StartComponent } from './start/start.component';
 import { UsageComponent } from './usage/usage.component';
@@ -24,7 +24,7 @@ import { SharedModule } from "../../shared/shared.module";
   imports: [
     CommonModule,
     RouterModule,
-    snowflakeIdGeneratorRoutingModule,
+    SnowflakeIdGeneratorRoutingModule,
     TranslocoModule,
     ButtonModule,
     PanelModule,
