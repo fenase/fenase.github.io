@@ -68,11 +68,11 @@ nav {
 
 @media(width < 768px) {
   div.sidebar {
-    display: none;
+    visibility: hidden;
   }
 
   div.sidebar-active {
-    display: flex !important;
+    visibility: visible !important;
   }
 
   p-button.sidebar {
@@ -80,7 +80,7 @@ nav {
   }
 
   p-button.sidebar-active.open-sidebar {
-    display: none !important;
+    visibility: hidden !important;
   }
 
   p-button.sidebar-active.close-sidebar {
@@ -90,7 +90,7 @@ nav {
 
 @media (width >=768px) {
   div.sidebar {
-    display: inherit;
+    visibility: visible
   }
 
   p-button.sidebar {

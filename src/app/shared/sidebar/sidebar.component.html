@@ -1,5 +1,5 @@
 <div [class]="classList">
-  <div class="flex fixed z-5">
+  <div class="flex fixed z-5 ">
 
     <aside>
       <nav>
@@ -7,7 +7,8 @@
 
           <ng-template pTemplate="start">
             <div class="w-full inline-flex justify-content-end pr-3">
-              <p-button [class]="classList" class="close-sidebar" [icon]="buttonIcon" (onClick)="toggleSidebar()" />
+              <p-button size="small" [rounded]="true" [raised]="true" severity="secondary" [class]="classList"
+                class="close-sidebar" [icon]="buttonIcon" (onClick)="toggleSidebar()" />
             </div>
           </ng-template>
 
@@ -29,4 +30,6 @@
 
   </div>
 </div>
-<p-button [class]="classList" class="open-sidebar" [icon]="buttonIcon" (onClick)="toggleSidebar()" />
+<p-button size="small" [rounded]="true" [raised]="true" severity="secondary" [class]="classList" class="open-sidebar"
+  [icon]="buttonIcon" (onClick)="toggleSidebar()" />
+

@@ -11,18 +11,25 @@ export class SidebarComponent {
   @Input()
   public menuItems!: MenuItem[];
 
-  public classList: string[] = ["sidebar"];
-
-  public buttonIcon: string = "pi pi-plus";
-
   private possibleClasses: string[][] = [
-    ["sidebar"],
+    ["sidebar", "sidebar-inactive"],
     ["sidebar", "sidebar-active"]
   ]
   private possibleButtons: string[] = [
-    "pi pi-plus",
-    "pi pi-minus"
+    "pi pi-ellipsis-v",
+    "pi pi-arrow-left"
   ]
+
+  // private animationClasses: string[] = [
+  //   "fadeoutleft",
+  //   "fadeinleft",
+  // ]
+
+  public classList: string[] = this.possibleClasses[0];
+
+  public buttonIcon: string = this.possibleButtons[0];
+
+  // public animationClass: string = this.animationClasses[0];
 
   public sidebarActive: boolean = false
 
@@ -37,6 +44,7 @@ export class SidebarComponent {
 
     this.classList = this.possibleClasses[this.sidebarActive ? 1 : 0]
     this.buttonIcon = this.possibleButtons[this.sidebarActive ? 1 : 0]
+    // this.animationClass = this.animationClasses[this.sidebarActive ? 1 : 0]
   }
 }
 
