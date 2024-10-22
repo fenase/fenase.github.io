@@ -1,0 +1,3 @@
+{
+  "p1": "Generate unique identifiers based on Twitter's <a href='https://en.wikipedia.org/wiki/Snowflake_ID' rel='noopener noreferrer nofollow'>Snowflake ID</a>. Parse a Snowflake to get information about it's creation."
+}
