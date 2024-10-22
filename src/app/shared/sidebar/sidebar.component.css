@@ -14,11 +14,44 @@ nav {
   padding: 0 1rem 0 0;
   flex-grow: 1;
   list-style: none;
+  word-break: break-word;
+  word-wrap: break-word;
+  max-width: fit-content;
 }
+
+@media (min-width:576px) {
+  nav {
+    max-width: calc((560px * (12/12)) - 16px);
+    width: calc((560px * (12/12)) - 16px);
+  }
+}
+
+@media (min-width:768px) {
+  nav {
+    max-width: calc((750px * (5/12)) - 16px);
+    width: calc((750px * (5/12)) - 16px);
+  }
+}
+
+@media (min-width:992px) {
+  nav {
+    max-width: calc((970px * (4/12)) - 16px);
+    width: calc((970px * (4/12)) - 16px);
+  }
+}
+
+@media (min-width:1200px) {
+  nav {
+    max-width: calc((1170px * (3/12)) - 16px);
+    width: calc((1170px * (3/12)) - 16px);
+  }
+}
+
+
 
 @media screen and (min-width: 768px) {
   nav {
-    /* 100vh: screen height; 1rem: nav col-3 padding*/
+    /* 100vh => screen height; 1rem => nav + col-3 + padding*/
     height: calc(100vh - var(--topPaddingBecauseOfMenu) - 1rem);
   }
 }

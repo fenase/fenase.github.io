@@ -30,7 +30,7 @@ export class TopbarComponent {
           {
             label: 'Snowflake Id Generator',
             icon: 'pi pi-server',
-            routerLink: '/projects/404',
+            routerLink: '/projects/SnowflakeIDGenerator',
           },
         ]
       },

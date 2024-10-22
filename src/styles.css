@@ -812,6 +812,10 @@ a>code {
   .content {
     width: 970px;
   }
+
+  .sidebar{
+    display: inherit !important;
+  }
 }
 
 @media (min-width:1200px) {
@@ -825,6 +829,10 @@ a>code {
 
   .content {
     width: 1170px
+  }
+
+  .sidebar{
+    display: inherit !important;
   }
 }
 
@@ -854,6 +862,10 @@ a>code {
 .content {
   padding-top: var(--topPaddingBecauseOfMenu);
   z-index: 2;
-  position: relative;
+  position: absolute;
   flex: 0 0 auto;
+}
+
+.sidebar{
+  display: none;
 }
