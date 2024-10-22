@@ -12,8 +12,6 @@ import { MenuItem } from 'primeng/api';
 export class SnowflakeIDGeneratorComponent {
   private readonly baseRoute: string = "/projects/SnowflakeIDGenerator";
 
-
-
   public menuItems: MenuItem[] =
     [
       {
