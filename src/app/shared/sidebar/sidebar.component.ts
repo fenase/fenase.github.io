@@ -11,18 +11,18 @@ export class SidebarComponent {
   @Input()
   public menuItems!: MenuItem[];
 
-  public classList: string[] = ["sidebar"];
-
-  public buttonIcon: string = "pi pi-plus";
-
   private possibleClasses: string[][] = [
-    ["sidebar"],
+    ["sidebar", "sidebar-inactive"],
     ["sidebar", "sidebar-active"]
   ]
   private possibleButtons: string[] = [
-    "pi pi-plus",
-    "pi pi-minus"
+    "pi pi-ellipsis-v",
+    "pi pi-arrow-left"
   ]
+
+  public classList: string[] = this.possibleClasses[0];
+
+  public buttonIcon: string = this.possibleButtons[0];
 
   public sidebarActive: boolean = false
 

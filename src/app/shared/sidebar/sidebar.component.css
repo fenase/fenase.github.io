@@ -67,12 +67,42 @@ nav {
 
 
 @media(width < 768px) {
-  div.sidebar {
-    display: none;
+  div.sidebar.sidebar-inactive {
+    visibility: hidden;
+    transition: all 0.15s;
+    animation: fadeoutleft 0.15s linear;
+
+    @keyframes fadeoutleft {
+      0% {
+        opacity: 0;
+        transform: translateX(0%);
+        transition: transform .12s cubic-bezier(0, 0, 0.2, 1), opacity .12s cubic-bezier(0, 0, 0.2, 1);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(-100%);
+      }
+    }
   }
 
-  div.sidebar-active {
-    display: flex !important;
+  div.sidebar.sidebar-active {
+    visibility: visible;
+    transition: all 0.15s linear;
+    animation: fadeinleft 0.15s linear;
+
+    @keyframes fadeinleft {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: transform .12s cubic-bezier(0, 0, 0.2, 1), opacity .12s cubic-bezier(0, 0, 0.2, 1);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
   }
 
   p-button.sidebar {
@@ -80,7 +110,7 @@ nav {
   }
 
   p-button.sidebar-active.open-sidebar {
-    display: none !important;
+    visibility: hidden !important;
   }
 
   p-button.sidebar-active.close-sidebar {
@@ -90,7 +120,7 @@ nav {
 
 @media (width >=768px) {
   div.sidebar {
-    display: inherit;
+    visibility: visible
   }
 
   p-button.sidebar {
