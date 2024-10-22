@@ -1,22 +1,32 @@
-<div class="flex fixed ">
+<div [class]="classList">
+  <div class="flex fixed z-5">
 
-  <aside>
-    <nav>
-      <p-menu [model]="menuItems" styleClass="w-full">
-        <ng-template pTemplate="submenuheader" let-item>
-          <span class="text-primary font-bold">{{ item.label | transloco }}</span>
-        </ng-template>
-        <ng-template pTemplate="item" let-item>
+    <aside>
+      <nav>
+        <p-menu [model]="menuItems" styleClass="w-full">
 
-            <a [routerLink]="item.routerLink" routerLinkActive="router-link-active" pRipple
-              class="flex align-items-center p-menuitem-link router-link">
+          <ng-template pTemplate="start">
+            <div class="w-full inline-flex justify-content-end pr-3">
+              <p-button [class]="classList" class="close-sidebar" [icon]="buttonIcon" (onClick)="toggleSidebar()" />
+            </div>
+          </ng-template>
+
+          <ng-template pTemplate="submenuheader" let-item>
+            <span class="text-primary font-bold">{{ item.label | transloco }}</span>
+          </ng-template>
+
+          <ng-template pTemplate="item" let-item>
+            <a (click)="toggleSidebar(false)" [routerLink]="item.routerLink" routerLinkActive="router-link-active"
+              pRipple class="flex align-items-center p-menuitem-link router-link">
               <span [class]="item.icon"></span>
               <span class="ml-2">{{ item.label | transloco }}</span>
             </a>
+          </ng-template>
 
-        </ng-template>
-      </p-menu>
-    </nav>
-  </aside>
+        </p-menu>
+      </nav>
+    </aside>
 
+  </div>
 </div>
+<p-button [class]="classList" class="open-sidebar" [icon]="buttonIcon" (onClick)="toggleSidebar()" />
