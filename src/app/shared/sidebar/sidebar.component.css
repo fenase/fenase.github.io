@@ -64,3 +64,36 @@ nav {
   color: var(--brandStrokeCompoundPressed);
   border-left-color: var(--brandStrokeCompoundPressed);
 }
+
+
+@media(width < 768px) {
+  div.sidebar {
+    display: none;
+  }
+
+  div.sidebar-active {
+    display: flex !important;
+  }
+
+  p-button.sidebar {
+    display: inherit !important;
+  }
+
+  p-button.sidebar-active.open-sidebar {
+    display: none !important;
+  }
+
+  p-button.sidebar-active.close-sidebar {
+    display: inherit !important;
+  }
+}
+
+@media (width >=768px) {
+  div.sidebar {
+    display: inherit;
+  }
+
+  p-button.sidebar {
+    display: none !important;
+  }
+}

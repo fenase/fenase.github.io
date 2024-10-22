@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 :root,
 [data-theme=light] {
-  --topPaddingBecauseOfMenu: calc(5rem /*message*/ + 5rem /*header*/ );
+  --topPaddingBecauseOfMenu: calc(5rem
+      /*message*/
+      + 5rem
+      /*header*/
+    );
   --body-background-color: linear-gradient(341deg, rgba(250, 250, 250, 0) 15.1%, rgba(11, 108, 255, 0.2) 105.92%), var(--neutralBackground2Rest);
   --nuget-trends-icon-invert-value: 0;
   --brandBackgroundStatic: var(--dotnetBluePrimary, #0f6cbd);
@@ -812,10 +816,6 @@ a>code {
   .content {
     width: 970px;
   }
-
-  .sidebar{
-    display: inherit !important;
-  }
 }
 
 @media (min-width:1200px) {
@@ -829,10 +829,6 @@ a>code {
 
   .content {
     width: 1170px
-  }
-
-  .sidebar{
-    display: inherit !important;
   }
 }
 
@@ -864,8 +860,4 @@ a>code {
   z-index: 2;
   position: absolute;
   flex: 0 0 auto;
-}
-
-.sidebar{
-  display: none;
 }
