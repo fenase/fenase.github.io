@@ -41,46 +41,46 @@ export class SnowflakeIDGeneratorComponent {
       },
       {
         label: 'projects.SnowflakeIDGenerator.Generate',
-        icon: 'pi pi-play-circle',
+        icon: 'pi pi-play-sparkles',
         items: [
           {
             label: 'projects.SnowflakeIDGenerator.Using the SnowflakeIDGenerator class',
-            icon: 'pi pi-box',
-            routerLink: [this.baseRoute, 'thePackage'],
+            icon: 'pi pi-sparkles',
+            routerLink: [this.baseRoute, 'generate'],
             routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.SnowflakeIDGenerator.Using the SnowflakeIDGenerator class as static',
-            icon: 'pi pi-download',
-            routerLink: [this.baseRoute, 'installation'],
+            icon: 'pi pi-sparkles',
+            routerLink: [this.baseRoute, 'generateStatic'],
           },
           {
             label: 'projects.SnowflakeIDGenerator.Using a non-standard date as epoch',
-            icon: 'pi pi-code',
-            routerLink: [this.baseRoute, 'usage'],
+            icon: 'pi pi-calendar',
+            routerLink: [this.baseRoute, 'generateEpoch'],
             routerLinkActiveOptions: { exact: true }
           }
         ],
       },
       {
         label: 'projects.SnowflakeIDGenerator.The Snowflake object',
-        icon: 'pi pi-play-circle',
+        icon: 'pi pi-objects-column',
         items: [
           {
             label: 'projects.SnowflakeIDGenerator.Parsing an Id',
-            icon: 'pi pi-box',
-            routerLink: [this.baseRoute, 'thePackage'],
+            icon: 'pi pi-map',
+            routerLink: [this.baseRoute, 'parse'],
             routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.SnowflakeIDGenerator.The Snowflake object',
-            icon: 'pi pi-download',
-            routerLink: [this.baseRoute, 'installation'],
+            icon: 'pi pi-building-columns',
+            routerLink: [this.baseRoute, 'theObject'],
           },
           {
             label: 'projects.SnowflakeIDGenerator.Changing Epoch on generated codes',
-            icon: 'pi pi-code',
-            routerLink: [this.baseRoute, 'usage'],
+            icon: 'pi pi-calendar-plus',
+            routerLink: [this.baseRoute, 'changeEpoch'],
             routerLinkActiveOptions: { exact: true }
           }
         ],
