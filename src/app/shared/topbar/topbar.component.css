@@ -1,0 +1,25 @@
+@media screen and (width <=960px) {
+  .p-menuitem-link-active {
+    color: var(--brandStrokeCompoundPressed);
+    border-left: 1px solid var(--brandStrokeCompoundPressed) !important;
+
+  }
+
+  .p-menuitem-link {
+    border-left: 0px solid transparent;
+    transition: all 250ms ease-in !important;
+  }
+}
+
+@media screen and (width > 960px) {
+
+  .p-menuitem-link-active {
+    color: var(--brandStrokeCompoundPressed);
+    border-bottom: 1px solid var(--brandStrokeCompoundPressed) !important;
+  }
+
+  .p-menuitem-link {
+    border-bottom: 0px solid transparent;
+    transition: all 250ms ease-in !important;
+  }
+}

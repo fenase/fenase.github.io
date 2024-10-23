@@ -65,6 +65,11 @@ nav {
   border-left-color: var(--brandStrokeCompoundPressed);
 }
 
+@media (width >=768px) {
+  .router-link {
+    transition: all 250ms ease-in !important;
+  }
+}
 
 @media(width < 768px) {
   div.sidebar.sidebar-inactive {

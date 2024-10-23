@@ -1,7 +1,7 @@
 <nav>
   <p-menubar [model]="menuItems" styleClass="topbar-sticky">
     <ng-template pTemplate="item" let-item let-root="root">
-      <a [routerLink]="item.routerLink" routerLinkActive="router-link-active"
+      <a [routerLink]="item.routerLink" routerLinkActive="p-menuitem-link-active" [routerLinkActiveOptions]="item.routerLinkActiveOptions"
        pRipple class="flex align-items-center p-menuitem-link">
           <span [class]="item.icon"></span>
           <span class="ml-2">{{ item.label | transloco}}</span>
