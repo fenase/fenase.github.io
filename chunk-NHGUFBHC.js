@@ -1,1 +1,0 @@
-import"./chunk-2R6CW7ES.js";var n="Generate unique identifiers based on Twitter's <a href='https://en.wikipedia.org/wiki/Snowflake_ID' rel='noopener noreferrer nofollow'>Snowflake ID</a>. Parse a Snowflake to get information about it's creation.",i={p1:n};export{i as default,n as p1};

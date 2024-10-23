@@ -1,1 +1,0 @@
-import"./chunk-2R6CW7ES.js";var r="Genere identificadores \xFAnicos basados en <a href='https://en.wikipedia.org/wiki/Snowflake_ID' rel='noopener noreferrer nofollow'>Snowflake ID</a>, utilizado por Twitter. Procese un Snowflake para obtener informaci\xF3n acerca de su creaci\xF3n.",n={p1:r};export{n as default,r as p1};

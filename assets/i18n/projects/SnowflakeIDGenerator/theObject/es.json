@@ -1,0 +1,12 @@
+{
+  "While the SnowflakeIDGenerator": "Mientras que la clase <code>SnowflakeIDGenerator</code> guarda registro de la fecha, máquina y secuencia, el objeto <code>Snowflake</code> guarda el significado del código, y permite la extracción de la información de dicho código.",
+  "For example": "Por ejemplo, cómo se puede ver en la sección <a href=\"/projects/SnowflakeIDGenerator/parse\" rel=\"noopener noreferrer\">{{projects.SnowflakeIDGenerator.Parsing an Id}}</a>, cuando se trabaja con un objeto <code>Snowflake</code> (ya sea procesado o recién generado), se puede ver cierta información. Los campos disponigles son:",
+  "ul": {
+    "UtcDateTime": "<code>UtcDateTime</code>: La fecha de creación (formato UTC)",
+    "Timestamp": "<code>Timestamp</code> y <code>TimestampInt64</code> El componente <em>timestamp</em> del código. cantidad de milisegundos desde la <em>epoch</em> configurada",
+    "MachineId": "<code>MachineId</code> y <code>MachineIdInt32</code>: la máquina / terminal / servidor que creó el id",
+    "Sequence": "<code>Sequence</code> y <code>SequenceInt32</code>: El secuenciador. Si es mayor a 0, varios Ids fieron generados dentro del mismo milisegundo",
+    "Id": "<code>Id</code>: El Snowflake id en formato <code>ulong</code>",
+    "Code": "<code>Code</code>: El Snowflake id cómo <code>String</code>"
+  }
+}

@@ -1,0 +1,1 @@
+import"./chunk-2R6CW7ES.js";var a="If you need to change the epoch on an already generated code, use <code>ChangeEpoch()</code> to change it keeping the same code but changing the represented date, or use <code>RebaseEpoch()</code> to keep the date but changing the final code.",c={change:a};export{a as change,c as default};

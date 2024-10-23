@@ -1,0 +1,1 @@
+import"./chunk-2R6CW7ES.js";var c="Si necesita cambiar la \xE9poca de un c\xF3digo ya generado, use <code>ChangeEpoch()</code> para cambiarlo manteniendo el c\xF3digo, pero cambiando la fecha representada, o use <code>RebaseEpoch()</code> para mantener la fecha, pero cambiando el c\xF3digo final.",o={change:c};export{c as change,o as default};

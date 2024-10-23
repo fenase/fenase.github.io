@@ -1,0 +1,3 @@
+{
+  "change": "Si necesita cambiar la época de un código ya generado, use <code>ChangeEpoch()</code> para cambiarlo manteniendo el código, pero cambiando la fecha representada, o use <code>RebaseEpoch()</code> para mantener la fecha, pero cambiando el código final."
+}

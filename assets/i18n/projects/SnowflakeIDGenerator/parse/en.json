@@ -1,0 +1,5 @@
+{
+  "Parse a Snowflake": "Parse a Snowflake either from a string or a number (ulong) in order to get information regarding the generation, such as the time or the machine that generated the code.",
+  "If a custom epoch": "If a custom epoch was used when generating, that DateTime must be passed as second parameter when parsing in order to get the right generation date.",
+  "starting on version 1.2.2023": "Additionally, starting on version 1.2.2023 you can cast a string or a number (ulong) directly into a Snowflake without using the <code>Parse()</code> method (only when using the default epoch)."
+}
