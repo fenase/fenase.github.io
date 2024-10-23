@@ -127,3 +127,8 @@ nav {
     display: none !important;
   }
 }
+
+div.sidebar {
+  overflow-y: auto;
+  height: calc(100vh - var(--topPaddingBecauseOfMenu));
+}

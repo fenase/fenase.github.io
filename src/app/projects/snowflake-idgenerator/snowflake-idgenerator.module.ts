@@ -11,6 +11,12 @@ import { SnowflakeIDGeneratorComponent } from './snowflake-idgenerator.component
 import { StartComponent } from './start/start.component';
 import { UsageComponent } from './usage/usage.component';
 import { SharedModule } from "../../shared/shared.module";
+import { GenerateComponent } from './generate/generate.component';
+import { GenerateStaticComponent } from './generate-static/generate-static.component';
+import { GenerateEpochComponent } from './generate-epoch/generate-epoch.component';
+import { ParseComponent } from './parse/parse.component';
+import { TheObjectComponent } from './the-object/the-object.component';
+import { ChangeEpochComponent } from './change-epoch/change-epoch.component';
 
 
 
@@ -20,6 +26,12 @@ import { SharedModule } from "../../shared/shared.module";
     StartComponent,
     InstallationComponent,
     UsageComponent,
+    GenerateComponent,
+    GenerateStaticComponent,
+    GenerateEpochComponent,
+    ParseComponent,
+    TheObjectComponent,
+    ChangeEpochComponent,
   ],
   imports: [
     CommonModule,

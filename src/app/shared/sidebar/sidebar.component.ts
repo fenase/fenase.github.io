@@ -24,9 +24,14 @@ export class SidebarComponent {
 
   public buttonIcon: string = this.possibleButtons[0];
 
-  public sidebarActive: boolean = false
+  public sidebarActive: boolean = false;
+
+  public buttonActive: boolean = true;
 
   public toggleSidebar(open?: boolean): void {
+    if (!this.buttonActive) { return; }
+    this.buttonActive = false;
+
     if (open === true || open === false) {
       // force falue
       this.sidebarActive = open;
@@ -37,6 +42,10 @@ export class SidebarComponent {
 
     this.classList = this.possibleClasses[this.sidebarActive ? 1 : 0]
     this.buttonIcon = this.possibleButtons[this.sidebarActive ? 1 : 0]
+
+    setTimeout(() => {
+      this.buttonActive = true;
+    }, 150);
   }
 }
 

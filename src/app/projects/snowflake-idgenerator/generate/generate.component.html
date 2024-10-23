@@ -1,0 +1,27 @@
+<h1 class="text-primary">{{'projects.SnowflakeIDGenerator.Generate'|transloco}}</h1>
+<h2 class="text-primary">{{'projects.SnowflakeIDGenerator.Using the SnowflakeIDGenerator class'|transloco}}</h2>
+
+<ng-container *transloco="let t; prefix: 'projects.SnowflakeIDGenerator.generate.Using the SnowflakeIDGenerator class'">
+
+  <ol>
+    <li [innerHTML]="t('Instantiate')"></li>
+  </ol>
+
+<app-code-example examplePath="projects/SnowflakeIDGenerator/instantiate" language="cs"></app-code-example>
+
+  <p [innerHTML]="t('where machineId is')"></p>
+  <p [innerHTML]="t('Starting on version 1.1.2023')"></p>
+
+  <app-code-example examplePath="projects/SnowflakeIDGenerator/instantiateCustomEpoch" language="cs"></app-code-example>
+
+  <ol start="2">
+    <li> {{t('Using the generator object')}}
+      <ol>
+        <li [innerHTML]="t('Call GetSnowflake')"></li>
+        <li [innerHTML]="t('Call GetCode')"></li>
+        <li [innerHTML]="t('Call GetCodeString')"></li>
+      </ol>
+    </li>
+  </ol>
+
+</ng-container>

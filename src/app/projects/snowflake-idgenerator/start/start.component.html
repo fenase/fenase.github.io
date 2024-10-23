@@ -22,7 +22,15 @@
 </div>
 
 
-<ng-container *transloco="let t">
-  <p [innerHTML]="t('projects.SnowflakeIDGenerator.start.p1')"></p>
+<ng-container *transloco="let t; prefix: 'projects.SnowflakeIDGenerator.start'">
+  <p [innerHTML]="t('p1')"></p>
+
+  <h2 class="text-primary">Snowflakes</h2>
+
+  <p [innerHTML]="t('Snowflakes are')"></p>
+  <p [innerHTML]="t('The other components refer')"></p>
+
+  <app-figure imgUrl="/assets/img/SnowflakeId-Wikipedia.png" altText="SnowflakeId components"
+    [epigraph]="t('snowflake components image epigraph')"></app-figure>
 
 </ng-container>
