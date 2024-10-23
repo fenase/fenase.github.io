@@ -15,6 +15,7 @@ import { GenerateComponent } from './generate/generate.component';
 import { GenerateStaticComponent } from './generate-static/generate-static.component';
 import { GenerateEpochComponent } from './generate-epoch/generate-epoch.component';
 import { ParseComponent } from './parse/parse.component';
+import { TheObjectComponent } from './the-object/the-object.component';
 
 
 
@@ -28,6 +29,7 @@ import { ParseComponent } from './parse/parse.component';
     GenerateStaticComponent,
     GenerateEpochComponent,
     ParseComponent,
+    TheObjectComponent,
   ],
   imports: [
     CommonModule,

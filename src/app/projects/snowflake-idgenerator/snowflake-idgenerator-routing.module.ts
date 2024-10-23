@@ -8,6 +8,7 @@ import { ParseComponent } from './parse/parse.component';
 import { SnowflakeIDGeneratorComponent } from './snowflake-idgenerator.component';
 import { StartComponent } from './start/start.component';
 import { UsageComponent } from './usage/usage.component';
+import { TheObjectComponent } from './the-object/the-object.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
       {
         path: 'parse',
         component: ParseComponent,
+      },
+      {
+        path: 'theObject',
+        component: TheObjectComponent,
       },
     ],
   },
