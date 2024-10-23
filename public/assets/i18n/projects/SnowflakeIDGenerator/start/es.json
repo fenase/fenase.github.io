@@ -1,3 +1,6 @@
 {
-  "p1": "Genere identificadores únicos basados en <a href='https://en.wikipedia.org/wiki/Snowflake_ID' rel='noopener noreferrer nofollow'>Snowflake ID</a>, utilizado por Twitter. Procese un Snowflake para obtener información acerca de su creación."
+  "p1": "Genere identificadores únicos basados en <a href='https://en.wikipedia.org/wiki/Snowflake_ID' rel='noopener noreferrer nofollow'>Snowflake ID</a>, utilizado por Twitter. Procese un Snowflake para obtener información acerca de su creación.",
+  "Snowflakes are": "Los Snowflakes (o SnoflakeIds) son una forma de generar identificadores utilizada en computación distribuida que, cuando se usan adecuadamente, garantizan unicidad a través de distintos sistemas, ya que uno de sus componentes refiere al Id del sistema que lo está creando.",
+  "The other components refer": "Los otros componentes refieren a la fecha y hora actual, para así evitar mantener una secuencia a lo largo del tiempo (por ejemplo, un secuenciador en una base de datos), y una pequeña secuencia (en memoria), para permitir la generación de varios códigos en un corto lapso de tiempo.",
+  "snowflake components image epigraph": "Fuente y créditos de la imagen disponibles en <a href=\"https://commons.wikimedia.org/wiki/File:Snowflake-identifier.png\" rel=\"noopener noreferrer nofollow\">wikimedia</a>. \"instance\" en ésta imágen reemplaza a \"machineId\" en la librería / paquete"
 }
