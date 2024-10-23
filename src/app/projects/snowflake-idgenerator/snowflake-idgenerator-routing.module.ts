@@ -4,6 +4,9 @@ import { InstallationComponent } from './installation/installation.component';
 import { StartComponent } from './start/start.component';
 import { UsageComponent } from './usage/usage.component';
 import { SnowflakeIDGeneratorComponent } from './snowflake-idgenerator.component';
+import { GenerateComponent } from './generate/generate.component';
+import { GenerateStaticComponent } from './generate-static/generate-static.component';
+import { GenerateEpochComponent } from './generate-epoch/generate-epoch.component';
 
 const routes: Routes = [
   {
@@ -26,6 +29,18 @@ const routes: Routes = [
       {
         path: 'usage',
         component: UsageComponent,
+      },
+      {
+        path: 'generate',
+        component: GenerateComponent,
+      },
+      {
+        path: 'generateStatic',
+        component: GenerateStaticComponent,
+      },
+      {
+        path: 'generateEpoch',
+        component: GenerateEpochComponent,
       },
     ],
   },

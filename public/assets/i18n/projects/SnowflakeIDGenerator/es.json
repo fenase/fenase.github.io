@@ -4,10 +4,10 @@
   "Installation": "Instalación",
   "Basic usage": "Uso básico",
   "Generate":"Generate",
-  "Using the SnowflakeIDGenerator class":"Using the SnowflakeIDGenerator class",
-  "Using the SnowflakeIDGenerator class as static":"Using the SnowflakeIDGenerator class as static",
-  "Using a non-standard date as epoch":"Using a non-standard date as epoch",
-  "Parsing an Id":"Parsing an Id",
-  "The Snowflake object":"The Snowflake object",
-  "Changing Epoch on generated codes":"Changing Epoch on generated codes"
+  "Using the SnowflakeIDGenerator class":"Usando la claseSnowflakeIDGenerator",
+  "Using the SnowflakeIDGenerator class as static":"Usando la clase SnowflakeIDGenerator como clase estática",
+  "Using a non-standard date as epoch":"Usando una fecha no-standard como epoch",
+  "Parsing an Id":"Procesando un Id",
+  "The Snowflake object":"El objeto Snowflake",
+  "Changing Epoch on generated codes":"Modificar Epoch en códigos generados"
 }
