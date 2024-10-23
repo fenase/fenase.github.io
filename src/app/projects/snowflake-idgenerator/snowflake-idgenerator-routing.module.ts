@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GenerateEpochComponent } from './generate-epoch/generate-epoch.component';
+import { GenerateStaticComponent } from './generate-static/generate-static.component';
+import { GenerateComponent } from './generate/generate.component';
 import { InstallationComponent } from './installation/installation.component';
+import { ParseComponent } from './parse/parse.component';
+import { SnowflakeIDGeneratorComponent } from './snowflake-idgenerator.component';
 import { StartComponent } from './start/start.component';
 import { UsageComponent } from './usage/usage.component';
-import { SnowflakeIDGeneratorComponent } from './snowflake-idgenerator.component';
-import { GenerateComponent } from './generate/generate.component';
-import { GenerateStaticComponent } from './generate-static/generate-static.component';
-import { GenerateEpochComponent } from './generate-epoch/generate-epoch.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
       {
         path: 'generateEpoch',
         component: GenerateEpochComponent,
+      },
+      {
+        path: 'parse',
+        component: ParseComponent,
       },
     ],
   },

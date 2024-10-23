@@ -1,0 +1,5 @@
+{
+  "Parse a Snowflake": "Procese un Snowflake desde un número o string y conviértalo en un objeto Snowflake para obtener información acerca de la generación, cómo ser la fecha o la máquina que lo generó.",
+  "If a custom epoch": "Si se utilizó una época personalizada al momento de la generación, esa fecha  (<code>DateTime</code>) debe incluirse como segundo parámetro para obtener la fecha de generación correcta.",
+  "starting on version 1.2.2023": "Adicionalmente, a partir de la versión 1.2.2023 se puede realizar un <em>casteo</em> de un string o número (ulong) directamente a Snowflake sin utilizar el método <code>Parse()</code> (sólo cuando se utilizó la época predeterminada)."
+}
