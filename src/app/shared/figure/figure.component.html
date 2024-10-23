@@ -1,0 +1,7 @@
+<div>
+  <figure>
+    <span [classList]="classes"><p-skeleton height="15em" /></span>
+    <img [classList]="classes" [src]="imgUrl" [alt]="altText" (load)="onImageLoaded()" width="100%">
+    <figcaption [innerHTML]="epigraph"></figcaption>
+  </figure>
+</div>

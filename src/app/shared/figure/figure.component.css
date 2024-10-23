@@ -1,0 +1,24 @@
+img.loaded {
+  display: block;
+}
+
+span.loaded {
+  display: none !important;
+}
+
+img.not-loaded {
+  display: none !important;
+}
+
+span.not-loaded {
+  display: block;
+  width: 100%;
+}
+
+figcaption {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  color: var(--bs-secondary-text-emphasis);
+}
