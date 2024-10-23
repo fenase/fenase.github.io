@@ -1,34 +1,33 @@
-<div [class]="classList">
-  <div class="flex fixed z-5 ">
+<div class="flex fixed z-5" [class]="classList">
 
-    <aside>
-      <nav>
-        <p-menu [model]="menuItems" styleClass="w-full">
+  <aside>
+    <nav>
+      <p-menu [model]="menuItems" styleClass="w-full">
 
-          <ng-template pTemplate="start">
-            <div class="w-full inline-flex justify-content-end pr-3">
-              <p-button size="small" [rounded]="true" [raised]="true" severity="secondary" [class]="classList"
-                class="close-sidebar" [icon]="buttonIcon" (onClick)="toggleSidebar()" />
-            </div>
-          </ng-template>
+        <ng-template pTemplate="start">
+          <div class="w-full inline-flex justify-content-end pr-3">
+            <p-button size="small" [rounded]="true" [raised]="true" severity="secondary" [class]="classList"
+              class="close-sidebar" [icon]="buttonIcon" (onClick)="toggleSidebar()" [disabled]="!buttonActive" />
+          </div>
+        </ng-template>
 
-          <ng-template pTemplate="submenuheader" let-item>
-            <span class="text-primary font-bold">{{ item.label | transloco }}</span>
-          </ng-template>
+        <ng-template pTemplate="submenuheader" let-item>
+          <span class="text-primary font-bold">{{ item.label | transloco }}</span>
+        </ng-template>
 
-          <ng-template pTemplate="item" let-item>
-            <a (click)="toggleSidebar(false)" [routerLink]="item.routerLink" routerLinkActive="router-link-active"
-              pRipple class="flex align-items-center p-menuitem-link router-link">
-              <span [class]="item.icon"></span>
-              <span class="ml-2">{{ item.label | transloco }}</span>
-            </a>
-          </ng-template>
+        <ng-template pTemplate="item" let-item>
+          <a (click)="toggleSidebar(false)" [routerLink]="item.routerLink" routerLinkActive="router-link-active" pRipple
+            class="flex align-items-center p-menuitem-link router-link">
+            <span [class]="item.icon"></span>
+            <span class="ml-2">{{ item.label | transloco }}</span>
+          </a>
+        </ng-template>
 
-        </p-menu>
-      </nav>
-    </aside>
+      </p-menu>
+    </nav>
+  </aside>
 
-  </div>
 </div>
+
 <p-button size="small" [rounded]="true" [raised]="true" severity="secondary" [class]="classList" class="open-sidebar"
-  [icon]="buttonIcon" (onClick)="toggleSidebar()" />
+  [icon]="buttonIcon" (onClick)="toggleSidebar()" [disabled]="!buttonActive" />
