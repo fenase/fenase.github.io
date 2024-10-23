@@ -16,6 +16,7 @@ import { GenerateStaticComponent } from './generate-static/generate-static.compo
 import { GenerateEpochComponent } from './generate-epoch/generate-epoch.component';
 import { ParseComponent } from './parse/parse.component';
 import { TheObjectComponent } from './the-object/the-object.component';
+import { ChangeEpochComponent } from './change-epoch/change-epoch.component';
 
 
 
@@ -30,6 +31,7 @@ import { TheObjectComponent } from './the-object/the-object.component';
     GenerateEpochComponent,
     ParseComponent,
     TheObjectComponent,
+    ChangeEpochComponent,
   ],
   imports: [
     CommonModule,

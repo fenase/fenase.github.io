@@ -9,6 +9,7 @@ import { SnowflakeIDGeneratorComponent } from './snowflake-idgenerator.component
 import { StartComponent } from './start/start.component';
 import { UsageComponent } from './usage/usage.component';
 import { TheObjectComponent } from './the-object/the-object.component';
+import { ChangeEpochComponent } from './change-epoch/change-epoch.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
       {
         path: 'theObject',
         component: TheObjectComponent,
+      },
+      {
+        path: 'changeEpoch',
+        component: ChangeEpochComponent,
       },
     ],
   },
