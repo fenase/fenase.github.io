@@ -5,7 +5,7 @@ import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
-  styles: '',
+  styleUrl: './topbar.component.css',
 })
 export class TopbarComponent {
   constructor(public router: Router, private readonly activatedRoute: ActivatedRoute) { }
@@ -15,29 +15,26 @@ export class TopbarComponent {
       {
         label: 'Home',
         icon: 'pi pi-home',
-        routerLink: '.',
+        routerLink: '/',
+        routerLinkActiveOptions: { exact: true },
       },
       {
-        label: 'Projects',
-        icon: 'pi pi-search',
-        routerLink: '/projects',
-        items: [
-          {
-            label: 'Big Excel Creator',
-            icon: 'pi pi-bolt',
-            routerLink: '/projects/BigExcelCreator',
-          },
-          {
-            label: 'Snowflake Id Generator',
-            icon: 'pi pi-server',
-            routerLink: '/projects/SnowflakeIDGenerator',
-          },
-        ]
+        label: 'Big Excel Creator',
+        icon: 'pi pi-bolt',
+        routerLink: '/projects/BigExcelCreator',
+        routerLinkActiveOptions: { exact: false },
+      },
+      {
+        label: 'Snowflake Id Generator',
+        icon: 'pi pi-server',
+        routerLink: '/projects/SnowflakeIDGenerator',
+        routerLinkActiveOptions: { exact: false },
       },
       {
         label: 'aboutMe',
         icon: 'pi pi-envelope',
         routerLink: '/about',
+        routerLinkActiveOptions: { exact: false },
       }
     ];
 }
