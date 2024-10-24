@@ -736,6 +736,14 @@
   --surface-card: #18181b;
 }
 
+:root,
+body,
+nav,
+pre {
+  scrollbar-color: var(--primary-color) var(--surface-d);
+  scrollbar-width: thin !important;
+}
+
 pre,
 code,
 kbd,
@@ -792,29 +800,29 @@ a>code {
 
 @media (min-width:576px) {
   .container {
-    width: 528px
+    width: 512px
   }
 
   .topbar {
-    width: 528px
+    width: 512px
   }
 
   .content {
-    width: 528px;
+    width: 512px;
   }
 }
 
 @media (min-width:768px) {
   .container {
-    width: 720px
+    width: 704px
   }
 
   .topbar {
-    width: 720px
+    width: 704px
   }
 
   .content {
-    width: 720px;
+    width: 704px;
   }
 }
 

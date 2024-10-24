@@ -18,8 +18,6 @@ nav {
   max-width: fit-content;
   /* 100vh => screen height; 1rem => nav + col-3 + padding */
   height: calc(100vh - var(--topPaddingBecauseOfMenu) - 1rem);
-  scrollbar-color: var(--primary-color) var(--surface-d);
-  scrollbar-width: thin;
 }
 
 /* nav bar width */
