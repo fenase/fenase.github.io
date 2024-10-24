@@ -786,7 +786,21 @@ a>code {
   margin-left: auto;
 }
 
-@media(width < 576px) {
+@media print {
+  :root {
+    --topPaddingBecauseOfMenu: 0;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .content {
+    width: calc(100vw - 48px);
+  }
+}
+
+@media screen and (width < 576px) {
   .container {
     width: calc((90vw * (12/12)) - 32px);
   }
@@ -800,7 +814,7 @@ a>code {
   }
 }
 
-@media (min-width:576px) {
+@media screen and (min-width:576px) {
   .container {
     width: 512px
   }
@@ -814,7 +828,7 @@ a>code {
   }
 }
 
-@media (min-width:768px) {
+@media screen and (min-width:768px) {
   .container {
     width: 704px
   }
@@ -828,7 +842,7 @@ a>code {
   }
 }
 
-@media (min-width:992px) {
+@media screen and (min-width:992px) {
   .container {
     width: 944px
   }
@@ -842,7 +856,7 @@ a>code {
   }
 }
 
-@media (min-width:1200px) {
+@media screen and (min-width:1200px) {
   .container {
     width: 1152px
   }

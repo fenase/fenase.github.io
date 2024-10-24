@@ -20,8 +20,13 @@ nav {
   height: calc(100vh - var(--topPaddingBecauseOfMenu) - 1rem);
 }
 
-/* nav bar width */
+@media print {
+  .sidebar {
+    display: none !important;
+  }
+}
 
+/* nav bar width */
 @media (width < 576px) {
   nav {
     max-width: calc((90vw * (12/12)) - 16px);
@@ -80,7 +85,7 @@ nav {
 }
 
 
-@media(width < 768px) {
+@media screen and (width < 768px) {
   div.sidebar.sidebar-inactive {
     visibility: hidden;
     transition: all 0.15s;
@@ -132,7 +137,7 @@ nav {
   }
 }
 
-@media (width >=768px) {
+@media screen and (width >=768px) {
   div.sidebar {
     visibility: visible
   }
