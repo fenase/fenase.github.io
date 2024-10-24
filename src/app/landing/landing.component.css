@@ -1,0 +1,6 @@
+::ng-deep .p-fieldset-legend
+{
+  border: 0;
+  background-color: transparent;
+  background: transparent;
+}

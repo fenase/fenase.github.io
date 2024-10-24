@@ -6,6 +6,8 @@ import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-br
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHighlightOptions } from 'ngx-highlightjs';
 import { PrimeNGConfig } from 'primeng/api';
+import { AvatarModule } from 'primeng/avatar';
+import { FieldsetModule } from 'primeng/fieldset';
 import { MessagesModule } from 'primeng/messages';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +34,8 @@ const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
     TranslocoRootModule,
     MessagesModule,
     ScrollTopModule,
+    FieldsetModule,
+    AvatarModule
   ],
   providers: [
     provideAnimationsAsync(),
