@@ -776,73 +776,73 @@ a>code {
   margin-left: auto;
 }
 
-@media(width < 576px){
+@media(width < 576px) {
   .container {
-    width: calc((100% * (12/12)) - 16px);
+    width: calc((90vw * (12/12)) - 32px);
   }
 
   .topbar {
-    width: calc((100% * (12/12)) - 16px);
+    width: calc((90vw * (12/12)) - 32px);
   }
 
   .content {
-    width: calc((100% * (12/12)) - 16px);
+    width: calc((90vw * (12/12)) - 32px);
   }
 }
 
 @media (min-width:576px) {
   .container {
-    width: 560px
+    width: 528px
   }
 
   .topbar {
-    width: 560px
+    width: 528px
   }
 
   .content {
-    width: 560px;
+    width: 528px;
   }
 }
 
 @media (min-width:768px) {
   .container {
-    width: 750px
+    width: 720px
   }
 
   .topbar {
-    width: 750px
+    width: 720px
   }
 
   .content {
-    width: 750px;
+    width: 720px;
   }
 }
 
 @media (min-width:992px) {
   .container {
-    width: 970px
+    width: 944px
   }
 
   .topbar {
-    width: 970px
+    width: 944px
   }
 
   .content {
-    width: 970px;
+    width: 944px;
   }
 }
 
 @media (min-width:1200px) {
   .container {
-    width: 1170px
+    width: 1152px
   }
 
   .topbar {
-    width: 1170px
+    width: 1152px
   }
 
   .content {
-    width: 1170px
+    width: 1152px
   }
 }
 

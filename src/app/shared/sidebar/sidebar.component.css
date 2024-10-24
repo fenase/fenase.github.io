@@ -1,7 +1,6 @@
 nav {
   position: sticky;
   left: 0;
-  top: 6rem;
   width: 100%;
   -webkit-user-select: none;
   user-select: none;
@@ -17,12 +16,26 @@ nav {
   word-break: break-word;
   word-wrap: break-word;
   max-width: fit-content;
+  /* 100vh => screen height; 1rem => nav + col-3 + padding */
+  height: calc(100vh - var(--topPaddingBecauseOfMenu) - 1rem);
+  scrollbar-color: var(--primary-color) var(--surface-d);
+  scrollbar-width: thin;
+}
+
+/* nav bar width */
+
+@media (width < 576px) {
+  nav {
+    max-width: calc((90vw * (12/12)) - 16px);
+    width: calc((90vw * (12/12)) - 16px);
+    margin-right: 0;
+  }
 }
 
 @media (min-width:576px) {
   nav {
-    max-width: calc((560px * (12/12)) - 16px);
-    width: calc((560px * (12/12)) - 16px);
+    max-width: calc((520px * (12/12)) - 16px);
+    width: calc((520px * (12/12)) - 16px);
   }
 }
 
@@ -30,6 +43,7 @@ nav {
   nav {
     max-width: calc((750px * (5/12)) - 16px);
     width: calc((750px * (5/12)) - 16px);
+    top: 6rem;
   }
 }
 
@@ -47,12 +61,14 @@ nav {
   }
 }
 
+/* END nav bar width */
 
 
-@media screen and (min-width: 768px) {
-  nav {
-    /* 100vh => screen height; 1rem => nav + col-3 + padding*/
-    height: calc(100vh - var(--topPaddingBecauseOfMenu) - 1rem);
+@media screen and (width >=768px) {
+
+  /* large screens have  transitions */
+  .router-link {
+    transition: all 250ms ease-in !important;
   }
 }
 
@@ -65,11 +81,6 @@ nav {
   border-left-color: var(--brandStrokeCompoundPressed);
 }
 
-@media (width >=768px) {
-  .router-link {
-    transition: all 250ms ease-in !important;
-  }
-}
 
 @media(width < 768px) {
   div.sidebar.sidebar-inactive {
