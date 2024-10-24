@@ -6,12 +6,15 @@ import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-br
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHighlightOptions } from 'ngx-highlightjs';
 import { PrimeNGConfig } from 'primeng/api';
+import { AvatarModule } from 'primeng/avatar';
+import { FieldsetModule } from 'primeng/fieldset';
+import { MessagesModule } from 'primeng/messages';
+import { ScrollTopModule } from 'primeng/scrolltop';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { SharedModule } from './shared/shared.module';
 import { TranslocoRootModule } from './transloco-root.module';
-import { MessagesModule } from 'primeng/messages';
 
 const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
   // ......
@@ -30,6 +33,9 @@ const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
     SharedModule,
     TranslocoRootModule,
     MessagesModule,
+    ScrollTopModule,
+    FieldsetModule,
+    AvatarModule
   ],
   providers: [
     provideAnimationsAsync(),

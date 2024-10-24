@@ -6,7 +6,7 @@ import { Subject, Subscription, takeUntil } from 'rxjs';
 @Component({
   selector: 'app-code-example',
   templateUrl: './code-example.component.html',
-  styleUrls: ['./code-example.component.css', '/node_modules/highlight.js/styles/vs.css'],
+  styleUrls: ['./code-example.component.css'],
 })
 export class CodeExampleComponent implements OnInit, OnDestroy {
 
