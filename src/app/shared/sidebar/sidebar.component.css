@@ -125,7 +125,33 @@ nav {
   }
 
   p-button.sidebar {
-    display: inherit !important;
+    display: inherit;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, opacity 0.2s;
+    border-radius: 50%;
+  }
+
+  p-button.sidebar.open-sidebar {
+    display: flex !important;
+    position: fixed;
+    top: calc(50vh - 5rem);
+    left: 1rem;
+  }
+
+  @media (prefers-color-scheme: light) {
+    p-button.sidebar.open-sidebar {
+      opacity: 0.7;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    p-button.sidebar.open-sidebar {
+      opacity: 0.3;
+    }
+  }
+
+  p-button.sidebar.open-sidebar:hover {
+    opacity: 1;
   }
 
   p-button.sidebar-active.open-sidebar {
