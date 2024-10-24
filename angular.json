@@ -41,10 +41,12 @@
             ],
             "styles": [
               "primeng/resources/themes/lara-light-blue/theme.css",
+              "src/themes/site/lara-dark-blue/theme.css",
               "primeng/resources/primeng.min.css",
               "primeicons/primeicons.css",
               "primeflex/primeflex.css",
               "highlight.js/styles/github.min.css",
+              "src/themes/codeHilight/github-dark.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -106,10 +108,12 @@
             ],
             "styles": [
               "primeng/resources/themes/lara-light-blue/theme.css",
+              "src/themes/site/lara-dark-blue/theme.css",
               "primeng/resources/primeng.min.css",
               "primeicons/primeicons.css",
               "primeflex/primeflex.css",
               "highlight.js/styles/github.min.css",
+              "src/themes/codeHilight/github-dark.css",
               "src/styles.css"
             ],
             "scripts": []
