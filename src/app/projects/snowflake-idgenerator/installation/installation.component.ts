@@ -6,7 +6,7 @@ import { Versions } from '../globals';
 @Component({
   selector: 'app-installation',
   templateUrl: './installation.component.html',
-  styleUrls: ['/node_modules/highlight.js/styles/vs.css'],
+  styles: '',
   providers: [
     provideTranslocoScope(
       { scope: 'projects/SnowflakeIDGenerator/installation', alias: 'projects.SnowflakeIDGenerator.installation' },
