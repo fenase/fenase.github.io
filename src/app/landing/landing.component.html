@@ -1,5 +1,4 @@
-<!-- <div class="card"> -->
-<p-fieldset>
+<p-panel>
   <ng-template pTemplate="header">
     <div class="flex align-items-center gap-2 px-2">
       <p-avatar image="https://gravatar.com/avatar/2178dbbef9d31aaac42ec8ede84ad0aa1ebb719a6bb0b36d035eef11a7b11a31"
@@ -28,5 +27,12 @@
 
   </ng-container>
 
-</p-fieldset>
-<!-- </div> -->
+  <ng-template pTemplate="footer">
+    <div class="flex flex-wrap align-items-center justify-content-between gap-3">
+      <div class="flex align-items-center gap-2">
+        <a pButton href="https://www.linkedin.com/in/federico-seckel" target="_blank" rel="noopener noreferrer"
+          class="p-button font-bold" icon="pi pi-linkedin" rounded="true" text="true" severity="secondary"></a>
+      </div>
+    </div>
+  </ng-template>
+</p-panel>
