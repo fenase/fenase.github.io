@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrl: './install-instructions.component.css'
 })
 export class InstallInstructionsComponent implements OnInit {
-  constructor(private clipboard: Clipboard) { }
+  constructor(private readonly clipboard: Clipboard) { }
 
 
   @Input({ required: true })
