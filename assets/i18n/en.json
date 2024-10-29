@@ -10,7 +10,14 @@
   "Projects": "Projects",
   "Snowflake Id Generator": "Snowflake Id Generator",
   "aboutMe": "About me",
-  "aboutMeText": "",
   "landing": "landing works!!!!",
-  "site under construction": "SITE UNDER CONSTRUCTION."
+  "site under construction": "SITE UNDER CONSTRUCTION.",
+  "welcome": "Welcome!!!",
+  "AboutMeText": {
+    "myName": "My name: Federico.",
+    "profession": "Software developer by work (and yes, by passion too).",
+    "myAreas": "I very much rather deal with the back-end of things, but I'm starting to include front-end development in my skills (the \"starting\" part is this site).",
+    "myLanguages": "Although Spanish is my mother language, some people seem to think I can speak english too...",
+    "findMyProjects": "On this site you'll find some documentation and manuals for my NuGet packages. At this point it's just a copy of the instructions on the packages themselves. In the future, I'll be adding more details to it."
+  }
 }
