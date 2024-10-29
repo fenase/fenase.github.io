@@ -40,8 +40,8 @@
               }
             ],
             "styles": [
-              "primeng/resources/themes/lara-light-blue/theme.css",
-              "src/themes/site/lara-dark-blue/theme.css",
+              "primeng/resources/themes/aura-light-blue/theme.css",
+              "src/themes/site/aura-dark-blue/theme.css",
               "primeng/resources/primeng.min.css",
               "primeicons/primeicons.css",
               "primeflex/primeflex.css",
@@ -107,8 +107,8 @@
               }
             ],
             "styles": [
-              "primeng/resources/themes/lara-light-blue/theme.css",
-              "src/themes/site/lara-dark-blue/theme.css",
+              "primeng/resources/themes/aura-light-blue/theme.css",
+              "src/themes/site/aura-dark-blue/theme.css",
               "primeng/resources/primeng.min.css",
               "primeicons/primeicons.css",
               "primeflex/primeflex.css",
