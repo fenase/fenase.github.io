@@ -743,7 +743,7 @@
 body,
 nav,
 pre {
-  scrollbar-color: var(--primary-color) var(--surface-d);
+  scrollbar-color: var(--primary-color) var(--surface-200);
   scrollbar-width: thin !important;
 }
 

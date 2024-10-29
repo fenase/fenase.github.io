@@ -11,11 +11,11 @@ export class SidebarComponent {
   @Input()
   public menuItems!: MenuItem[];
 
-  private possibleClasses: string[][] = [
+  private readonly possibleClasses: string[][] = [
     ["sidebar", "sidebar-inactive"],
     ["sidebar", "sidebar-active"]
   ]
-  private possibleButtons: string[] = [
+  private readonly possibleButtons: string[] = [
     "pi pi-ellipsis-v",
     "pi pi-arrow-left"
   ]
