@@ -30,11 +30,11 @@ export class TopbarComponent {
         routerLink: '/projects/SnowflakeIDGenerator',
         routerLinkActiveOptions: { exact: false },
       },
-      {
-        label: 'aboutMe',
-        icon: 'pi pi-envelope',
-        routerLink: '/about',
-        routerLinkActiveOptions: { exact: false },
-      }
+      // {
+      //   label: 'aboutMe',
+      //   icon: 'pi pi-envelope',
+      //   routerLink: '/about',
+      //   routerLinkActiveOptions: { exact: false },
+      // }
     ];
 }
