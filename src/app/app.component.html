@@ -1,12 +1,9 @@
 <div class="container">
+
   <div class="topbar topbar-sticky">
-    <p-messages severity="error" styleClass="text-center">
-      <ng-template pTemplate>
-        <div class="text-center">{{'site under construction' | transloco}}</div>
-      </ng-template>
-    </p-messages>
     <app-topbar></app-topbar>
   </div>
+
   <div class="content">
     <p-scrollTop threshold="50"></p-scrollTop>
     <router-outlet></router-outlet>
