@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { provideTranslocoScope } from '@jsverse/transloco';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, PrimeIcons } from 'primeng/api';
 
 @Component({
   selector: 'app-snowflake-idgenerator',
@@ -16,22 +16,21 @@ export class SnowflakeIDGeneratorComponent {
     [
       {
         label: 'projects.SnowflakeIDGenerator.Getting started',
-        icon: 'pi pi-play-circle',
         items: [
           {
             label: 'projects.SnowflakeIDGenerator.The Package',
-            icon: 'pi pi-box',
+            icon: PrimeIcons.BOX,
             routerLink: [this.baseRoute, 'thePackage'],
             routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.SnowflakeIDGenerator.Installation',
-            icon: 'pi pi-download',
+            icon: PrimeIcons.DOWNLOAD,
             routerLink: [this.baseRoute, 'installation'],
           },
           {
             label: 'projects.SnowflakeIDGenerator.Basic usage',
-            icon: 'pi pi-code',
+            icon: PrimeIcons.CODE,
             routerLink: [this.baseRoute, 'usage'],
             routerLinkActiveOptions: { exact: true }
           }
@@ -39,22 +38,21 @@ export class SnowflakeIDGeneratorComponent {
       },
       {
         label: 'projects.SnowflakeIDGenerator.Generate',
-        icon: 'pi pi-play-sparkles',
         items: [
           {
             label: 'projects.SnowflakeIDGenerator.Using the SnowflakeIDGenerator class',
-            icon: 'pi pi-sparkles',
+            icon: PrimeIcons.SPARKLES,
             routerLink: [this.baseRoute, 'generate'],
             routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.SnowflakeIDGenerator.Using the SnowflakeIDGenerator class as static',
-            icon: 'pi pi-sparkles',
+            icon: PrimeIcons.SPARKLES,
             routerLink: [this.baseRoute, 'generateStatic'],
           },
           {
             label: 'projects.SnowflakeIDGenerator.Using a non-standard date as epoch',
-            icon: 'pi pi-calendar',
+            icon: PrimeIcons.CALENDAR,
             routerLink: [this.baseRoute, 'generateEpoch'],
             routerLinkActiveOptions: { exact: true }
           }
@@ -62,26 +60,35 @@ export class SnowflakeIDGeneratorComponent {
       },
       {
         label: 'projects.SnowflakeIDGenerator.The Snowflake object',
-        icon: 'pi pi-objects-column',
         items: [
           {
             label: 'projects.SnowflakeIDGenerator.Parsing an Id',
-            icon: 'pi pi-map',
+            icon: PrimeIcons.MAP,
             routerLink: [this.baseRoute, 'parse'],
             routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.SnowflakeIDGenerator.The Snowflake object',
-            icon: 'pi pi-building-columns',
+            icon: PrimeIcons.BUILDING_COLUMNS,
             routerLink: [this.baseRoute, 'theObject'],
           },
           {
             label: 'projects.SnowflakeIDGenerator.Changing Epoch on generated codes',
-            icon: 'pi pi-calendar-plus',
+            icon: PrimeIcons.CALENDAR_PLUS,
             routerLink: [this.baseRoute, 'changeEpoch'],
             routerLinkActiveOptions: { exact: true }
           }
         ],
+      },
+      {
+        label: 'Advanced',
+        items: [
+          {
+            label: 'API',
+            icon: PrimeIcons.SITEMAP,
+            url: 'https://fenase.github.io/SnowflakeIDGenerator/api/SnowflakeID.html',
+          },
+        ]
       },
     ];
 

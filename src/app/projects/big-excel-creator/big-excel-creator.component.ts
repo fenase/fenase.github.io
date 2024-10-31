@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { ActivatedRoute, Router } from '@angular/router';
 import { provideTranslocoScope } from '@jsverse/transloco';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, PrimeIcons } from 'primeng/api';
 
 @Component({
   templateUrl: './big-excel-creator.component.html',
@@ -17,22 +17,21 @@ export class BigExcelCreatorComponent {
     [
       {
         label: 'projects.BigExcelCreator.Getting started',
-        icon: 'pi pi-play-circle',
         items: [
           {
             label: 'projects.BigExcelCreator.The Package',
-            icon: 'pi pi-box',
+            icon: PrimeIcons.BOX,
             routerLink: [this.baseRoute, 'thePackage'],
             routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Installation',
-            icon: 'pi pi-download',
+            icon: PrimeIcons.DOWNLOAD,
             routerLink: [this.baseRoute, 'installation'],
           },
           {
             label: 'projects.BigExcelCreator.Basic usage',
-            icon: 'pi pi-code',
+            icon: PrimeIcons.CODE,
             routerLink: [this.baseRoute, 'usage'],
             routerLinkActiveOptions: { exact: true }
           }
@@ -40,11 +39,10 @@ export class BigExcelCreatorComponent {
       },
       {
         label: 'projects.BigExcelCreator.Data Validation',
-        icon: 'pi pi-list-check',
         items: [
           {
             label: 'projects.BigExcelCreator.Data Validation',
-            icon: 'pi pi-list-check',
+            icon: PrimeIcons.LIST_CHECK,
             routerLink: [this.baseRoute, 'dataValidation'],
             routerLinkActiveOptions: { exact: true }
           }
@@ -52,47 +50,46 @@ export class BigExcelCreatorComponent {
       },
       {
         label: 'projects.BigExcelCreator.Styling and formatting',
-        icon: 'pi pi-palette',
         items: [
           {
             label: 'projects.BigExcelCreator.Column formatting',
-            icon: 'pi pi-objects-column',
+            icon: PrimeIcons.OBJECTS_COLUMN,
             routerLink: [this.baseRoute, 'styling', 'columnFormatting'],
             routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Hide Sheet',
-            icon: 'pi pi-eye-slash',
+            icon: PrimeIcons.EYE_SLASH,
             routerLink: [this.baseRoute, 'styling', 'hideSheet'],
             routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Merge Cells',
-            icon: 'pi pi-bars',
+            icon: PrimeIcons.BARS,
             routerLink: [this.baseRoute, 'styling', 'mergeCells'],
             routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Styling',
-            icon: 'pi pi-palette',
+            icon: PrimeIcons.PALETTE,
             routerLink: [this.baseRoute, 'styling', 'styling'],
             routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Comments',
-            icon: 'pi pi-comment',
+            icon: PrimeIcons.COMMENT,
             routerLink: [this.baseRoute, 'styling', 'comments'],
             routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Autofilter',
-            icon: 'pi pi-filter',
+            icon: PrimeIcons.FILTER,
             routerLink: [this.baseRoute, 'styling', 'autofilter'],
             routerLinkActiveOptions: { exact: true }
           },
           {
             label: 'projects.BigExcelCreator.Conditional Formatting',
-            icon: 'pi pi-sun',
+            icon: PrimeIcons.SUN,
             routerLink: [this.baseRoute, 'styling', 'conditionalFormatting'],
             routerLinkActiveOptions: { exact: true }
           },
@@ -100,13 +97,22 @@ export class BigExcelCreatorComponent {
       },
       {
         label: 'projects.BigExcelCreator.Page layout',
-        icon: 'pi pi-table',
         items: [
           {
             label: 'projects.BigExcelCreator.Page layout',
-            icon: 'pi pi-table',
+            icon: PrimeIcons.TABLE,
             routerLink: [this.baseRoute, 'pageLayout'],
             routerLinkActiveOptions: { exact: true }
+          },
+        ]
+      },
+      {
+        label: 'Advanced',
+        items: [
+          {
+            label: 'API',
+            icon: PrimeIcons.SITEMAP,
+            url: 'https://fenase.github.io/BigExcelCreator/api/BigExcelCreator.html',
           },
         ]
       },
