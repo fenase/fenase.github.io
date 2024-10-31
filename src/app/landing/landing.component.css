@@ -2,3 +2,7 @@
   border: 0;
   background: transparent;
 }
+
+a.p-button {
+  text-decoration: none;
+}
