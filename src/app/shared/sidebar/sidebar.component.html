@@ -16,10 +16,16 @@
         </ng-template>
 
         <ng-template pTemplate="item" let-item>
-          <a (click)="toggleSidebar(false)" [routerLink]="item.routerLink" routerLinkActive="router-link-active" pRipple
+          <a *ngIf="item.routerLink" (click)="toggleSidebar(false)" [routerLink]="item.routerLink" routerLinkActive="router-link-active" pRipple
             class="flex align-items-center p-menuitem-link router-link">
             <span [class]="item.icon"></span>
             <span class="ml-2">{{ item.label | transloco }}</span>
+          </a>
+          <a *ngIf="item.url" (click)="toggleSidebar(false)" [href]="item.url" pRipple target="_blank"
+            class="flex align-items-center p-menuitem-link router-link">
+            <span [class]="item.icon"></span>
+            <span class="ml-2">{{ item.label | transloco }}</span>
+            <div class="pi pi-external-link ml-auto" style="font-size: 0.75rem"></div>
           </a>
         </ng-template>
 
