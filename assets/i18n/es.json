@@ -19,5 +19,7 @@
     "myAreas": "Prefiero, tal vez demasiado, lidiar con el área del back-end, pero estoy comenzando a incluir en mis habilidades temas de front-end (la parte de \"comenzando\" se refiere a este sitio).",
     "myLanguages": "Mi lengua materna es el Castellano, aunque algunas personan piensan que piedo hablar en inglés también...",
     "findMyProjects": "En este sitio vas a encontrar documentación y manuales para mis paquetes NuGet. En este punto, es simplemente una copia de las instrucciones ya incluidas en el mismo paquete. En el fituro espero estar añadiendo más detalles."
-  }
+  },
+  "Advanced": "Avanzado",
+  "API": "API"
 }
