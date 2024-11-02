@@ -17,6 +17,7 @@ import { GenerateEpochComponent } from './generate-epoch/generate-epoch.componen
 import { ParseComponent } from './parse/parse.component';
 import { TheObjectComponent } from './the-object/the-object.component';
 import { ChangeEpochComponent } from './change-epoch/change-epoch.component';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
 
 
 
@@ -32,6 +33,7 @@ import { ChangeEpochComponent } from './change-epoch/change-epoch.component';
     ParseComponent,
     TheObjectComponent,
     ChangeEpochComponent,
+    DependencyInjectionComponent,
   ],
   imports: [
     CommonModule,

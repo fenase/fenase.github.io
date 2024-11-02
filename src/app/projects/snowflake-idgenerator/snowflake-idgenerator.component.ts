@@ -84,6 +84,12 @@ export class SnowflakeIDGeneratorComponent {
         label: 'Advanced',
         items: [
           {
+            label: 'projects.SnowflakeIDGenerator.dependency injection',
+            icon: PrimeIcons.BOLT,
+            routerLink: [this.baseRoute, 'dependencyInjection'],
+            routerLinkActiveOptions: { exact: true }
+          },
+          {
             label: 'API',
             icon: PrimeIcons.SITEMAP,
             url: 'https://fenase.github.io/SnowflakeIDGenerator/api/SnowflakeID.html',

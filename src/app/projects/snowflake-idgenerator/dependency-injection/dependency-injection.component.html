@@ -1,0 +1,28 @@
+<h1 class="text-primary">{{'projects.SnowflakeIDGenerator.dependency injection'|transloco}}</h1>
+
+<ng-container *transloco="let t; prefix: 'projects.SnowflakeIDGenerator.dependencyInjection'">
+
+  <p [innerHTML]="t('The package enables')"></p>
+
+  <p [innerHTML]="t('For example')"></p>
+
+  <app-code-example examplePath="projects/SnowflakeIDGenerator/dependencyInjectionBasic"
+    language="cs"></app-code-example>
+
+  <p [innerHTML]="t('Alternatively configure')"></p>
+
+  <p [innerHTML]="t('First add')"></p>
+
+  <app-code-example examplePath="projects/SnowflakeIDGenerator/dependencyInjectionConfig"
+    language="json"></app-code-example>
+
+  <p [innerHTML]="t('Then register')"></p>
+
+  <app-code-example examplePath="projects/SnowflakeIDGenerator/dependencyInjectionWithConfig"
+    language="cs"></app-code-example>
+
+  <p [innerHTML]="t('Both options')"></p>
+
+  <p [innerHTML]="t('See an example in')"></p>
+
+</ng-container>

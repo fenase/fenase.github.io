@@ -1,0 +1,9 @@
+{
+  "The package enables": "The package SnowflakeIDGenerator.DependencyInjection enables an easy way to configure Dependency Injection.",
+  "For example": "For example, if using ASP.net minimal api, use the following to register the generator using default values:",
+  "Alternatively configure": "Alternatively, you can configure the generator using settings contained in your appsettings.json file.",
+  "First add": "First, add the following section to your <code>appsettings.json</code> file",
+  "Then register": "Then, register the generator using",
+  "Both options": "Both options will allow you to inject the <code>ISnowflakeIDGenerator</code>&nbsp;<a class=\"pi pi-external-link externalLinkIcon\" href=\"https://fenase.github.io/SnowflakeIDGenerator/api/SnowflakeID.ISnowflakeIDGenerator.html\" target=\"_blank\"></a> interface on your code",
+  "See an example in": "See an example in the Example directory&nbsp;<a class=\"pi pi-external-link externalLinkIcon\" href=\"https://github.com/fenase/SnowflakeIDGenerator/tree/master/Examples/SnowflakeIDGenerator.Example.Web\" rel=\"noopener noreferrer nofollow\" target=\"_blank\"></a>."
+}

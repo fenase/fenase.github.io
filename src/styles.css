@@ -896,3 +896,9 @@ a>code {
   position: absolute;
   flex: 0 0 auto;
 }
+
+.externalLinkIcon {
+  text-decoration: none;
+  font-size: .75rem;
+  color: var(--primary-color);
+}

@@ -56,6 +56,7 @@ const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
         cs: () => import('highlight.js/lib/languages/csharp'),
         powershell: () => import('highlight.js/lib/languages/powershell'),
         xml: () => import('highlight.js/lib/languages/xml'),
+        json: () => import('highlight.js/lib/languages/json'),
       },
     }),
   ],
