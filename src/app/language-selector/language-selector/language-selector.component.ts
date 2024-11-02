@@ -106,9 +106,8 @@ export class LanguageSelectorComponent implements OnInit {
           "background-image": `url('${element.imgUrl}')`,
           'background-color': "transparent",
           'background-repeat': "no-repeat",
-          'background-size': "cover",
+          'background-size': "auto 105%",
           'background-position': "center center",
-          "aspect-ratio": "1",
           "color": "transparent",
           "opacity": "1",
         });
@@ -116,9 +115,8 @@ export class LanguageSelectorComponent implements OnInit {
           "background-image": `url('${element.imgUrl}')`,
           'background-color': "transparent",
           'background-repeat': "no-repeat",
-          'background-size': "cover",
+          'background-size': "auto 105%",
           'background-position': "center center",
-          "aspect-ratio": "1",
           "color": "transparent",
           "opacity": "0",
         });
