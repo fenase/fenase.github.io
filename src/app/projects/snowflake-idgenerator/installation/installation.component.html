@@ -4,8 +4,22 @@
 
   <p>{{ t('useCommand') }}</p>
 
-  <app-install-instructions [instructions]="instructions"></app-install-instructions>
+  <app-install-instructions [instructions]="instructions"
+    [(installerFlavorIndex)]="installerIndexSyncingIndex"></app-install-instructions>
 
   <p>{{ t('usePM') }}</p>
+
+</ng-container>
+
+<h2 class="text-primary">{{ 'projects.SnowflakeIDGenerator.dependency injection' | transloco }}</h2>
+
+<ng-container *transloco="let t; prefix: 'projects.SnowflakeIDGenerator.installation'">
+
+  <p>{{ t('If you wish to use the DI extensions') }}</p>
+
+  <app-install-instructions [instructions]="instructionsDI"
+    [(installerFlavorIndex)]="installerIndexSyncingIndex"></app-install-instructions>
+
+  <p>{{ t('This is not mandatory') }}</p>
 
 </ng-container>

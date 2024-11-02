@@ -1,5 +1,5 @@
 import { Clipboard } from '@angular/cdk/clipboard';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-install-instructions',
@@ -13,8 +13,16 @@ export class InstallInstructionsComponent implements OnInit {
   @Input({ required: true })
   public instructions: InstallationVersion[] = [];
 
+  @Input()
   public versionIndex: number = 1;
+  @Output()
+  public versionIndexCnage: EventEmitter<number> = new EventEmitter<number>();
+
+  @Input()
   public installerFlavorIndex: number = 2;
+  @Output()
+  public installerFlavorIndexChange: EventEmitter<number> = new EventEmitter<number>();
+
   public copying: boolean = false;
 
   ngOnInit(): void {
@@ -50,6 +58,9 @@ export class InstallInstructionsComponent implements OnInit {
       versionIndex: this.versionIndex,
       installerFlavorIndex: this.installerFlavorIndex,
     };
+
+    this.installerFlavorIndexChange.emit(this.installerFlavorIndex);
+    this.versionIndexCnage.emit(this.versionIndex);
 
     localStorage.setItem(this.storageKey, JSON.stringify(settings));
   }

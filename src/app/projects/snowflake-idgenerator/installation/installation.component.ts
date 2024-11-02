@@ -15,6 +15,8 @@ import { Versions } from '../globals';
   ],
 })
 export class InstallationComponent {
+  public installerIndexSyncingIndex: number = 0;
+
   public instructions: InstallationVersion[] = [
     {
       name: "single",
@@ -24,6 +26,16 @@ export class InstallationComponent {
         new InstallationInstruction("PackageReference", `<PackageReference Include="SnowflakeIDGenerator" Version="${Versions.lastVersion}" />`, "xml"),
       ]
     }
+  ];
 
-  ]
+  public instructionsDI: InstallationVersion[] = [
+    {
+      name: "single",
+      instructions: [
+        new InstallationInstruction(".NET CLI", `dotnet add package SnowflakeIDGenerator.DependencyInjection --version ${Versions.lastVersion}`, "powershell"),
+        new InstallationInstruction("Package Manager", `NuGet\\Install-Package SnowflakeIDGenerator.DependencyInjection -Version ${Versions.lastVersion}`, "powershell"),
+        new InstallationInstruction("PackageReference", `<PackageReference Include="SnowflakeIDGenerator.DependencyInjection" Version="${Versions.lastVersion}" />`, "xml"),
+      ]
+    }
+  ];
 }
