@@ -5,7 +5,6 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { HighlightModule } from 'ngx-highlightjs';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
-import { SkeletonModule } from 'primeng/skeleton';
 import { SharedModule } from "../../shared/shared.module";
 import { ChangeEpochComponent } from './change-epoch/change-epoch.component';
 import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
@@ -45,7 +44,6 @@ import { UsageComponent } from './usage/usage.component';
     PanelModule,
     SharedModule,
     HighlightModule,
-    SkeletonModule,
   ]
 })
 export class SnowflakeIDGeneratorModule { }
