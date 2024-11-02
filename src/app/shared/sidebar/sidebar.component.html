@@ -16,8 +16,8 @@
         </ng-template>
 
         <ng-template pTemplate="item" let-item>
-          <a *ngIf="item.routerLink" (click)="toggleSidebar(false)" [routerLink]="item.routerLink" routerLinkActive="router-link-active" pRipple
-            class="flex align-items-center p-menuitem-link router-link">
+          <a *ngIf="item.routerLink" (click)="toggleSidebar(false)" [routerLink]="item.routerLink"
+            routerLinkActive="router-link-active" pRipple class="flex align-items-center p-menuitem-link router-link">
             <span [class]="item.icon"></span>
             <span class="ml-2">{{ item.label | transloco }}</span>
           </a>
@@ -25,7 +25,7 @@
             class="flex align-items-center p-menuitem-link router-link">
             <span [class]="item.icon"></span>
             <span class="ml-2">{{ item.label | transloco }}</span>
-            <div class="pi pi-external-link ml-auto" style="font-size: 0.75rem"></div>
+            <div class="pi pi-external-link ml-auto text-xs"></div>
           </a>
         </ng-template>
 
