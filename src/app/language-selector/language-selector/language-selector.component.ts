@@ -93,6 +93,7 @@ export class LanguageSelectorComponent implements OnInit {
     });
 
     this.languagesList
+      .slice()
       .sort((a, b) => {
         if (a.code === activeLanguageCode) { return -1; }
         if (b.code === activeLanguageCode) { return 1; }
