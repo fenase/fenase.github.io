@@ -14,6 +14,14 @@ export class LanguageSelectorComponent implements OnInit {
   public menuItems: LanguageMenuItem[] = [];
   public activeLanguage?: string;
 
+  public buttonStyles: any[] = [
+    {},
+  ];
+  public buttonStyleIndex: number = 0;
+  public get buttonStyle() {
+    return this.buttonStyles[this.buttonStyleIndex];
+  }
+
   public languagesList: Array<Record<'imgUrl' | 'code' | 'label' | 'shorthand' | 'message', string>> =
     [
       {
@@ -51,6 +59,10 @@ export class LanguageSelectorComponent implements OnInit {
         items: this.languagesList,
       }
     ]
+
+    this.preloadFlags();
+
+    this.configureHeadsUpAnimation(languageCode);
   }
 
   public changeLanguage(languageCode: string): void {
@@ -64,4 +76,74 @@ export class LanguageSelectorComponent implements OnInit {
         this.activeLanguage = languageCode;
       });
   }
+
+
+  private preloadFlags() {
+    this.languagesList.forEach(element => {
+      let image = new Image();
+      image.src = element.imgUrl;
+    });
+  }
+
+  private configureHeadsUpAnimation(activeLanguageCode: string | null | undefined) {
+    this.buttonStyles.push({
+      "opacity": "0",
+      "color": "transparent",
+      'background-color': "transparent",
+    });
+
+    this.languagesList
+      .sort((a, b) => {
+        if (a.code === activeLanguageCode) { return -1; }
+        if (b.code === activeLanguageCode) { return 1; }
+        if (a.code < b.code) { return -1; }
+        if (a.code > b.code) { return 1; }
+        return 0;
+      })
+      .forEach(element => {
+        this.buttonStyles.push({
+          "background-image": `url('${element.imgUrl}')`,
+          'background-color': "transparent",
+          'background-repeat': "no-repeat",
+          'background-size': "cover",
+          'background-position': "center center",
+          "aspect-ratio": "1",
+          "color": "transparent",
+          "opacity": "1",
+        });
+        this.buttonStyles.push({
+          "background-image": `url('${element.imgUrl}')`,
+          'background-color': "transparent",
+          'background-repeat': "no-repeat",
+          'background-size': "cover",
+          'background-position': "center center",
+          "aspect-ratio": "1",
+          "color": "transparent",
+          "opacity": "0",
+        });
+      });
+
+    this.buttonStyles.push({
+      "opacity": "1",
+      "color": "transparent",
+      'background-color': "transparent",
+    });
+
+    setTimeout(() => {
+      this.animateButton();
+    }, 2000);
+  }
+
+  private animateButton(index: number = 0) {
+    if (index >= this.buttonStyles.length) {
+      this.buttonStyleIndex = 0;
+      return;
+    }
+    setTimeout(() => {
+      index++;
+      this.buttonStyleIndex = index;
+      this.animateButton(index);
+    }, index < this.buttonStyles.length - 1 ? 300 : 10);
+  }
+
 }

@@ -17,7 +17,8 @@
 
   </p-menu>
 
-  <p-button icon="pi pi-language" [rounded]="true" [text]="true" [raised]="true" (onClick)="menu.toggle($event)"
-    [pTooltip]="t('Languages')" tooltipPosition="left" [ariaLabel]="t('Languages')"></p-button>
+  <button pButton icon="pi pi-language" [rounded]="true" [text]="true" [raised]="true" (click)="menu.toggle($event)"
+    [pTooltip]="t('Languages')" tooltipPosition="left" [ariaLabel]="t('Languages')" [ngStyle]="buttonStyle"
+    class="animated"></button>
 
 </ng-container>
