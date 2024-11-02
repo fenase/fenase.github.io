@@ -1,0 +1,6 @@
+{
+  "SnowflakeIdGeneratorOptions": {
+    "MachineId": 5,
+    "Epoch": "2023-12-25"
+  }
+}

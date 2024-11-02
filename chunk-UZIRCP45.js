@@ -1,1 +1,0 @@
-import"./chunk-2R6CW7ES.js";var s="Se puede agregar este paquete a su ptoyecto .NET usando los comandos mostrados abajo.",o="Tambi\xE9n puede usar el gestor de paquetes de NuGet desde la soluci\xF3n de Visual Studio.",u={useCommand:s,usePM:o};export{u as default,s as useCommand,o as usePM};

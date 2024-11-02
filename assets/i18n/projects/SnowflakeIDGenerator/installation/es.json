@@ -1,4 +1,6 @@
 {
   "useCommand": "Se puede agregar este paquete a su ptoyecto .NET usando los comandos mostrados abajo.",
-  "usePM": "También puede usar el gestor de paquetes de NuGet desde la solución de Visual Studio."
+  "usePM": "También puede usar el gestor de paquetes de NuGet desde la solución de Visual Studio.",
+  "If you wish to use the DI extensions": "Si desea usar las extensiones para la Inyección de Dependencias, se necesita instalar el paquete SnowflakeIDGenerator.DependencyInjection.",
+  "This is not mandatory": "Esto no es obligatorio. Si lo desea, puede utilizar su propia estrategia de Inyección."
 }

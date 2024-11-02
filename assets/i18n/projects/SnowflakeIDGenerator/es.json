@@ -9,5 +9,6 @@
   "Using a non-standard date as epoch": "Usando una fecha no-standard como epoch",
   "Parsing an Id": "Analizando un Id",
   "The Snowflake object": "El objeto Snowflake",
-  "Changing Epoch on generated codes": "Modificar Epoch en códigos generados"
+  "Changing Epoch on generated codes": "Modificar Epoch en códigos generados",
+  "dependency injection": "Inyección de dependencias"
 }

@@ -1,1 +1,0 @@
-import"./chunk-2R6CW7ES.js";var e="You can add this package to your .NET project using the commands below",u="Also, you can use the nuget package manager inside your solution in Visual Studio",n={useCommand:e,usePM:u};export{n as default,e as useCommand,u as usePM};
