@@ -136,6 +136,7 @@ nav {
     position: fixed;
     top: calc(50vh - 5rem);
     left: 1rem;
+    z-index: 10000;
   }
 
   @media (prefers-color-scheme: light) {
@@ -146,7 +147,7 @@ nav {
 
   @media (prefers-color-scheme: dark) {
     p-button.sidebar.open-sidebar {
-      opacity: 0.3;
+      opacity: 0.4;
     }
   }
 
