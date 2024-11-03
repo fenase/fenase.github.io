@@ -798,14 +798,17 @@ a>code {
 @media screen and (width < 576px) {
   .container {
     width: calc((90vw * (12/12)) - 32px);
+    width: calc((90dvw * (12/12)) - 32px);
   }
 
   .topbar {
     width: calc((90vw * (12/12)) - 32px);
+    width: calc((90dvw * (12/12)) - 32px);
   }
 
   .content {
     width: calc((90vw * (12/12)) - 32px);
+    width: calc((90dvw * (12/12)) - 32px);
   }
 }
 
