@@ -138,8 +138,9 @@ nav {
   p-button.sidebar.open-sidebar {
     display: flex !important;
     position: fixed;
-    top: calc(50vh - 5rem);
-    left: 1rem;
+    top: calc(25vh - 5rem);
+    top: calc(25dvh);
+    left: 0;
     z-index: 10000;
   }
 
@@ -151,7 +152,7 @@ nav {
 
   @media (prefers-color-scheme: dark) {
     p-button.sidebar.open-sidebar {
-      opacity: 0.4;
+      opacity: 0.7;
     }
   }
 
@@ -181,4 +182,5 @@ nav {
 div.sidebar {
   overflow-y: auto;
   height: calc(100vh - var(--topPaddingBecauseOfMenu));
+  height: calc(100dvh - var(--topPaddingBecauseOfMenu));
 }
