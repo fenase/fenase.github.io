@@ -762,6 +762,7 @@ pre code {
   font-size: inherit;
   color: inherit;
   word-break: normal;
+  max-width: 100%;
 }
 
 code {
