@@ -16,10 +16,12 @@ nav {
   word-break: break-word;
   word-wrap: break-word;
   max-width: fit-content;
+  /* fallback */
   /* 100vh => screen height; 1rem => nav + col-3 + padding */
-  height: calc(100vh - var(--topPaddingBecauseOfMenu) - 1rem); /* fallback */
-  height: calc(100dvh - var(--topPaddingBecauseOfMenu) - 1rem);
-  overflow-y: auto;
+  height: calc(100vh - var(--topPaddingBecauseOfMenu) - 2rem);
+  /* on modern browsers */
+  /* 100vh => dynamic screen height (account for address bar); 1rem => nav + col-3 + padding */
+  height: calc(100dvh - var(--topPaddingBecauseOfMenu));
 }
 
 @media print {
@@ -88,22 +90,35 @@ nav {
 
 
 @media screen and (width < 768px) {
+  @keyframes fadeoutleft {
+    0% {
+      opacity: 1;
+      transform: translateX(0%);
+      transition: transform .12s cubic-bezier(0, 0, 0.2, 1), opacity .12s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+
   div.sidebar.sidebar-inactive {
     visibility: hidden;
     transition: all 0.15s;
     animation: fadeoutleft 0.15s linear;
+  }
 
-    @keyframes fadeoutleft {
-      0% {
-        opacity: 0;
-        transform: translateX(0%);
-        transition: transform .12s cubic-bezier(0, 0, 0.2, 1), opacity .12s cubic-bezier(0, 0, 0.2, 1);
-      }
+  @keyframes fadeinleft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: transform .12s cubic-bezier(0, 0, 0.2, 1), opacity .12s cubic-bezier(0, 0, 0.2, 1);
+    }
 
-      100% {
-        opacity: 1;
-        transform: translateX(-100%);
-      }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
     }
   }
 
@@ -111,19 +126,6 @@ nav {
     visibility: visible;
     transition: all 0.15s linear;
     animation: fadeinleft 0.15s linear;
-
-    @keyframes fadeinleft {
-      0% {
-        opacity: 0;
-        transform: translateX(-100%);
-        transition: transform .12s cubic-bezier(0, 0, 0.2, 1), opacity .12s cubic-bezier(0, 0, 0.2, 1);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateX(0%);
-      }
-    }
   }
 
   p-button.sidebar {
