@@ -46,3 +46,9 @@ pre>span {
 .card{
   padding: 0.5rem 1rem;
 }
+
+@media (width < 576px) {
+  .card{
+    padding: 0.2rem 0.3rem;
+  }
+}
