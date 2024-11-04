@@ -138,8 +138,8 @@ nav {
   p-button.sidebar.open-sidebar {
     display: flex !important;
     position: fixed;
-    top: calc(25vh - 5rem);
-    top: calc(25dvh);
+    top: calc(10vh + var(--topPaddingBecauseOfMenu));
+    top: calc(10dvh + var(--topPaddingBecauseOfMenu));
     left: 0;
     z-index: 10000;
   }

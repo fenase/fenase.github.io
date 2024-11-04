@@ -6,8 +6,8 @@
 
         <ng-template pTemplate="start">
           <div class="w-full inline-flex justify-content-end pr-3">
-            <p-button size="small" [rounded]="true" [raised]="true" severity="secondary" [class]="classList"
-              class="close-sidebar" [icon]="buttonIcon" (onClick)="toggleSidebar()" [disabled]="!buttonActive" />
+            <p-button size="small" [raised]="true" severity="secondary" [class]="classList" class="close-sidebar"
+              [icon]="buttonIcon" (onClick)="toggleSidebar()" [disabled]="!buttonActive" />
           </div>
         </ng-template>
 
@@ -35,5 +35,5 @@
 
 </div>
 
-<p-button size="small" [rounded]="true" [raised]="true" severity="secondary" [class]="classList" class="open-sidebar"
-  [icon]="buttonIcon" (onClick)="toggleSidebar()" [disabled]="!buttonActive" />
+<p-button size="small" [raised]="true" severity="secondary" [class]="classList" class="open-sidebar" [icon]="buttonIcon"
+  (onClick)="toggleSidebar()" [disabled]="!buttonActive" />
