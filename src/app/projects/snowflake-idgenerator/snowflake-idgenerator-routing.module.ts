@@ -16,6 +16,7 @@ const routes: Routes = [
   {
     path: '',
     component: SnowflakeIDGeneratorComponent,
+    title: 'Snowflake Id Generator',
     children: [
       {
         path: '',

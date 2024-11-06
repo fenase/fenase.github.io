@@ -19,10 +19,11 @@ const routes: Routes = [
   {
     path: '',
     component: BigExcelCreatorComponent,
+    title: 'Big Excel Creator',
     children: [
       {
         path: '',
-        redirectTo:'thePackage',
+        redirectTo: 'thePackage',
         pathMatch: 'full',
       },
       {
