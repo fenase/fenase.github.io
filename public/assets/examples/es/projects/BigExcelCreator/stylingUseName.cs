@@ -1,7 +1,5 @@
 MemoryStream stream = new MemoryStream();
-using (BigExcelWriter excel = new(stream,
-                                    DocumentFormat.OpenXml.SpreadsheetDocumentType.Workbook
-                                    stylesheet: list.GetStylesheet()))
+using (BigExcelWriter excel = new(stream, stylesheet: list.GetStylesheet()))
 {
     int index_style_name1 = list.GetIndexByName(name1);
     int index_style_name2 = list.GetIndexByName(name2);
