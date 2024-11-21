@@ -1,6 +1,6 @@
 {
   "seeWorkingExample": "To see a working example, see the <a href='https://github.com/fenase/BigExcelCreator/blob/main/Example/Program.cs' rel='noopener noreferrer nofollow'>example code</a> on gitHub, part of the vs solution.",
-  "step 1": "Instantiate class <code>BigExcelWriter</code> using either a file path or a stream (<code>MemoryStream</code> is recommended).",
+  "step 1": "Instantiate class <code>BigExcelWriter</code> using either a file path or a stream (When using a stream, using <code>MemoryStream</code> is recommended, although you may use a different type of stream if you need to).",
   "step 2": "Open a new Sheet using <code>CreateAndOpenSheet</code>",
   "step 3": "For every row, use <code>BeginRow</code> and <code>EndRow</code>",
   "step 3 note": "If you want to hide a row, pass <code>true</code> when calling <code>BeginRow</code>",

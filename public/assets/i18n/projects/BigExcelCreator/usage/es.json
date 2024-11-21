@@ -1,6 +1,6 @@
 {
   "seeWorkingExample": "Para ver un ejemplo de funcionamiento, vea el <a href='https://github.com/fenase/BigExcelCreator/blob/main/Example/Program.cs' rel='noopener noreferrer nofollow'>código de ejemplo</a> en gitHub. Éste forma parte de la solución de VisualStudio.",
-  "step 1": "Instancie la clase <code>BigExcelWriter</code> utilizando una ruta a un archivo o un stream (se recomienda usar <code>MemoryStream</code>).",
+  "step 1": "Instancie la clase <code>BigExcelWriter</code> utilizando una ruta a un archivo o un stream (Cuando se usa un stream, se recomienda usar <code>MemoryStream</code>. Aún así, se puede usar otro tipo de stream en caso de ser necesario).",
   "step 2": "Abra una nueva hoja usando el método <code>CreateAndOpenSheet</code>",
   "step 3": "Para cada fila, use <code>BeginRow</code> y <code>EndRow</code>",
   "step 3 note": "si desea ocultar una fila, agregue <code>true</code> cuando realiza el llamado a <code>BeginRow</code>",
