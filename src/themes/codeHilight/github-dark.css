@@ -21,7 +21,7 @@
 */
   .hljs {
     color: #c9d1d9;
-    background: #292929
+    background: var(--neutralBackground1Rest);
   }
 
   .hljs-doctag,
