@@ -8,6 +8,7 @@
   "Home": "Home",
   "Note": "Note",
   "Projects": "Projects",
+  "MyProjects": "My Projects",
   "Snowflake Id Generator": "Snowflake Id Generator",
   "aboutMe": "About me",
   "landing": "landing works!!!!",
@@ -21,5 +22,9 @@
     "findMyProjects": "On this site you'll find some documentation and manuals for my NuGet packages. At this point it's just a copy of the instructions on the packages themselves. In the future, I'll be adding more details to it."
   },
   "Advanced": "Advanced",
-  "API": "API"
+  "API": "API",
+  "LandingDescriptions": {
+    "Big Excel Creator": "Create Excel files using OpenXML SAX with styling. This is specially useful when trying to output thousands of rows",
+    "Snowflake Id Generator": "Generate unique identifiers based on Twitter's Snowflake ID. Parse a Snowflake to get information about it's creation"
+  }
 }
