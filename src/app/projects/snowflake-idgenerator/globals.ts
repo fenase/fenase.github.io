@@ -1,6 +1,6 @@
 export const Versions = {
 
-  lastVersion: "1.5.2024.306",
+  lastVersion: "1.5.2024.337",
 }
 
 export const Constants = {
