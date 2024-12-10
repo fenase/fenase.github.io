@@ -20,5 +20,5 @@
     "The first component of": "The first component of the codes is the amount of milliseconds elapsed since a set point in time, called epoch. By default, the generator uses the unix epoch (jan-1-1970 12:00:00am) as starting point to count.",
     "Adding a DateTime": "Adding a <code>DateTime</code> object as an extra parameter when using the generator allows to change the zero value to be used to count milliseconds to."
   },
-  "note recommend to use strings": "If the generated code is going to be used somewhere without a well-defined <code>ulong</code> type (example, Typescript), it is recommended to use the <code>string</code> representation, because those languages usually represent numbers as floating-point numbers and must round the code since they can't represent every ingeter beyond certain value."
+  "note recommend to use strings": "If the generated code is going to be used somewhere without a well-defined <code>ulong</code> type (example, Typescript), it is recommended to use the <code>string</code> representation, because those languages usually represent numbers as floating-point numbers and must round the code since they can't represent every integer beyond certain value."
 }
