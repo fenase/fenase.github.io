@@ -19,5 +19,6 @@
     "version 1.1.2023 and up": "versión 1.1.2023 o superior",
     "The first component of": "El primer componente de los códigos es el tiempo (en milisegundos) transcurridos desde un punto fijo en el tiempo, llamado <em>epoch</em> (época). De forma predeterminada, el generador utiliza la época UNIX (1° de enero de 1970, 12:00:00am) cómo punto a partir del cual empezar a contar.",
     "Adding a DateTime": "Incluir un objeto <code>DateTime</code> como parámetro extra al utilizar el generadoe permite cambiar el momento 0 desde el cuál se cuentan los milisegundos transcurridos."
-  }
+  },
+  "note recommend to use strings": "Si el código va a ser utilizado en algún lugar que no posea el tipo <code>ulong</code> debidamente definido (ejemplo, Typescript), se recomienda la utilización de las representaciones en formato <code>string</code>, ya que esos lenguajes usualmente representan los números como números de punto flotante, y deben redondear el código por no poder representar todos los números enteros más allá de cierto valor."
 }
