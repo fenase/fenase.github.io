@@ -13,6 +13,10 @@
     <li [innerHTML]="t('Call GetCode')"></li>
     <li [innerHTML]="t('Call GetCodeString')"></li>
   </ol>
+</ng-container>
 
-
+<ng-container *transloco="let t">
+  <p-panel [header]="t('Note')">
+    <p [innerHTML]="t('projects.SnowflakeIDGenerator.generate.note recommend to use strings')"></p>
+  </p-panel>
 </ng-container>
