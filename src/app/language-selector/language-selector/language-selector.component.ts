@@ -45,9 +45,7 @@ export class LanguageSelectorComponent implements OnInit {
   ngOnInit(): void {
     let languageCode: string | null | undefined = localStorage.getItem(this.storedLanguageKey);
 
-    if (!languageCode) {
-      languageCode = getBrowserLang();
-    }
+    languageCode ??= getBrowserLang();
 
     if (languageCode && this.languagesList.map(x => x.code).includes(languageCode)) {
       this.changeLanguage(languageCode);
