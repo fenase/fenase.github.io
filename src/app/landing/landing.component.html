@@ -27,13 +27,14 @@
 
   </ng-container>
 
-  <ng-template pTemplate="footer">
+  <ng-template pTemplate="footer" *transloco="let t">
     <div class="flex flex-wrap align-items-center justify-content-between gap-3">
       <div class="flex align-items-center gap-2">
         <a pButton href="https://www.linkedin.com/in/federico-seckel" target="_blank" rel="noopener noreferrer"
-          class="p-button font-bold" icon="pi pi-linkedin" rounded="true" text="true" severity="secondary"></a>
+          class="p-button font-bold" icon="pi pi-linkedin" rounded="true" text="true" severity="secondary"
+          [attr.aria-label]="t('goToLinkedin')"></a>
         <a pButton href="https://github.com/fenase" target="_blank" rel="noopener noreferrer" class="p-button font-bold"
-          icon="pi pi-github" rounded="true" text="true" severity="secondary"></a>
+          icon="pi pi-github" rounded="true" text="true" severity="secondary" [attr.aria-label]="t('goToGitHub')"></a>
       </div>
     </div>
   </ng-template>

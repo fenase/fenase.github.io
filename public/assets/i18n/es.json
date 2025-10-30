@@ -20,6 +20,8 @@
     "myLanguages": "Mi lengua materna es el Castellano, aunque algunas personan piensan que piedo hablar en inglés también...",
     "findMyProjects": "En este sitio vas a encontrar documentación y manuales para mis paquetes NuGet. En este punto, es simplemente una copia de las instrucciones ya incluidas en el mismo paquete. En el fituro espero estar añadiendo más detalles."
   },
+  "goToLinkedin": "Ir a mi perfil de LinkedIn",
+  "goToGitHub": "Ir a mi perfil de gitHub",
   "Advanced": "Avanzado",
   "API": "API"
 }
