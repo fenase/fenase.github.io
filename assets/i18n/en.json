@@ -20,6 +20,8 @@
     "myLanguages": "Although Spanish is my mother language, some people seem to think I can speak english too...",
     "findMyProjects": "On this site you'll find some documentation and manuals for my NuGet packages. At this point it's just a copy of the instructions on the packages themselves. In the future, I'll be adding more details to it."
   },
+  "goToLinkedin": "Go to my LinkedIn profile",
+  "goToGitHub": "Go to my gitHub profile",
   "Advanced": "Advanced",
   "API": "API"
 }
