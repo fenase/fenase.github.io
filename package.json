@@ -38,6 +38,15 @@
   },
   "overrides": {
     "esbuild": "~0.25.0",
-    "tmp": "~0.2.4"
+    "tmp": "~0.2.4",
+    "primeng": {
+      "@angular/common": "^19.2.16",
+      "@angular/core": "^19.2.16",
+      "@angular/forms": "^19.2.16",
+      "zone.js": "^0.15.1"
+    },
+    "angular-cli-ghpages": {
+      "gh-pages": "^5.0.0"
+    }
   }
 }
