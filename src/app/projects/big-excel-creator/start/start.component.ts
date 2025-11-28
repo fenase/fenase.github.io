@@ -3,10 +3,11 @@ import { provideTranslocoScope } from '@jsverse/transloco';
 import { Constants } from '../globals';
 
 @Component({
-  selector: 'app-start',
-  templateUrl: './start.component.html',
-  styles: '',
-  providers: [provideTranslocoScope({ scope: 'projects/BigExcelCreator/start', alias: 'projects.BigExcelCreator.start' })]
+    selector: 'app-start',
+    templateUrl: './start.component.html',
+    styles: '',
+    providers: [provideTranslocoScope({ scope: 'projects/BigExcelCreator/start', alias: 'projects.BigExcelCreator.start' })],
+    standalone: false
 })
 export class StartComponent {
   public readonly last2versionLink: string = Constants.last2versionLink;

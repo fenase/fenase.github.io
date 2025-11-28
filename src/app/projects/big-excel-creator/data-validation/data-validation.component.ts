@@ -11,6 +11,7 @@ import { provideTranslocoScope } from '@jsverse/transloco';
       { scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' }
     )
   ],
+  standalone: false
 })
 export class DataValidationComponent {
 

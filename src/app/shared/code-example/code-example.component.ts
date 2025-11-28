@@ -4,9 +4,10 @@ import { TranslocoService } from '@jsverse/transloco';
 import { Subject, Subscription, takeUntil } from 'rxjs';
 
 @Component({
-  selector: 'app-code-example',
-  templateUrl: './code-example.component.html',
-  styleUrls: ['./code-example.component.css'],
+    selector: 'app-code-example',
+    templateUrl: './code-example.component.html',
+    styleUrls: ['./code-example.component.css'],
+    standalone: false
 })
 export class CodeExampleComponent implements OnInit, OnDestroy {
 

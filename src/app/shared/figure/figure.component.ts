@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-figure',
-  templateUrl: './figure.component.html',
-  styleUrl: './figure.component.css',
+    selector: 'app-figure',
+    templateUrl: './figure.component.html',
+    styleUrl: './figure.component.css',
+    standalone: false
 })
 export class FigureComponent {
 

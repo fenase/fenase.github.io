@@ -4,10 +4,15 @@ import { provideTranslocoScope } from '@jsverse/transloco';
 import { MenuItem, PrimeIcons } from 'primeng/api';
 
 @Component({
-  selector: 'app-snowflake-idgenerator',
-  templateUrl: './snowflake-idgenerator.component.html',
-  styles: '',
-  providers: [provideTranslocoScope({ scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' })]
+    selector: 'app-snowflake-idgenerator',
+    templateUrl: './snowflake-idgenerator.component.html',
+    styles: '',
+    providers: [
+      provideTranslocoScope(
+        { scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' }
+      )
+    ],
+    standalone: false
 })
 export class SnowflakeIDGeneratorComponent {
   private readonly baseRoute: string = "/projects/SnowflakeIDGenerator";

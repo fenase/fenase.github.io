@@ -4,9 +4,10 @@ import { provideTranslocoScope } from '@jsverse/transloco';
 import { MenuItem, PrimeIcons } from 'primeng/api';
 
 @Component({
-  templateUrl: './big-excel-creator.component.html',
-  styles: '',
-  providers: [provideTranslocoScope({ scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' })]
+    templateUrl: './big-excel-creator.component.html',
+    styles: '',
+    providers: [provideTranslocoScope({ scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' })],
+    standalone: false
 })
 export class BigExcelCreatorComponent {
   private readonly baseRoute: string = "/projects/BigExcelCreator";

@@ -4,15 +4,16 @@ import { InstallationInstruction, InstallationVersion } from '../../../shared/in
 import { Versions } from '../globals';
 
 @Component({
-  selector: 'app-installation',
-  templateUrl: './installation.component.html',
-  styles: '',
-  providers: [
-    provideTranslocoScope(
-      { scope: 'projects/SnowflakeIDGenerator/installation', alias: 'projects.SnowflakeIDGenerator.installation' },
-      { scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' }
-    )
-  ],
+    selector: 'app-installation',
+    templateUrl: './installation.component.html',
+    styles: '',
+    providers: [
+        provideTranslocoScope(
+          { scope: 'projects/SnowflakeIDGenerator/installation', alias: 'projects.SnowflakeIDGenerator.installation' },
+          { scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' }
+        )
+    ],
+    standalone: false
 })
 export class InstallationComponent {
   public installerIndexSyncingIndex: number = 0;

@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { NgModule, inject, provideAppInitializer } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { provideHttpClient } from '@angular/common/http';
@@ -43,12 +43,10 @@ const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
     provideAnimationsAsync(),
     provideHttpClient(),
     provideAnimations(),
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initializeAppFactory,
-      deps: [PrimeNGConfig],
-      multi: true,
-    },
+    provideAppInitializer(() => {
+        const initializerFn = (initializeAppFactory)(inject(PrimeNGConfig));
+        return initializerFn();
+      }),
     provideHighlightOptions({
       coreLibraryLoader: () => import('highlight.js/lib/core'),
       lineNumbersLoader: () => import('ngx-highlightjs/line-numbers'),

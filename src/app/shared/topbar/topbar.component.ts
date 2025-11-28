@@ -3,9 +3,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MenuItem, PrimeIcons } from 'primeng/api';
 
 @Component({
-  selector: 'app-topbar',
-  templateUrl: './topbar.component.html',
-  styleUrl: './topbar.component.css',
+    selector: 'app-topbar',
+    templateUrl: './topbar.component.html',
+    styleUrl: './topbar.component.css',
+    standalone: false
 })
 export class TopbarComponent {
   constructor(public router: Router, private readonly activatedRoute: ActivatedRoute) { }

@@ -2,9 +2,10 @@ import { Clipboard } from '@angular/cdk/clipboard';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-install-instructions',
-  templateUrl: './install-instructions.component.html',
-  styleUrl: './install-instructions.component.css'
+    selector: 'app-install-instructions',
+    templateUrl: './install-instructions.component.html',
+    styleUrl: './install-instructions.component.css',
+    standalone: false
 })
 export class InstallInstructionsComponent implements OnInit {
   constructor(private readonly clipboard: Clipboard) { }
