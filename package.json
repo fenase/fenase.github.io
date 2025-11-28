@@ -35,5 +35,8 @@
     "@angular/compiler-cli": "^18.2.14",
     "angular-cli-ghpages": "^2.0.3",
     "typescript": "~5.5.2"
+  },
+  "overrides": {
+    "esbuild": "~0.25.0"
   }
 }
