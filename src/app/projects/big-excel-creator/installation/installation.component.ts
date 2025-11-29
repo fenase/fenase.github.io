@@ -4,13 +4,16 @@ import { InstallationInstruction, InstallationVersion, InstallInstructionsCompon
 import { Versions } from '../globals';
 
 @Component({
-    selector: 'app-installation',
-    templateUrl: './installation.component.html',
-    styles: '',
-    providers: [
-        provideTranslocoScope({ scope: 'projects/BigExcelCreator/installation', alias: 'projects.BigExcelCreator.installation' }, { scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' })
-    ],
-    imports: [TranslocoDirective, InstallInstructionsComponent, TranslocoPipe]
+  selector: 'app-installation',
+  templateUrl: './installation.component.html',
+  styles: '',
+  providers: [
+    provideTranslocoScope(
+      { scope: 'projects/BigExcelCreator/installation', alias: 'projects.BigExcelCreator.installation' },
+      { scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' }
+    )
+  ],
+  imports: [TranslocoDirective, InstallInstructionsComponent, TranslocoPipe]
 })
 export class InstallationComponent {
 
