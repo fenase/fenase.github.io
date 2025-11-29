@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, isDevMode, NgModule } from '@angular/core';
+import { isDevMode, NgModule, inject, provideAppInitializer } from '@angular/core';
 import {
   provideTransloco,
   TranslocoModule,
@@ -29,12 +29,10 @@ export function preloadTranslation(transloco: TranslocoService) {
       },
       loader: TranslocoHttpLoader
     }),
-    {
-      provide: APP_INITIALIZER,
-      multi: true,
-      deps: [TranslocoService],
-      useFactory: preloadTranslation,
-    },
+    provideAppInitializer(() => {
+        const initializerFn = (preloadTranslation)(inject(TranslocoService));
+        return initializerFn();
+      }),
   ],
 })
 export class TranslocoRootModule { }

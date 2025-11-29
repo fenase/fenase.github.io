@@ -1,10 +1,16 @@
 import { Component, Input } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, PrimeTemplate } from 'primeng/api';
+import { MenuModule } from 'primeng/menu';
+import { Button } from 'primeng/button';
+import { NgIf } from '@angular/common';
+import { RouterLinkActive, RouterLink } from '@angular/router';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.css'
+    selector: 'app-sidebar',
+    templateUrl: './sidebar.component.html',
+    styleUrl: './sidebar.component.css',
+    imports: [MenuModule, PrimeTemplate, Button, NgIf, RouterLinkActive, RouterLink, TranslocoPipe]
 })
 export class SidebarComponent {
 

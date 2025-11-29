@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { provideTranslocoScope } from '@jsverse/transloco';
+import { provideTranslocoScope, TranslocoDirective } from '@jsverse/transloco';
+import { FigureComponent } from '../../../shared/figure/figure.component';
 
 @Component({
   selector: 'app-start',
@@ -11,5 +12,6 @@ import { provideTranslocoScope } from '@jsverse/transloco';
       { scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' }
     )
   ],
+  imports: [TranslocoDirective, FigureComponent]
 })
 export class StartComponent { }

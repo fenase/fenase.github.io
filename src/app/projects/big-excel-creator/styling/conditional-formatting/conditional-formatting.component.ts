@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { provideTranslocoScope } from '@jsverse/transloco';
+import { provideTranslocoScope, TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
+import { PanelModule } from 'primeng/panel';
+import { CodeExampleComponent } from '../../../../shared/code-example/code-example.component';
 
 @Component({
   selector: 'app-conditional-formatting',
@@ -11,6 +13,7 @@ import { provideTranslocoScope } from '@jsverse/transloco';
       { scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' }
     )
   ],
+  imports: [TranslocoDirective, PanelModule, CodeExampleComponent, TranslocoPipe]
 })
 export class ConditionalFormattingComponent {
 

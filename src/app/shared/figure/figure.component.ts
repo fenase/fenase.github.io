@@ -1,9 +1,11 @@
 import { Component, Input } from '@angular/core';
+import { SkeletonModule } from 'primeng/skeleton';
 
 @Component({
-  selector: 'app-figure',
-  templateUrl: './figure.component.html',
-  styleUrl: './figure.component.css',
+    selector: 'app-figure',
+    templateUrl: './figure.component.html',
+    styleUrl: './figure.component.css',
+    imports: [SkeletonModule]
 })
 export class FigureComponent {
 
