@@ -1,21 +1,18 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
-import { provideAnimations } from '@angular/platform-browser/animations';
-import { provideAppInitializer, inject, importProvidersFrom } from '@angular/core';
-import { PrimeNGConfig } from 'primeng/api';
-import { provideHighlightOptions } from 'ngx-highlightjs';
+import { importProvidersFrom, inject, provideAppInitializer } from '@angular/core';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import { AppRoutingModule } from './app/app-routing.module';
-import { TranslocoRootModule } from './app/transloco-root.module';
-import { MessagesModule } from 'primeng/messages';
-import { ScrollTopModule } from 'primeng/scrolltop';
-import { PanelModule } from 'primeng/panel';
-import { ButtonModule } from 'primeng/button';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideHighlightOptions } from 'ngx-highlightjs';
+import { PrimeNGConfig } from 'primeng/api';
 import { AvatarModule } from 'primeng/avatar';
+import { ButtonModule } from 'primeng/button';
+import { MessagesModule } from 'primeng/messages';
+import { PanelModule } from 'primeng/panel';
+import { ScrollTopModule } from 'primeng/scrolltop';
+import { AppRoutingModule } from './app/app-routing.module';
 import { AppComponent } from './app/app.component';
+import { TranslocoRootModule } from './app/transloco-root.module';
 
 const initializeAppFactory = (primeConfig: PrimeNGConfig) => () => {
   // ......
