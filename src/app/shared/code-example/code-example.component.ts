@@ -2,12 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { TranslocoService } from '@jsverse/transloco';
 import { Subject, Subscription, takeUntil } from 'rxjs';
+import { NgIf } from '@angular/common';
+import { Highlight } from 'ngx-highlightjs';
+import { SkeletonModule } from 'primeng/skeleton';
 
 @Component({
     selector: 'app-code-example',
     templateUrl: './code-example.component.html',
     styleUrls: ['./code-example.component.css'],
-    standalone: false
+    imports: [NgIf, Highlight, SkeletonModule]
 })
 export class CodeExampleComponent implements OnInit, OnDestroy {
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { provideTranslocoScope } from '@jsverse/transloco';
-import { InstallationInstruction, InstallationVersion } from '../../../shared/install-instructions/install-instructions.component';
+import { provideTranslocoScope, TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
+import { InstallationInstruction, InstallationVersion, InstallInstructionsComponent } from '../../../shared/install-instructions/install-instructions.component';
 import { Versions } from '../globals';
 
 @Component({
@@ -8,12 +8,9 @@ import { Versions } from '../globals';
     templateUrl: './installation.component.html',
     styles: '',
     providers: [
-        provideTranslocoScope(
-          { scope: 'projects/SnowflakeIDGenerator/installation', alias: 'projects.SnowflakeIDGenerator.installation' },
-          { scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' }
-        )
+        provideTranslocoScope({ scope: 'projects/SnowflakeIDGenerator/installation', alias: 'projects.SnowflakeIDGenerator.installation' }, { scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' })
     ],
-    standalone: false
+    imports: [TranslocoDirective, InstallInstructionsComponent, TranslocoPipe]
 })
 export class InstallationComponent {
   public installerIndexSyncingIndex: number = 0;

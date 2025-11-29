@@ -6,7 +6,7 @@ import { HighlightModule } from 'ngx-highlightjs';
 import { ButtonModule } from 'primeng/button';
 import { ListboxModule } from 'primeng/listbox';
 import { PanelModule } from 'primeng/panel';
-import { SharedModule } from "../../shared/shared.module";
+
 import { BigExcelCreatorRoutingModule } from './big-excel-creator-routing.module';
 import { BigExcelCreatorComponent } from './big-excel-creator.component';
 import { DataValidationComponent } from './data-validation/data-validation.component';
@@ -26,7 +26,15 @@ import { UsageComponent } from './usage/usage.component';
 
 
 @NgModule({
-  declarations: [
+    imports: [
+    CommonModule,
+    RouterModule,
+    TranslocoModule,
+    BigExcelCreatorRoutingModule,
+    ButtonModule,
+    ListboxModule,
+    PanelModule,
+    HighlightModule,
     BigExcelCreatorComponent,
     StartComponent,
     UsageComponent,
@@ -40,18 +48,7 @@ import { UsageComponent } from './usage/usage.component';
     CommentsComponent,
     AutofilterComponent,
     ConditionalFormattingComponent,
-    StylingDetailsComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    TranslocoModule,
-    BigExcelCreatorRoutingModule,
-    ButtonModule,
-    ListboxModule,
-    PanelModule,
-    SharedModule,
-    HighlightModule,
-  ]
+    StylingDetailsComponent,
+]
 })
 export class BigExcelCreatorModule { }

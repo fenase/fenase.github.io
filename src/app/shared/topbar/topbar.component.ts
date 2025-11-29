@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { MenuItem, PrimeIcons } from 'primeng/api';
+import { ActivatedRoute, Router, RouterLinkActive, RouterLink } from '@angular/router';
+import { MenuItem, PrimeIcons, PrimeTemplate } from 'primeng/api';
+import { MenubarModule } from 'primeng/menubar';
+import { NgIf, NgClass } from '@angular/common';
+import { LanguageSelectorComponent } from '../../language-selector/language-selector/language-selector.component';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
     selector: 'app-topbar',
     templateUrl: './topbar.component.html',
     styleUrl: './topbar.component.css',
-    standalone: false
+    imports: [MenubarModule, PrimeTemplate, RouterLinkActive, RouterLink, NgIf, NgClass, LanguageSelectorComponent, TranslocoPipe]
 })
 export class TopbarComponent {
   constructor(public router: Router, private readonly activatedRoute: ActivatedRoute) { }

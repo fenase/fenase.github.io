@@ -5,7 +5,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { HighlightModule } from 'ngx-highlightjs';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
-import { SharedModule } from "../../shared/shared.module";
+
 import { ChangeEpochComponent } from './change-epoch/change-epoch.component';
 import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
 import { GenerateEpochComponent } from './generate-epoch/generate-epoch.component';
@@ -22,7 +22,14 @@ import { UsageComponent } from './usage/usage.component';
 
 
 @NgModule({
-  declarations: [
+    imports: [
+    CommonModule,
+    RouterModule,
+    SnowflakeIdGeneratorRoutingModule,
+    TranslocoModule,
+    ButtonModule,
+    PanelModule,
+    HighlightModule,
     SnowflakeIDGeneratorComponent,
     StartComponent,
     InstallationComponent,
@@ -34,16 +41,6 @@ import { UsageComponent } from './usage/usage.component';
     TheObjectComponent,
     ChangeEpochComponent,
     DependencyInjectionComponent,
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    SnowflakeIdGeneratorRoutingModule,
-    TranslocoModule,
-    ButtonModule,
-    PanelModule,
-    SharedModule,
-    HighlightModule,
-  ]
+]
 })
 export class SnowflakeIDGeneratorModule { }

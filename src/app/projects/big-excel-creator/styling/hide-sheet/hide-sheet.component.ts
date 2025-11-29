@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
-import { provideTranslocoScope } from '@jsverse/transloco';
+import { provideTranslocoScope, TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
     selector: 'app-hide-sheet',
     templateUrl: './hide-sheet.component.html',
     styles: ``,
     providers: [
-        provideTranslocoScope(
-          { scope: 'projects/BigExcelCreator/styling', alias: 'projects.BigExcelCreator.styling' },
-          { scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' }
-        )
+        provideTranslocoScope({ scope: 'projects/BigExcelCreator/styling', alias: 'projects.BigExcelCreator.styling' }, { scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' })
     ],
-    standalone: false
+    imports: [TranslocoDirective, TranslocoPipe]
 })
 export class HideSheetComponent {
 

@@ -1,13 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslocoService, getBrowserLang } from '@jsverse/transloco';
+import { TranslocoService, getBrowserLang, TranslocoDirective } from '@jsverse/transloco';
 import { first } from 'rxjs';
 import { LanguageMenuItem } from '../LanguageMenuItem.Interface';
+import { MenuModule } from 'primeng/menu';
+import { PrimeTemplate } from 'primeng/api';
+import { TooltipModule } from 'primeng/tooltip';
+import { NgIf, NgStyle } from '@angular/common';
+import { ButtonDirective } from 'primeng/button';
 
 @Component({
     selector: 'app-language-selector',
     templateUrl: './language-selector.component.html',
     styleUrls: ['./language-selector.component.css'],
-    standalone: false
+    imports: [TranslocoDirective, MenuModule, PrimeTemplate, TooltipModule, NgIf, ButtonDirective, NgStyle]
 })
 export class LanguageSelectorComponent implements OnInit {
   private readonly storedLanguageKey: string = "lang";

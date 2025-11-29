@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import { provideTranslocoScope } from '@jsverse/transloco';
+import { provideTranslocoScope, TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
+import { CodeExampleComponent } from '../../../shared/code-example/code-example.component';
 
 @Component({
     selector: 'app-generate-epoch',
     templateUrl: './generate-epoch.component.html',
     styles: ``,
     providers: [
-        provideTranslocoScope(
-          { scope: 'projects/SnowflakeIDGenerator/generate', alias: 'projects.SnowflakeIDGenerator.generate' },
-          { scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' }
-        )
+        provideTranslocoScope({ scope: 'projects/SnowflakeIDGenerator/generate', alias: 'projects.SnowflakeIDGenerator.generate' }, { scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' })
     ],
-    standalone: false
+    imports: [TranslocoDirective, CodeExampleComponent, TranslocoPipe]
 })
 export class GenerateEpochComponent {
 
