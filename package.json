@@ -44,7 +44,7 @@
       "zone.js": "^0.15.1"
     },
     "angular-cli-ghpages": {
-      "gh-pages": "^5.0.0"
+      "gh-pages": "^6.3.0"
     }
   }
 }
