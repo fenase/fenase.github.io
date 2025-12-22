@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { provideTranslocoScope } from '@jsverse/transloco';
+import { provideTranslocoScope, TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-the-object',
@@ -11,6 +11,7 @@ import { provideTranslocoScope } from '@jsverse/transloco';
       { scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' }
     )
   ],
+  imports: [TranslocoDirective, TranslocoPipe]
 })
 export class TheObjectComponent {
 

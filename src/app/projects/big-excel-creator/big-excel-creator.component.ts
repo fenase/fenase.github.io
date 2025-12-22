@@ -1,12 +1,14 @@
 import { Component } from "@angular/core";
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { provideTranslocoScope } from '@jsverse/transloco';
 import { MenuItem, PrimeIcons } from 'primeng/api';
+import { SidebarComponent } from "../../shared/sidebar/sidebar.component";
 
 @Component({
-  templateUrl: './big-excel-creator.component.html',
-  styles: '',
-  providers: [provideTranslocoScope({ scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' })]
+    templateUrl: './big-excel-creator.component.html',
+    styles: '',
+    providers: [provideTranslocoScope({ scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' })],
+    imports: [SidebarComponent, RouterOutlet]
 })
 export class BigExcelCreatorComponent {
   private readonly baseRoute: string = "/projects/BigExcelCreator";

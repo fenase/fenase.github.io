@@ -6748,7 +6748,6 @@
     }
 
     .p-steps .p-steps-item .p-menuitem-link {
-      background: transparent;
       transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, outline-color 0.2s;
       border-radius: 6px;
       background: #18181b;
@@ -8806,7 +8805,6 @@
 
     .p-orderlist .p-orderlist-header {
       background: #18181b;
-      color: #ffffff;
       border: 0 none;
       border-bottom: 0 none;
       padding: 0.75rem 1rem 0.5rem 1rem;
@@ -8947,7 +8945,6 @@
 
     .p-picklist .p-picklist-header {
       background: #18181b;
-      color: #ffffff;
       border: 1px solid #3f3f46;
       border: 0 none;
       padding: 0.75rem 1rem 0.5rem 1rem;

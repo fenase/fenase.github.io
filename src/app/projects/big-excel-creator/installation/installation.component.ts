@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { provideTranslocoScope } from '@jsverse/transloco';
-import { InstallationInstruction, InstallationVersion } from '../../../shared/install-instructions/install-instructions.component';
+import { provideTranslocoScope, TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
+import { InstallationInstruction, InstallationVersion, InstallInstructionsComponent } from '../../../shared/install-instructions/install-instructions.component';
 import { Versions } from '../globals';
 
 @Component({
@@ -13,6 +13,7 @@ import { Versions } from '../globals';
       { scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' }
     )
   ],
+  imports: [TranslocoDirective, InstallInstructionsComponent, TranslocoPipe]
 })
 export class InstallationComponent {
 

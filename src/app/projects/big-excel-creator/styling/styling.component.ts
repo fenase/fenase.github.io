@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { provideTranslocoScope } from '@jsverse/transloco';
+import { provideTranslocoScope, TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-styling',
@@ -11,6 +11,7 @@ import { provideTranslocoScope } from '@jsverse/transloco';
       { scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' }
     )
   ],
+  imports: [TranslocoPipe]
 })
 export class StylingComponent {
 

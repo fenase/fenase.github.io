@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { provideTranslocoScope } from '@jsverse/transloco';
+import { provideTranslocoScope, TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
+import { PanelModule } from 'primeng/panel';
 
 @Component({
   selector: 'app-generate-static',
@@ -11,6 +12,7 @@ import { provideTranslocoScope } from '@jsverse/transloco';
       { scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' }
     )
   ],
+  imports: [TranslocoDirective, PanelModule, TranslocoPipe]
 })
 export class GenerateStaticComponent {
 

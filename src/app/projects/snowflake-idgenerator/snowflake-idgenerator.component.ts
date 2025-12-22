@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { provideTranslocoScope } from '@jsverse/transloco';
 import { MenuItem, PrimeIcons } from 'primeng/api';
+import { SidebarComponent } from '../../shared/sidebar/sidebar.component';
 
 @Component({
-  selector: 'app-snowflake-idgenerator',
-  templateUrl: './snowflake-idgenerator.component.html',
-  styles: '',
-  providers: [provideTranslocoScope({ scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' })]
+    selector: 'app-snowflake-idgenerator',
+    templateUrl: './snowflake-idgenerator.component.html',
+    styles: '',
+    providers: [
+        provideTranslocoScope({ scope: 'projects/SnowflakeIDGenerator', alias: 'projects.SnowflakeIDGenerator' })
+    ],
+    imports: [SidebarComponent, RouterOutlet]
 })
 export class SnowflakeIDGeneratorComponent {
   private readonly baseRoute: string = "/projects/SnowflakeIDGenerator";

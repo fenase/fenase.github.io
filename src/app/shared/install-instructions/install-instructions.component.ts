@@ -1,10 +1,16 @@
 import { Clipboard } from '@angular/cdk/clipboard';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TranslocoDirective } from '@jsverse/transloco';
+import { NgIf, NgFor } from '@angular/common';
+import { TabViewModule } from 'primeng/tabview';
+import { Highlight } from 'ngx-highlightjs';
+import { Button } from 'primeng/button';
 
 @Component({
-  selector: 'app-install-instructions',
-  templateUrl: './install-instructions.component.html',
-  styleUrl: './install-instructions.component.css'
+    selector: 'app-install-instructions',
+    templateUrl: './install-instructions.component.html',
+    styleUrl: './install-instructions.component.css',
+    imports: [TranslocoDirective, NgIf, TabViewModule, NgFor, Highlight, Button]
 })
 export class InstallInstructionsComponent implements OnInit {
   constructor(private readonly clipboard: Clipboard) { }
