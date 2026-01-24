@@ -45,6 +45,7 @@
     },
     "angular-cli-ghpages": {
       "gh-pages": "^6.3.0"
-    }
+    },
+    "tar": ">7.5.3"
   }
 }
