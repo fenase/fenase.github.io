@@ -33,7 +33,7 @@
     "@angular/build": "^19.2.19",
     "@angular/cli": "^19.2.19",
     "@angular/compiler-cli": "^19.2.18",
-    "angular-cli-ghpages": "^2.0.3",
+    "angular-cli-ghpages": "^3.0.2",
     "typescript": "~5.8.3"
   },
   "overrides": {
@@ -42,9 +42,6 @@
       "@angular/core": "^19.2.16",
       "@angular/forms": "^19.2.16",
       "zone.js": "^0.15.1"
-    },
-    "angular-cli-ghpages": {
-      "gh-pages": "^6.3.0"
     },
     "tar": ">7.5.3"
   }
