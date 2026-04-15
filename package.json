@@ -19,7 +19,7 @@
     "@angular/platform-browser": "^19.2.16",
     "@angular/platform-browser-dynamic": "^19.2.20",
     "@angular/router": "^19.2.20",
-    "@jsverse/transloco": "^8.2.1",
+    "@jsverse/transloco": "^8.3.0",
     "ngx-highlightjs": "^14.0.1",
     "primeflex": "^3.3.1",
     "primeicons": "^7.0.0",
@@ -30,8 +30,8 @@
     "zone.js": "^0.15.1"
   },
   "devDependencies": {
-    "@angular/build": "^19.2.23",
-    "@angular/cli": "^19.2.23",
+    "@angular/build": "^19.2.24",
+    "@angular/cli": "^19.2.24",
     "@angular/compiler-cli": "^19.2.20",
     "angular-cli-ghpages": "^3.0.2",
     "typescript": "~5.8.3"
