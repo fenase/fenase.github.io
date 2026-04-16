@@ -6,6 +6,6 @@ excel.CreateAndOpenSheet("Sheet Name");
 // when writing to cells between B2 and B10 of the current sheet.
 string range = "B2:B10";
 string formula = "vals!$A$1:$A$6";
-excel.AddValidator(range, formula);
+excel.AddListValidator(range, formula);
 
 excel.CloseSheet();

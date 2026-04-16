@@ -1,0 +1,32 @@
+{
+  "intro": "El método <code>CreateSheetFromObject</code> proporciona una abstracción de alto nivel para escribir colecciones de objetos directamente en hojas de Excel. Este enfoque mapea automáticamente las propiedades del objeto a columnas y aplica configuración basada en atributos sin iteración manual fila por fila.",
+  "benefits": "Esta característica es especialmente útil cuando necesitás exportar datos estructurados de tu aplicación con código mínimo. Al usar atributos de clase para decorar propiedades, obtenés control granular sobre la apariencia de las columnas, manejo de tipos de datos, estilos e incluso reglas de formato condicional, todo de forma declarativa.",
+  "availableAttributes": "Atributos Disponibles",
+  "attributesIntro": "Las propiedades pueden decorarse con los siguientes atributos para personalizar su representación en Excel:",
+  "columnConfiguration": "Configuración de Columnas",
+  "attributes": {
+    "Ignore": "<code>ExcelIgnore</code> excluye completamente una propiedad de escribirse en la hoja.",
+    "ColumnName": "<code>ExcelColumnName</code> establece un nombre de encabezado personalizado en lugar de usar el nombre de la propiedad.",
+    "ColumnOrder": "<code>ExcelColumnOrder</code> controla el orden de columnas especificando una posición basada en cero.",
+    "ColumnType": "<code>ExcelColumnType</code> especifica el tipo de dato de celda: <code>Text</code>, <code>Number</code> o <code>Formula</code>.",
+    "ColumnWidth": "<code>ExcelColumnWidth</code> establece un ancho de columna personalizado en caracteres.",
+    "ColumnHidden": "<code>ExcelColumnHidden</code> oculta la columna de la vista en la hoja generada.",
+    "StyleFormat": "<code>ExcelStyleFormat</code> aplica un estilo nombrado a celdas de datos individuales en la columna.",
+    "HeaderStyleFormat": "<code>ExcelHeaderStyleFormat</code> (a nivel de clase) aplica un estilo nombrado a toda la fila de encabezado.",
+    "ConditionalFormatFormula": "<code>ExcelConditionalFormatFormula</code> aplica formato condicional basado en una expresión de fórmula.",
+    "ConditionalFormatCellIs": "<code>ExcelConditionalFormatCellIs</code> aplica formato condicional basado en comparaciones de valores de celdas (igual, entre, mayor que, etc.).",
+    "ConditionalFormatDuplicatedValues": "<code>ExcelConditionalFormatDuplicatedValues</code> resalta celdas que contienen valores duplicados dentro de la columna."
+  },
+  "styling": "Estilos",
+  "conditionalFormatting": "Formato Condicional",
+  "advancedOptions": "Opciones Avanzadas",
+  "advancedIntro": "El método <code>CreateSheetFromObject</code> soporta varios parámetros opcionales para mayor flexibilidad:",
+  "options": {
+    "WriteHeaderRow": "<code>writeHeaderRow</code> (por defecto: <code>true</code>) controla si los encabezados de columna se escriben como la primera fila.",
+    "AddAutoFilter": "<code>addAutoFilterOnFirstColumn</code> (por defecto: <code>false</code>) añade automáticamente un autofiltro a la fila de encabezado para filtrado interactivo.",
+    "SheetVisibility": "<code>sheetState</code> permite controlar la visibilidad de la hoja: <code>Visible</code>, <code>Hidden</code> o <code>VeryHidden</code>.",
+    "SharedStrings": "<code>useSharedStringsOnTextData</code> (por defecto: <code>false</code>) reduce el tamaño del archivo deduplicando valores de texto entre hojas."
+  },
+  "example": "Ejemplo",
+  "exampleDesc": "A continuación se muestra un ejemplo completo que demuestra decoración de propiedades, orden de columnas personalizado, ocultamiento de columnas y formato condicional aplicado a un inventario de productos simple:"
+}
