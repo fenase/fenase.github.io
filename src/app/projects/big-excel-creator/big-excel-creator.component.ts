@@ -36,6 +36,11 @@ export class BigExcelCreatorComponent {
             icon: PrimeIcons.CODE,
             routerLink: [this.baseRoute, 'usage'],
             routerLinkActiveOptions: { exact: true }
+          },
+          {
+            label: 'projects.BigExcelCreator.Creating sheets from objects',
+            icon: PrimeIcons.LIST,
+            routerLink: [this.baseRoute, 'sheetFromObject'],
           }
         ],
       },
