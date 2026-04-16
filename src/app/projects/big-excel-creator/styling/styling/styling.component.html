@@ -12,7 +12,11 @@
   <app-code-example examplePath="projects/BigExcelCreator/stylingUseName" language="cs"></app-code-example>
 
   <p-panel [showHeader]="false">
-    <p [innerHTML]="t('Styling.note.p1',{'aHrefLink':'#conditionalFormatting'})"></p>
+    <p>
+      {{ t('Styling.note.p1') }}
+      <a [routerLink]="['..', 'conditionalFormatting']">{{ 'projects.BigExcelCreator.Conditional Formatting' | transloco }}</a>
+      <span [innerHTML]="t('Styling.note.p1Suffix')"></span>
+    </p>
     <p [innerHTML]="t('Styling.note.p2')"></p>
 
     <app-code-example examplePath="projects/BigExcelCreator/stylingDifferential" language="cs"></app-code-example>

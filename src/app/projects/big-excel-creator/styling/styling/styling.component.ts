@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { provideTranslocoScope, TranslocoDirective, TranslocoPipe } from '@jsverse/transloco';
 import { CodeExampleComponent } from '../../../../shared/code-example/code-example.component';
 import { PanelModule } from 'primeng/panel';
@@ -13,8 +14,6 @@ import { PanelModule } from 'primeng/panel';
       { scope: 'projects/BigExcelCreator', alias: 'projects.BigExcelCreator' }
     )
   ],
-  imports: [TranslocoDirective, CodeExampleComponent, PanelModule, TranslocoPipe]
+  imports: [TranslocoDirective, CodeExampleComponent, PanelModule, TranslocoPipe, RouterModule]
 })
-export class StylingComponent {
-
-}
+export class StylingComponent {}

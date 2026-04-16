@@ -4,7 +4,10 @@
 
 <ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.styling'">
 
-  <p [innerHTML]="t('Conditional Formatting.basic',{'aHrefLink':'#styling'})"></p>
+  <p>
+    <span [innerHTML]="t('Conditional Formatting.basic')"></span>
+    <a [routerLink]="['..', 'styling']">Styling</a>{{ t('Conditional Formatting.basicSuffix') }}
+  </p>
 
   <p-panel [showHeader]="false">
     <p [innerHTML]="t('Conditional Formatting.note.On every case below')"></p>
@@ -17,7 +20,10 @@
 
   <h3 class="text-primary">{{ t('Conditional Formatting.Formula.title') }}</h3>
 
-  <p [innerHTML]="t('Conditional Formatting.Formula.basic',{'aHrefLink':'#styling'})"></p>
+  <p>
+    <span [innerHTML]= "t('Conditional Formatting.Formula.basic')"></span>
+    <a [routerLink]="['..', 'styling']">Styling</a>{{ t('Conditional Formatting.Formula.basicSuffix') }}
+  </p>
   <ul>
     <li [innerHTML]="t('Conditional Formatting.Formula.formula')"></li>
   </ul>
