@@ -1,0 +1,32 @@
+{
+  "intro": "The <code>CreateSheetFromObject</code> method provides a high-level abstraction for writing collections of objects directly to Excel sheets. This approach automatically maps object properties to columns and applies attributes-based configuration without manual row-by-row iteration.",
+  "benefits": "This feature is especially useful when you need to export structured data from your application with minimal boilerplate code. By using class attributes to decorate properties, you gain fine-grained control over column appearance, data type handling, styling, and even conditional formatting rules—all declaratively.",
+  "availableAttributes": "Available Attributes",
+  "attributesIntro": "Properties can be decorated with the following attributes to customize their Excel representation:",
+  "columnConfiguration": "Column Configuration",
+  "attributes": {
+    "Ignore": "<code>ExcelIgnore</code> completely excludes a property from being written to the sheet.",
+    "ColumnName": "<code>ExcelColumnName</code> sets a custom column header name instead of using the property name.",
+    "ColumnOrder": "<code>ExcelColumnOrder</code> controls the column order by specifying a zero-based position.",
+    "ColumnType": "<code>ExcelColumnType</code> specifies the cell data type: <code>Text</code>, <code>Number</code>, or <code>Formula</code>.",
+    "ColumnWidth": "<code>ExcelColumnWidth</code> sets a custom column width in characters.",
+    "ColumnHidden": "<code>ExcelColumnHidden</code> hides the column from view in the generated spreadsheet.",
+    "StyleFormat": "<code>ExcelStyleFormat</code> applies a named style to individual data cells in the column.",
+    "HeaderStyleFormat": "<code>ExcelHeaderStyleFormat</code> (class-level) applies a named style to the entire header row.",
+    "ConditionalFormatFormula": "<code>ExcelConditionalFormatFormula</code> applies conditional formatting based on a formula expression.",
+    "ConditionalFormatCellIs": "<code>ExcelConditionalFormatCellIs</code> applies conditional formatting based on cell value comparisons (equal, between, greater than, etc.).",
+    "ConditionalFormatDuplicatedValues": "<code>ExcelConditionalFormatDuplicatedValues</code> highlights cells that contain duplicate values within the column."
+  },
+  "styling": "Styling",
+  "conditionalFormatting": "Conditional Formatting",
+  "advancedOptions": "Advanced Options",
+  "advancedIntro": "The <code>CreateSheetFromObject</code> method supports several optional parameters for greater flexibility:",
+  "options": {
+    "WriteHeaderRow": "<code>writeHeaderRow</code> (default: <code>true</code>) controls whether column headers are written as the first row.",
+    "AddAutoFilter": "<code>addAutoFilterOnFirstColumn</code> (default: <code>false</code>) automatically adds an autofilter to the header row for interactive filtering.",
+    "SheetVisibility": "<code>sheetState</code> allows you to control sheet visibility: <code>Visible</code>, <code>Hidden</code>, or <code>VeryHidden</code>.",
+    "SharedStrings": "<code>useSharedStringsOnTextData</code> (default: <code>false</code>) reduces file size by deduplicating text values across sheets."
+  },
+  "example": "Example",
+  "exampleDesc": "Below is a complete example demonstrating property decoration, custom column ordering, column hiding, and conditional formatting applied to a simple product inventory:"
+}

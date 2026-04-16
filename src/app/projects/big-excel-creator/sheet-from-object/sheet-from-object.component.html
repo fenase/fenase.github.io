@@ -1,0 +1,45 @@
+<h1 class="text-primary">{{ 'projects.BigExcelCreator.Creating sheets from objects' | transloco }}</h1>
+
+<ng-container *transloco="let t; prefix: 'projects.BigExcelCreator.sheetFromObject'">
+  <p [innerHTML]="t('intro')"></p>
+  <p [innerHTML]="t('benefits')"></p>
+
+  <h2 class="text-primary">{{ t('availableAttributes') }}</h2>
+  <p [innerHTML]="t('attributesIntro')"></p>
+
+  <h3>{{ t('columnConfiguration') }}</h3>
+  <ul>
+    <li [innerHTML]="t('attributes.Ignore')"></li>
+    <li [innerHTML]="t('attributes.ColumnName')"></li>
+    <li [innerHTML]="t('attributes.ColumnOrder')"></li>
+    <li [innerHTML]="t('attributes.ColumnType')"></li>
+    <li [innerHTML]="t('attributes.ColumnWidth')"></li>
+    <li [innerHTML]="t('attributes.ColumnHidden')"></li>
+  </ul>
+
+  <h3>{{ t('styling') }}</h3>
+  <ul>
+    <li [innerHTML]="t('attributes.StyleFormat')"></li>
+    <li [innerHTML]="t('attributes.HeaderStyleFormat')"></li>
+  </ul>
+
+  <h3>{{ t('conditionalFormatting') }}</h3>
+  <ul>
+    <li [innerHTML]="t('attributes.ConditionalFormatFormula')"></li>
+    <li [innerHTML]="t('attributes.ConditionalFormatCellIs')"></li>
+    <li [innerHTML]="t('attributes.ConditionalFormatDuplicatedValues')"></li>
+  </ul>
+
+  <h2 class="text-primary">{{ t('advancedOptions') }}</h2>
+  <p [innerHTML]="t('advancedIntro')"></p>
+  <ul>
+    <li [innerHTML]="t('options.WriteHeaderRow')"></li>
+    <li [innerHTML]="t('options.AddAutoFilter')"></li>
+    <li [innerHTML]="t('options.SheetVisibility')"></li>
+    <li [innerHTML]="t('options.SharedStrings')"></li>
+  </ul>
+
+  <h2 class="text-primary">{{ t('example') }}</h2>
+  <p [innerHTML]="t('exampleDesc')"></p>
+  <app-code-example examplePath="projects/BigExcelCreator/sheetFromObject" language="cs"></app-code-example>
+</ng-container>

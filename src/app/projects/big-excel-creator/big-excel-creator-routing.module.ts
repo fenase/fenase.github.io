@@ -13,6 +13,7 @@ import { HideSheetComponent } from './styling/hide-sheet/hide-sheet.component';
 import { MergeCellsComponent } from './styling/merge-cells/merge-cells.component';
 import { StylingComponent } from './styling/styling.component';
 import { StylingComponent as StylingDetailsComponent } from './styling/styling/styling.component';
+import { SheetFromObjectComponent } from './sheet-from-object/sheet-from-object.component';
 import { UsageComponent } from './usage/usage.component';
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
       {
         path: 'usage',
         component: UsageComponent,
+      },
+      {
+        path: 'sheetFromObject',
+        component: SheetFromObjectComponent,
       },
       {
         path: 'dataValidation',
