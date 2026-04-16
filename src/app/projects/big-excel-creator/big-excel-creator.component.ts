@@ -112,6 +112,11 @@ export class BigExcelCreatorComponent {
         label: 'Advanced',
         items: [
           {
+            label: 'projects.BigExcelCreator.Creating sheets from objects',
+            icon: PrimeIcons.LIST,
+            routerLink: [this.baseRoute, 'sheetFromObject'],
+          },
+          {
             label: 'API',
             icon: PrimeIcons.SITEMAP,
             url: 'https://fenase.github.io/BigExcelCreator/api/BigExcelCreator.html',
